@@ -1,6 +1,8 @@
 AVL_SET_NEXT
+BUMP_NUM_CHECKED_STATES__HT
 CALC_FOUNDATION_TO_PUT_CARD_ON
 CALC_HARD_THREAD_MAX_NUM_CHECKED_STATES
+CALC_HARD_THREAD_MAX_NUM_CHECKED_STATES__HELPER
 CALC_VACANCY_VAL
 CARD_ZERO
 COLUMN
@@ -17,6 +19,7 @@ DB_NOTFOUND
 DEBUG_VERIFY_SOFT_DFS_STACK
 DECLARE_NEW_STATE
 DEFAULT_MAX_NUM_ELEMENTS_IN_CACHE
+DEFINE_fc_solve_empty_card
 DEPTH_Q_GROW_BY
 DERIVED_STATES_LIST_GROW_BY
 DICTCOUNT_T_MAX
@@ -111,6 +114,7 @@ FCS_PRESET_BAKERS_DOZEN
 FCS_PRESET_BAKERS_GAME
 FCS_PRESET_CODE_DECKS_EXCEED_MAX
 FCS_PRESET_CODE_FREECELLS_EXCEED_MAX
+FCS_PRESET_CODE_NOT_FOUND
 FCS_PRESET_CODE_STACKS_EXCEED_MAX
 FCS_PRESET_CRUEL
 FCS_PRESET_DIE_SCHLANGE
@@ -124,6 +128,7 @@ FCS_PRESET_SIMPLE_SIMON
 FCS_PRINT_FINISHED
 FCS_PROTO_CARD_SUIT_POSITIONS_BY_RANK_INITIAL_OFFSET
 FCS_PROTO_CARD_SUIT_POSITIONS_BY_RANK_STEP
+FCS_SS_POS_BY_RANK_WIDTH
 FCS_STATE_ALREADY_EXISTS
 FCS_STATE_BEGIN_SUSPEND_PROCESS
 FCS_STATE_DOES_NOT_EXIST
@@ -230,6 +235,7 @@ FC_SOLVE__MSG_H
 FC_SOLVE__OFFLOADING_QUEUE_H
 FC_SOLVE__OUTPUT_TO_FILE_H
 FC_SOLVE__PATS__FNV_H
+FC_SOLVE__PORTABLE_INT32_H
 FC_SOLVE__PORTABLE_INT64_H
 FC_SOLVE__PORTABLE_TIME_H
 FC_SOLVE__PQUEUE_H
@@ -448,6 +454,7 @@ cards_num_min_limit
 cb
 check_for_exceeded
 check_if_limits_exceeded
+check_if_limits_exceeded__num
 check_len
 check_num_states_in_collection
 child_seq_index
@@ -458,6 +465,7 @@ cluster_tree
 cmaj_flt
 cmin_flt
 col_col
+col_len_minus_1
 column_inv_idxs
 command
 comparator
@@ -466,6 +474,7 @@ compare_rating_with_index
 compare_records
 compatible
 condition_expr
+context_t
 coord_from_input
 copy
 copyleft
@@ -493,6 +502,7 @@ depth_ptr
 dequeue_position
 derived_end
 dest_found
+dest_num_cards
 dest_stack
 determine_scan_completeness
 dfs_max_info_ptr
@@ -534,6 +544,7 @@ dnode_process_t
 dummy
 duplicate_string_while_adding_a_trailing_newline
 elem
+empty_ret
 end_args
 end_element
 end_game_idx
@@ -598,6 +609,7 @@ fc_solve_delta_stater_free
 fc_solve_delta_stater_set_derived
 fc_solve_foundations_prefixes
 fc_solve_free_instance
+fc_solve_free_instance_soft_thread_callback
 fc_solve_freecells_prefixes
 fc_solve_get_board
 fc_solve_get_board_l
@@ -814,6 +826,7 @@ fcs_preset_name_t
 fcs_presets
 fcs_state_extra_info_struct
 fcs_state_ia_alloc_into_var
+fcs_state_validity_ret_t
 fcs_states_linked_list_item_struct
 fcs_super_method_type_t
 fcs_tests_group_type_t
@@ -934,6 +947,7 @@ have_preset
 height
 help_screen_t
 how_much_proto
+ht
 index
 init_soft_thread
 init_solver_state
@@ -1038,6 +1052,7 @@ new_top_most_cards
 next_board
 next_derived_iter
 next_queue_id
+next_st_idx
 next_state
 nextcolor
 nfds
@@ -1051,6 +1066,7 @@ num_additional_moves
 num_back_end_moves
 num_cards_1
 num_cards_2
+num_cards_left
 num_cards_not_on_parents
 num_cards_not_on_parents_factor
 num_cards_not_on_parents_weight
@@ -1087,6 +1103,7 @@ p_scan
 p_scan_copy
 pack_position
 packs_end
+padding_len
 param_num
 past_end_board
 pclose
@@ -1177,6 +1194,7 @@ seqs_build_by
 seqs_over_renegade_cards
 set_any_iter_handler
 set_debug_iter_output_func_to_val
+set_next_prelude_item
 set_scan_visited
 sextet_a
 sextet_b
@@ -1240,6 +1258,7 @@ strtoul
 suit_bit
 suit_positions_by_rank_step
 swap_save
+switch_to_next_soft_thread
 synergy
 t_card
 tcomm
@@ -1275,8 +1294,12 @@ tty_pgrp
 tv_sec
 tv_usec
 tz
+u_int16_t
 u_int32_t
 u_int64_t
+u_int8_t
+uint16_t
+uint8_t
 unlimited_sequence_move_var
 unlink
 unpack_position
