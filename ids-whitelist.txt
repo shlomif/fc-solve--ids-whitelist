@@ -536,6 +536,7 @@ calc_empty_col_idx
 calc_moves_flare
 calc_moves_seq
 calc_num_vacant_slots
+calc_start_end_src_stack
 calc_variant_suit_mask_and_desired_suit_value
 callback_choice
 calloc
@@ -618,6 +619,7 @@ derived_states_list_struct
 dest_below_card
 dest_found
 dest_num_cards
+dest_rand_index_ptr
 dest_stack
 determine_scan_completeness
 dfs_max_info_ptr
@@ -628,6 +630,7 @@ dict_color
 dict_compare
 dict_context
 dict_create
+dict_data
 dict_dictptr
 dict_dummy
 dict_dupes
@@ -639,6 +642,7 @@ dict_last
 dict_left
 dict_load_begin
 dict_load_end
+dict_load_next
 dict_lower_bound
 dict_maxcount
 dict_merge
@@ -648,15 +652,24 @@ dict_prev
 dict_process
 dict_right
 dict_set_allocator
+dict_similar
 dict_strict_lower_bound
 dict_strict_upper_bound
 dict_upper_bound
+dictptr
+dll_ind_buf_t
 dllexport
 dllimport
+dn
 dnode_create
 dnode_destroy
+dnode_free
+dnode_get
+dnode_getkey
 dnode_process_t
+dnode_put
 dummy
+dump_pqueue
 duplicate_string_while_adding_a_trailing_newline
 elem
 empty_ret
@@ -669,8 +682,10 @@ end_num
 end_of_arg_loop
 end_of_hard_threads
 end_of_hard_threads_loop
+end_of_junk
 end_of_stacks
 end_rand_index_ptr
+end_soft_dfs_info
 end_soft_thread
 end_stack_item
 end_time
@@ -1063,6 +1078,7 @@ height
 help_screen_t
 how_much_proto
 ht
+i_card
 index
 init_soft_thread
 init_solver_state
@@ -1128,6 +1144,7 @@ microsoft_rand_rand
 microsoft_rand_randp
 microsoft_rand_uint_t
 millitm
+min_card
 min_flt
 min_len
 min_states
