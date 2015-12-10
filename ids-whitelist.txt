@@ -47,6 +47,7 @@ FCS_BEFS_WEIGHT_DEPTH
 FCS_BEFS_WEIGHT_MAX_SEQUENCE_MOVE
 FCS_BEFS_WEIGHT_NUM_CARDS_NOT_ON_PARENTS
 FCS_BEFS_WEIGHT_SEQS_OVER_RENEGADE_CARDS
+FCS_BOTH__POS_BY_RANK__SIZE
 FCS_CARD_SUIT_POSITIONS_BY_RANK_INITIAL_OFFSET
 FCS_CARD_SUIT_POSITIONS_BY_RANK_STEP
 FCS_CMD_LINE_USER
@@ -145,8 +146,10 @@ FCS_PATS__MAX_NUM_MOVES
 FCS_PATS__SOLVE_LEVEL_GROW_BY
 FCS_PATS__SUIT
 FCS_PATS__TREE_LIST_NUM_BUCKETS
+FCS_POS_BY_RANK_LEN
 FCS_POS_BY_RANK_MAP
 FCS_POS_BY_RANK_SIZE
+FCS_POS_BY_RANK__ENABLE_PARENT_CHECK
 FCS_POS_IDX
 FCS_POS_IDX_TO_CHECK_START_LOOP
 FCS_POS_IDX_TO_CHECK__INIT_CONSTANTS
@@ -176,6 +179,8 @@ FCS_RAND
 FCS_RUNTIME_OPTIMIZE_SOLUTION_PATH
 FCS_RUNTIME_TO_REPARENT_STATES_PROTO
 FCS_SOFT_THREAD_IS_FINISHED
+FCS_SS_POS_BY_RANK_LEN
+FCS_SS_POS_BY_RANK_SIZE
 FCS_SS_POS_BY_RANK_WIDTH
 FCS_STATE_ALREADY_EXISTS
 FCS_STATE_BEGIN_SUSPEND_PROCESS
@@ -219,6 +224,7 @@ FC_SOLVE_DBM_SOLVER_KEY_H
 FC_SOLVE_FCC_BRFS_H
 FC_SOLVE_FCC_BRFS_TEST_H
 FC_SOLVE_PATSOLVE_PATS_PLAY_H
+FC_SOLVE_PATSOLVE_PATS_PRINT_MSG_H
 FC_SOLVE_PATSOLVE_PAT_H
 FC_SOLVE_PATSOLVE_PRINT_CARD_H
 FC_SOLVE_PATSOLVE_PRINT_LAYOUT_H
@@ -349,6 +355,7 @@ HARD_CODED_UNUSED
 HAVE_C_INLINE
 HAVE_STRNCASECMP
 HAVE_STRNDUP
+HAVE_VASPRINTF
 HMODULE
 IA_STATE_PACKS_GROW_BY
 INSTANCE_GAME_FLAGS
@@ -452,6 +459,7 @@ ST_LOOP__WAS_FINISHED
 SUIT
 TRAILING_CHAR
 ULONG_MAX
+USAGE
 Usage
 VALUE
 VERIFY_DERIVED_STATE
@@ -459,6 +467,7 @@ VERIFY_SOFT_DFS_STACK
 VERIFY_STATE_SANITY
 VERSION
 WEIGHTING
+_GNU_SOURCE
 _MSC_VER
 _WIN32
 __GNUC__
@@ -514,6 +523,7 @@ avl_t_next
 avl_table
 avl_traverser
 base64_encoding_buffer_max_len
+befs_positions_by_rank
 befs_rate_state
 bfs_queue
 bfs_queue_last_item
@@ -618,6 +628,7 @@ derived_stacks_buffer
 derived_states_list_struct
 dest_below_card
 dest_found
+dest_info
 dest_num_cards
 dest_rand_index_ptr
 dest_stack
@@ -696,6 +707,10 @@ epoll_create1
 epoll_ctl
 epoll_event
 epoll_wait
+epollfd
+ev
+events
+existing_cache_state
 existing_opt
 exported
 fail_reason
@@ -703,16 +718,27 @@ false
 false_seq_index_limit
 false_seq_index_loop
 fc_pro_get_board
+fc_solve_PQueueFree
+fc_solve__assign_dest_stack_and_col_ptr
+fc_solve__calc_positions_by_rank_data
 fc_solve__hard_thread__compile_prelude
 fc_solve__soft_thread__do_solve
+fc_solve_add_start_point_in_mem
+fc_solve_add_to_irrev_moves_bitmask
 fc_solve_alloc_instance
 fc_solve_append_string_finalize
 fc_solve_append_string_init
 fc_solve_apply_preset_by_name
 fc_solve_args_man_alloc
+fc_solve_args_man_chop
+fc_solve_bit_data_t
 fc_solve_bit_reader_init
+fc_solve_bit_writer_init
+fc_solve_bsearch
 fc_solve_cache_stacks
 fc_solve_calc_positions_by_rank_location
+fc_solve_canonize_state_with_locs
+fc_solve_card_parse_str
 fc_solve_check_state_validity
 fc_solve_columns_google_hash_free
 fc_solve_columns_google_hash_insert
@@ -1233,6 +1259,7 @@ out_fcc_start_points
 out_is_fcc_new
 out_moves_seq
 out_sum
+p_by_r
 p_quota
 p_scan
 p_scan_copy
@@ -1240,7 +1267,9 @@ pack_position
 packs_end
 padding_len
 param_num
+pass_copy
 past_end_board
+pats__init_soft_thread_and_instance
 pclose
 perl_hash_function
 perror
@@ -1359,6 +1388,7 @@ srando
 srandp
 src_cards_num
 src_stack_idx
+ssize_t
 st_tests_order
 stack_ptr__moves_to_parent
 stack_ptr_this_state_val
@@ -1456,6 +1486,7 @@ val_ptr_state_val
 valid
 var_prefix
 var_prefix_len
+vasprintf
 verify_bintree
 verify_soft_dfs_stack
 vfprintf
