@@ -1,0 +1,12 @@
+=encoding utf8
+
+=head1 ABOUT
+
+Freecell Solver's C<ids-whitelist.txt> file (work in progress). To use:
+
+    ln -s /home/shlomif/progs/freecell/git/ids-whitelist/ids-whitelist.txt scripts/
+    ruby scripts/find-ids.rb *.[ch] patsolve-shlomif/patsolve/{pat.{c,h},patmain.c,tree.{c,h},patsolve.c,pats__*.h,param.h,print_card.h,print_layout.h,read_layout.h} > ids.txt
+    gvim ids.txt +cbuf
+
+=cut
+
