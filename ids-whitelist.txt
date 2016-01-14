@@ -23,6 +23,7 @@ DB_BTREE
 DB_CREATE
 DB_NOTFOUND
 DEBUG_VERIFY_SOFT_DFS_STACK
+DECKS_NUM__ARG
 DECLARE_NEW_STATE
 DECLARE_STATE
 DEFAULT_MAX_NUM_ELEMENTS_IN_CACHE
@@ -69,6 +70,7 @@ FCS_FOUNDATIONS_OFFSET
 FCS_FREECELLS_OFFSET
 FCS_GEN_BOARDS_WITH_EXTERNAL_API
 FCS_IA_PACK_SIZE
+FCS_IMPLICIT_T_RANK
 FCS_INLINED_HASH_DATA_TYPE
 FCS_INLINED_HASH__COLUMNS
 FCS_INLINED_HASH__STATES
@@ -306,6 +308,7 @@ FC_SOLVE__PRESET_H
 FC_SOLVE__RAND_H
 FC_SOLVE__RANGE_SOLVERS_GEN_MS_BOARDS_H
 FC_SOLVE__RATE_STATE_H
+FC_SOLVE__REMOVE_TRAILING_WHITESPACE_IN_OUTPUT
 FC_SOLVE__SCANS_H
 FC_SOLVE__SCANS_IMPL_H
 FC_SOLVE__SET_WEIGHTS_H
@@ -315,6 +318,7 @@ FC_SOLVE__STANDARD_NOTATION_EXTENDED
 FC_SOLVE__STANDARD_NOTATION_NO
 FC_SOLVE__STANDARD_NOTATION_REGULAR
 FC_SOLVE__STATE_H
+FC_SOLVE__STRICTER_BOARD_PARSING
 FC_SOLVE__STRNDUP_H
 FC_SOLVE__STR_UTILS_H
 FC_SOLVE__UNUSED_H
@@ -339,6 +343,7 @@ FOREACH_SOFT_THREAD_FREE_INSTANCE
 FOUNDATION_BASE
 FPRINTF_TIME
 FREECELL
+FREECELLS_NUM__ARG
 FREECELL_SOLVER_PKG_DATA_DIR
 FccEntryPointList_init
 FccEntryPointNode_compare
@@ -417,6 +422,7 @@ O_CREAT
 O_RDWR
 PARAMETERIZED_FIXED_LIMIT
 PARAMETERIZED_LIMIT
+PASS_IND_BUF_T
 PATSOLVE_PARAM_H
 PATSOLVE_STANDALONE
 PENULTIMATE_DEPTH
@@ -471,6 +477,7 @@ _GNU_SOURCE
 _MSC_VER
 _WIN32
 __GNUC__
+__VA_ARGS__
 __attribute__
 __builtin_expect
 __declspec
@@ -562,6 +569,7 @@ card_str
 card_to_string
 card_to_string_suits
 card_to_string_values
+cards_char_map
 cards_num_min_limit
 cards_under_sequences_factor
 cb
@@ -799,6 +807,7 @@ fc_solve_move_stack_compact_allocate
 fc_solve_move_stack_normalize
 fc_solve_move_stack_pop
 fc_solve_move_stack_swallow_stack
+fc_solve_move_to_string_w_state
 fc_solve_moves_processed_get_moves_left
 fc_solve_moves_processed_get_next_move
 fc_solve_moves_processed_render_move
@@ -929,8 +938,10 @@ fcs_depth_multi_queue__extract
 fcs_depth_multi_queue__init
 fcs_depth_multi_queue__new_queue
 fcs_derived_state_struct
+fcs_duplicate_kv_state
 fcs_duplicate_kv_state_extra
 fcs_duplicate_preset
+fcs_duplicate_state
 fcs_fcc_moves_list_item_struct
 fcs_foreach_st_callback_choice_t
 fcs_freecell_card_suit
@@ -1018,6 +1029,7 @@ freecell_solver_pats__make_move
 freecell_solver_pats__x_y_params_preset
 freecell_solver_set_stored_states_trimming_limit
 freecell_solver_user_cmd_line_read_cmd_line_preset
+freecell_solver_user_current_state_as_string
 freecell_solver_user_get_current_depth
 freecell_solver_user_get_limit_iterations
 freecell_solver_user_get_max_num_decks
@@ -1029,12 +1041,14 @@ freecell_solver_user_get_next_move
 freecell_solver_user_get_num_soft_threads_in_instance
 freecell_solver_user_get_num_states_in_collection
 freecell_solver_user_get_num_times
+freecell_solver_user_iter_state_as_string
 freecell_solver_user_limit_current_instance_iterations
 freecell_solver_user_limit_depth
 freecell_solver_user_limit_iterations
 freecell_solver_user_limit_num_states_in_collection
 freecell_solver_user_move_ptr_to_string_w_state
 freecell_solver_user_move_to_string
+freecell_solver_user_move_to_string_w_state
 freecell_solver_user_next_flare
 freecell_solver_user_next_hard_thread
 freecell_solver_user_next_instance
@@ -1470,6 +1484,7 @@ unlink
 unpack_position
 unsigned_foo
 unused
+unused__rank_is_null
 update_col_cards_under_sequences
 upon_new_state
 upper_card
