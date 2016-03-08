@@ -52,6 +52,7 @@ FCS_BEFS_WEIGHT_SEQS_OVER_RENEGADE_CARDS
 FCS_BOTH__POS_BY_RANK__SIZE
 FCS_CARD_SUIT_POSITIONS_BY_RANK_INITIAL_OFFSET
 FCS_CARD_SUIT_POSITIONS_BY_RANK_STEP
+FCS_CMD_LINE_PARAM_WITH_NO_ARG
 FCS_CMD_LINE_USER
 FCS_COMPILE_FLARES_RET_COLON_NOT_FOUND
 FCS_COMPILE_FLARES_RET_JUNK_AFTER_CP
@@ -228,6 +229,7 @@ FC_SOLVE_DBM_SOLVER_H
 FC_SOLVE_DBM_SOLVER_KEY_H
 FC_SOLVE_FCC_BRFS_H
 FC_SOLVE_FCC_BRFS_TEST_H
+FC_SOLVE_MAP_CHAR
 FC_SOLVE_PATSOLVE_PATS_PLAY_H
 FC_SOLVE_PATSOLVE_PATS_PRINT_MSG_H
 FC_SOLVE_PATSOLVE_PAT_H
@@ -283,6 +285,7 @@ FC_SOLVE__GAME_TYPE_LIMIT_H
 FC_SOLVE__GAME_TYPE_PARAMS_H
 FC_SOLVE__GENERIC_TREE_H
 FC_SOLVE__GOOGLE_HASH_H
+FC_SOLVE__HANDLE_PARSING_H
 FC_SOLVE__INDIRECT_BUFFER_H
 FC_SOLVE__INLINE_H
 FC_SOLVE__INSTANCE_FOR_LIB_H
@@ -498,6 +501,7 @@ add_checkpoint_to_plan
 add_count_iters_to_plan
 add_run_indef_to_plan
 add_start_point
+add_to_move_funcs_list
 add_to_plan
 additional_moves
 aft_open_paren
@@ -610,6 +614,8 @@ context_t
 coord
 coord_from_input
 copy
+copy_from_idx
+copy_from_iter
 copyleft
 copyright
 count_additional_irrev_moves
@@ -618,6 +624,7 @@ count_freed
 count_num_vacant_freecells
 count_num_vacant_stacks
 count_start_state_moves
+count_to_add
 create_plan_item
 cstime
 curr_pack
@@ -738,6 +745,7 @@ fc_solve_PQueueFree
 fc_solve__assign_dest_stack_and_col_ptr
 fc_solve__calc_positions_by_rank_data
 fc_solve__hard_thread__compile_prelude
+fc_solve__internal__copy_moves
 fc_solve__soft_thread__do_solve
 fc_solve_add_start_point_in_mem
 fc_solve_add_to_irrev_moves_bitmask
@@ -859,16 +867,20 @@ fc_solve_pats__new
 fc_solve_pats__new_array
 fc_solve_pats__new_block
 fc_solve_pats__new_from_block
+fc_solve_pats__new_position
 fc_solve_pats__play
 fc_solve_pats__pos__struct
 fc_solve_pats__print_card
 fc_solve_pats__print_layout
 fc_solve_pats__print_queue
+fc_solve_pats__queue_position
 fc_solve_pats__read_layout
 fc_solve_pats__release
 fc_solve_pats__soft_thread_reset_helper
+fc_solve_pats__sort_piles
 fc_solve_pats__status_code_t
 fc_solve_pats__status_fail_reason_t
+fc_solve_pats__undo_move
 fc_solve_patsolve_do_solve
 fc_solve_pq_init
 fc_solve_pq_pop
@@ -896,11 +908,14 @@ fc_solve_sfs_move_cards_to_a_different_parent
 fc_solve_sfs_move_freecell_cards_on_top_of_stacks
 fc_solve_sfs_move_freecell_cards_to_empty_stack
 fc_solve_sfs_move_freecell_cards_to_founds
+fc_solve_sfs_move_funcs
+fc_solve_sfs_move_funcs_aliases
 fc_solve_sfs_move_non_top_stack_cards_to_founds
 fc_solve_sfs_move_sequences_to_free_stacks
 fc_solve_sfs_move_stack_cards_to_a_parent_on_the_same_stack
 fc_solve_sfs_move_stack_cards_to_different_stacks
 fc_solve_sfs_move_top_stack_cards_to_founds
+fc_solve_sfs_raymond_prune
 fc_solve_sfs_simple_simon_move_sequence_to_false_parent
 fc_solve_sfs_simple_simon_move_sequence_to_founds
 fc_solve_sfs_simple_simon_move_sequence_to_parent_on_the_same_stack
@@ -916,6 +931,7 @@ fc_solve_simple_simon_nothing
 fc_solve_soft_dfs_do_solve
 fc_solve_soft_thread_init_soft_dfs
 fc_solve_soft_thread_update_initial_cards_val
+fc_solve_st_free_pq
 fc_solve_start_instance_process_with_board
 fc_solve_state_compare_equal
 fc_solve_state_compare_indirect
@@ -927,6 +943,7 @@ fc_solve_states_google_hash_new
 fc_solve_string_to_test_num
 fc_solve_string_to_test_num_compare_func
 fc_solve_u2p_rank
+fc_solve_u2p_suit
 fc_solve_user_INTERNAL_calc_derived_states_wrapper
 fc_solve_user_INTERNAL_compile_all_flares_plans
 fc_solve_user_INTERNAL_debondt_delta_states_enc_and_dec
@@ -1064,6 +1081,7 @@ freecell_solver_user_cmd_line_read_cmd_line_preset
 freecell_solver_user_current_state_as_string
 freecell_solver_user_get_current_depth
 freecell_solver_user_get_invalid_state_error_string
+freecell_solver_user_get_lib_version
 freecell_solver_user_get_limit_iterations
 freecell_solver_user_get_max_num_decks
 freecell_solver_user_get_max_num_freecells
@@ -1154,6 +1172,7 @@ how_much_proto
 ht
 i_card
 index
+indexes
 init_soft_thread
 init_solver_state
 init_stacks_map
@@ -1225,6 +1244,8 @@ min_states
 misplaced_card
 mod_table
 move_func_num
+move_funcs_idxs
+move_funcs_list
 move_num
 moves_end
 mpz_add
@@ -1259,6 +1280,7 @@ new_state_kv_ptr
 new_top_most_cards
 next_board
 next_derived_iter
+next_i
 next_queue_id
 next_st_idx
 next_state
@@ -1286,6 +1308,7 @@ num_finished_boards
 num_founds
 num_new_positions_temp
 num_out_derived_states
+num_so_far
 num_total_cards_moved
 num_true_seqs_out_ptr
 octet_a
@@ -1293,6 +1316,7 @@ octet_b
 octet_c
 old_buffer
 one
+only_recognized
 open
 opened_files_dir_to_assign
 optimize
@@ -1305,6 +1329,7 @@ other_page
 out_derived_states
 out_fcc_start_points
 out_is_fcc_new
+out_move_funcs_list
 out_moves_seq
 out_sum
 p_by_r
@@ -1354,6 +1379,7 @@ ptr_next_state
 ptr_state_input
 ptr_state_raw
 ptr_state_void
+ptr_to_pos_in_moves
 ptr_trace
 ptr_trace_num
 put
