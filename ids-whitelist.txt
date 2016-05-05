@@ -1,3 +1,4 @@
+ALLOCED_SIZE
 AVL_SET_NEXT
 BEFS_MAX_DEPTH
 BRFS_VAR
@@ -19,6 +20,7 @@ COMMIT_NEW_STATE_WITH_COUNT
 COMP_BY
 COMP_BY_IDX
 COPY_INDIRECT_COLS
+CommandOption
 DB
 DBT
 DB_BTREE
@@ -39,6 +41,7 @@ DNODE_NEXT
 END_OF_LOOP
 EPOLLIN
 EPOLL_CTL_ADD
+ERROR
 EXIT_FAILURE
 FCC_INTERRUPTED
 FCC_SOLVED
@@ -231,6 +234,7 @@ FC_SOLVE_DBM_SOLVER_H
 FC_SOLVE_DBM_SOLVER_KEY_H
 FC_SOLVE_FCC_BRFS_H
 FC_SOLVE_FCC_BRFS_TEST_H
+FC_SOLVE_JAVASCRIPT_QUERYING
 FC_SOLVE_MAP_CHAR
 FC_SOLVE_PATSOLVE_PATS_PLAY_H
 FC_SOLVE_PATSOLVE_PATS_PRINT_MSG_H
@@ -259,6 +263,7 @@ FC_SOLVE__ARGS_MAN_GROW_BY
 FC_SOLVE__BOOL_H
 FC_SOLVE__CHECK_AND_ADD_STATE_H
 FC_SOLVE__CHECK_LIMITS_H
+FC_SOLVE__CMD_LINE_ENUM_H
 FC_SOLVE__COUNT_H
 FC_SOLVE__DBM_MOVE_TO_STRING_H
 FC_SOLVE__DBM_PROCS_H
@@ -317,7 +322,9 @@ FC_SOLVE__PRESET_H
 FC_SOLVE__RAND_H
 FC_SOLVE__RANGE_SOLVERS_GEN_MS_BOARDS_H
 FC_SOLVE__RATE_STATE_H
+FC_SOLVE__REMOVE_OLD_API_1
 FC_SOLVE__REMOVE_TRAILING_WHITESPACE_IN_OUTPUT
+FC_SOLVE__RINUTILS_H
 FC_SOLVE__SCANS_H
 FC_SOLVE__SCANS_IMPL_H
 FC_SOLVE__SET_WEIGHTS_H
@@ -330,6 +337,7 @@ FC_SOLVE__STATE_H
 FC_SOLVE__STRICTER_BOARD_PARSING
 FC_SOLVE__STRNDUP_H
 FC_SOLVE__STR_UTILS_H
+FC_SOLVE__TYPEOF_WRAP_H
 FC_SOLVE__UNUSED_H
 FC_SOLVE__VAR_BASE_READER_H
 FC_SOLVE__VAR_BASE_WRITER_H
@@ -374,9 +382,11 @@ HMODULE
 IA_STATE_PACKS_GROW_BY
 INDEX
 INSTANCE_GAME_FLAGS
+INSTANCE_ITEM_FLARES_LOOP_START
 INSTANCE_UNLIMITED_SEQUENCE_MOVE
 INTPTR_MAX
 IS_false_seq_index_loop
+ITEM_ALLOC
 JHSD
 JHSFA
 JHSG
@@ -398,11 +408,17 @@ LOOK_FOR_TRUE_PARENT_with_ds_dc__START
 MAKE_MOVE
 MAXCOL
 MAXPOS
+MAX_ERROR_STRING_LEN
 MAX_EVENTS
+MAX_HASH_VALUE
 MAX_NUM_INITIAL_CARDS_IN_A_STACK
 MAX_NUM_SCANS
 MAX_PATH
 MAX_PREVIOUS_MOVES
+MAX_STATE_STRING_COPY_LEN
+MAX_WORD_LENGTH
+MIN_HASH_VALUE
+MIN_WORD_LENGTH
 MOVES_PROCESSED_GROW_BY
 MY_HASH_COMPARE
 MY_HASH_CONTEXT_VAR
@@ -430,6 +446,7 @@ OPT__BAKERS_DOZEN__FIRST_PARENT
 OPT__BAKERS_DOZEN__IN_FOUNDATION
 O_CREAT
 O_RDWR
+OptionCode
 PARAMETERIZED_FIXED_LIMIT
 PARAMETERIZED_LIMIT
 PASS_IND_BUF_T
@@ -472,7 +489,9 @@ STACK_DEST_LOOP_START
 STATE_KEY
 ST_LOOP__GET_INDEX
 ST_LOOP__WAS_FINISHED
+SUCCESS
 SUIT
+TOTAL_KEYWORDS
 TRAILING_CHAR
 ULONG_MAX
 USAGE
@@ -486,11 +505,15 @@ WEIGHTING
 _GNU_SOURCE
 _MSC_VER
 _WIN32
+__GNUC_GNU_INLINE__
+__GNUC_STDC_INLINE__
 __GNUC__
 __VA_ARGS__
 __attribute__
 __builtin_expect
 __declspec
+__gnu_inline__
+__inline
 __int64
 __linux__
 __unused
@@ -507,6 +530,7 @@ add_to_move_funcs_list
 add_to_plan
 additional_moves
 aft_open_paren
+after_prefix
 after_pruning_state
 after_scan_delta
 after_start_moves_seq
@@ -514,6 +538,7 @@ all_instances_were_suspended
 allocated_from_list
 allowed_tests
 app_str_struct
+append
 are
 arg1
 arg_argc
@@ -594,6 +619,7 @@ child_idx
 child_num_true_seqs
 child_seq_index
 clean_soft_dfs
+clear_error
 clear_junk_dest_col
 clear_junk_stack_len
 cluster_tree
@@ -738,6 +764,7 @@ ev
 events
 existing_cache_state
 existing_opt
+exit_code_t
 exported
 fail_reason
 false
@@ -1018,6 +1045,7 @@ fcs_freecell_card_suit
 fcs_fully_connected_component_struct
 fcs_get_preset_by_id
 fcs_get_preset_id_by_name
+fcs_hash_set_max_num_elems
 fcs_int_move_set_dest_freecell
 fcs_int_move_set_foundation
 fcs_is_parent_card__helper
@@ -1083,6 +1111,7 @@ find_card_src_string
 find_col_card
 find_empty_col
 find_fc_card
+find_flare
 fingerprint_data_len
 first_line
 flags
@@ -1108,6 +1137,7 @@ freecell_preset
 freecell_solver_pats__make_move
 freecell_solver_pats__x_y_params_preset
 freecell_solver_set_stored_states_trimming_limit
+freecell_solver_user_cmd_line_parse_args
 freecell_solver_user_cmd_line_read_cmd_line_preset
 freecell_solver_user_current_state_as_string
 freecell_solver_user_get_current_depth
@@ -1120,7 +1150,9 @@ freecell_solver_user_get_max_num_stacks
 freecell_solver_user_get_moves_left
 freecell_solver_user_get_moves_sequence
 freecell_solver_user_get_next_move
+freecell_solver_user_get_num_freecells
 freecell_solver_user_get_num_soft_threads_in_instance
+freecell_solver_user_get_num_stacks
 freecell_solver_user_get_num_states_in_collection
 freecell_solver_user_get_num_times
 freecell_solver_user_iter_state_as_string
@@ -1157,6 +1189,7 @@ freecell_solver_user_set_soft_thread_name
 freecell_solver_user_set_soft_thread_step
 freecell_solver_user_set_solution_optimization
 freecell_solver_user_set_solving_method
+freecell_solver_user_stringify_move_ptr
 freecells_s_end
 from_bin
 from_left
@@ -1200,9 +1233,11 @@ h_card
 have_preset
 height
 help_screen_t
+how_much
 how_much_proto
 ht
 i_card
+in_word_set
 index
 indexes
 init_soft_thread
@@ -1258,6 +1293,7 @@ maj_flt
 mark_irreversible
 master_to_randomize
 max_info_ptr
+max_ptr
 max_rank
 max_sequence_len
 max_var_depth_to_check
@@ -1338,7 +1374,9 @@ num_cards_out_factor
 num_cards_to_move_from_columns
 num_checked_states_started_at
 num_finished_boards
+num_flares
 num_founds
+num_instances
 num_new_positions_temp
 num_out_derived_states
 num_so_far
@@ -1398,6 +1436,7 @@ print_ts
 prioritize
 priority
 proposed_quota_end
+proto_name
 prune_redundant
 prune_ret
 prune_seahaven
@@ -1412,6 +1451,7 @@ ptr_next_state
 ptr_state_input
 ptr_state_raw
 ptr_state_void
+ptr_to_end_moves_iter
 ptr_to_pass_new_state
 ptr_to_pos_in_moves
 ptr_trace
@@ -1509,6 +1549,7 @@ stack_ptr_this_state_val
 stacks_allocator
 stage_id
 start_enc_state
+start_from
 start_game_idx
 start_idx
 start_key_moves_count
@@ -1519,6 +1560,7 @@ start_state_str_proto
 state_indirect_stacks_buffer
 state_pair
 state_s_proto
+state_string_copy
 state_validity_card
 states_in_cache
 stdarg
@@ -1531,6 +1573,7 @@ strcat
 strcpy
 strecpy
 string_end
+strncmp
 strnicmp
 strtod
 strtoul
@@ -1625,7 +1668,9 @@ was_total_iterations_limit_per_board_set
 wcmp
 win
 windows
+windows_global_presetc
 with
+wordlist
 worker_func
 worker_thread
 wrap_up_solve
