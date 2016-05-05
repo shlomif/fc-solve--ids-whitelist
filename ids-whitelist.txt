@@ -84,7 +84,6 @@ FCS_INLINE_KEYWORD
 FCS_INT64_FORMAT
 FCS_INT_LIMIT_MAX
 FCS_LRU_KEY_IS_STATE
-FCS_MAP_CHAR
 FCS_MAX_FLARE_NAME_LEN
 FCS_MAX_IDENT_LEN
 FCS_MAX_NUM_SCANS_BUCKETS
@@ -157,7 +156,6 @@ FCS_PATS__SUIT
 FCS_PATS__TREE_LIST_NUM_BUCKETS
 FCS_POS_BY_RANK_LEN
 FCS_POS_BY_RANK_MAP
-FCS_POS_BY_RANK_SIZE
 FCS_POS_BY_RANK__ENABLE_PARENT_CHECK
 FCS_POS_IDX
 FCS_POS_IDX_TO_CHECK_START_LOOP
@@ -212,16 +210,11 @@ FCS_S_NEXT
 FCS_TALON_GYPSY
 FCS_TALON_KLONDIKE
 FCS_TALON_NONE
-FCS_TESTS_ALIASES_NUM
-FCS_USER_STATE_TO_C__PREMATURE_END_OF_INPUT
-FCS_USER_STATE_TO_C__SUCCESS
 FCS_VISITED_ALL_TESTS_DONE
 FCS_VISITED_GENERATED_BY_PRUNING
 FCS_VISITED_IN_OPTIMIZED_PATH
 FCS_VISITED_IN_SOLUTION_PATH
 FCS_WITH_CARD_COMPARE_LOOKUP
-FC_SOLVE_APPEND_STRING_GROW_BY
-FC_SOLVE_APPEND_STRING_MARGIN_SIZE
 FC_SOLVE_BIT_RW_H
 FC_SOLVE_BUCKETLIST_NBUCKETS
 FC_SOLVE_DBM_CACHE_H
@@ -256,13 +249,10 @@ FC_SOLVE_PATS__PARAM_PRESET__SeahavenSpeed
 FC_SOLVE_PQUEUE_MaxRating
 FC_SOLVE_PSEUDO_DFS_CACHE_H
 FC_SOLVE_STRINGS_COMPAT
-FC_SOLVE__ALLOC_H
 FC_SOLVE__ALLOC_WRAP_H
-FC_SOLVE__APP_STR_H
 FC_SOLVE__ARGS_MAN_GROW_BY
 FC_SOLVE__BOOL_H
 FC_SOLVE__CHECK_AND_ADD_STATE_H
-FC_SOLVE__CHECK_LIMITS_H
 FC_SOLVE__CMD_LINE_ENUM_H
 FC_SOLVE__COUNT_H
 FC_SOLVE__DBM_MOVE_TO_STRING_H
@@ -277,13 +267,11 @@ FC_SOLVE__DELTA_STATES_IFACE_H
 FC_SOLVE__DEPTH_MULTI_QUEUE_H
 FC_SOLVE__FCS_BASE64_H
 FC_SOLVE__FCS_CL_H
-FC_SOLVE__FCS_DATA_H
 FC_SOLVE__FCS_DLLEXPORT_H
 FC_SOLVE__FCS_ENUMS_H
 FC_SOLVE__FCS_HASH_H
 FC_SOLVE__FCS_LIMIT_H
 FC_SOLVE__FCS_MOVE_H
-FC_SOLVE__FCS_PATS_XY_PARAM_H
 FC_SOLVE__FCS_USER_H
 FC_SOLVE__FCS_USER_INTERNAL_H
 FC_SOLVE__FC_PRO_IFACE_POS_H
@@ -309,7 +297,6 @@ FC_SOLVE__MOVE_FUNCS_MAPS_H
 FC_SOLVE__MOVE_FUNCS_ORDER_H
 FC_SOLVE__MOVE_H
 FC_SOLVE__MOVE_STACK_COMPACT_ALLOC_H
-FC_SOLVE__MSG_H
 FC_SOLVE__OFFLOADING_QUEUE_H
 FC_SOLVE__OUTPUT_TO_FILE_H
 FC_SOLVE__P2U_RANK_H
@@ -335,7 +322,6 @@ FC_SOLVE__STANDARD_NOTATION_NO
 FC_SOLVE__STANDARD_NOTATION_REGULAR
 FC_SOLVE__STATE_H
 FC_SOLVE__STRICTER_BOARD_PARSING
-FC_SOLVE__STRNDUP_H
 FC_SOLVE__STR_UTILS_H
 FC_SOLVE__TYPEOF_WRAP_H
 FC_SOLVE__UNUSED_H
@@ -347,10 +333,7 @@ FD_SET
 FD_ZERO
 FLARES_CHOICE_FCPRO_SOLUTION_LEN
 FLARES_CHOICE_FC_SOLVE_SOLUTION_LEN
-FLARES_LOOP_END_FLARES
-FLARES_LOOP_END_INSTANCES
 FLARES_PLAN_RUN_COUNT_ITERS
-FLARE_MOVE_COUNT
 FNV1_32_INIT
 FNV_32_PRIME
 FOREACH_SOFT_THREAD_ACCUM_TESTS_ORDER
@@ -372,14 +355,11 @@ GROW_BY
 GTree
 GetModuleFileName
 GetModuleHandle
-HANDLE_SIG_QUIT
 HARD_CODED_UNUSED
 HAVE_C_INLINE
 HAVE_STRNCASECMP
-HAVE_STRNDUP
 HAVE_VASPRINTF
 HMODULE
-IA_STATE_PACKS_GROW_BY
 INDEX
 INSTANCE_GAME_FLAGS
 INSTANCE_ITEM_FLARES_LOOP_START
@@ -397,7 +377,6 @@ JLI
 Judy
 KAZLIB_OBSOLESCENT_DEBUG
 KAZLIB_OPAQUE_DEBUG
-KAZLIB_TEST_MAIN
 King_only
 LOCAL_VARIANT
 LOG_FILENAME
@@ -458,9 +437,6 @@ POPULATE_AND_CHECK_IF_FALSE_SEQ
 PQ_LEFT_CHILD_INDEX
 PQ_PARENT_INDEX
 PRELUDE_GROW_BY
-PREV_STATES_SORT_MARGIN
-PRUNE_RET_FOLLOW_STATE
-PRUNE_RET_NOT_FOUND
 PTHREAD_MUTEX_INITIALIZER
 Please
 QUEUE_TERMINATE
@@ -476,7 +452,6 @@ SEEK_END
 SEEK_SET
 SET_INSTANCE_GAME_PARAMS
 SIGABRT
-SIGQUIT
 SIGUSR1
 SIGUSR2
 SIMPS_SET_GAME_PARAMS
@@ -548,8 +523,6 @@ argc_ptr
 args_man_wrapper_t
 argv0
 argv_ptr
-array
-assign_dest_stack_and_col_ptr
 atof
 avl_allocator
 avl_count
@@ -600,7 +573,6 @@ canonize_move
 card_char
 card_map_3_10
 card_map_3_T
-card_stack
 card_str
 card_to_string
 card_to_string_suits
@@ -642,7 +614,6 @@ consumed_states_fn_temp
 context_t
 coord
 coord_from_input
-copy
 copy_from_idx
 copy_from_iter
 copyleft
@@ -656,7 +627,6 @@ count_start_state_moves
 count_to_add
 create_plan_item
 cstime
-curr_pack
 curr_state
 cutime
 dashes_ptr
@@ -665,7 +635,6 @@ data_len
 db_create
 db_open
 db_strerror
-dbm_fcc_entry_points_path
 dc_ptr
 deal_idx
 debondt_prepare_state_str
@@ -740,7 +709,6 @@ end_args
 end_element
 end_game_idx
 end_hard_thread
-end_idx
 end_num
 end_of_arg_loop
 end_of_hard_threads
@@ -788,7 +756,6 @@ fc_solve_args_man_chop
 fc_solve_bit_data_t
 fc_solve_bit_reader_init
 fc_solve_bit_writer_init
-fc_solve_bsearch
 fc_solve_cache_stacks
 fc_solve_calc_positions_by_rank_location
 fc_solve_canonize_state_with_locs
@@ -812,7 +779,6 @@ fc_solve_debondt_delta_stater_decode_into_state
 fc_solve_debondt_delta_stater_decode_into_state_proto
 fc_solve_debondt_delta_stater_encode_composite
 fc_solve_debondt_delta_stater_encode_into_buffer
-fc_solve_debondt_delta_stater_free
 fc_solve_debondt_delta_stater_init
 fc_solve_debondt_delta_stater_release
 fc_solve_debondt_delta_stater_set_derived
@@ -833,11 +799,8 @@ fc_solve_get_board_l
 fc_solve_get_column_encoding_composite
 fc_solve_get_column_orig_num_cards
 fc_solve_get_freecells_encoding
-fc_solve_get_the_positions_by_rank_data
-fc_solve_get_the_positions_by_rank_data__freecell_generator
 fc_solve_glib_hash_stack_compare
 fc_solve_glib_hash_stack_hash_function
-fc_solve_hash_c_dummy
 fc_solve_hash_foreach
 fc_solve_hash_free
 fc_solve_hash_function
@@ -859,7 +822,6 @@ fc_solve_kaz_tree_delete
 fc_solve_kaz_tree_delete_by_value
 fc_solve_kaz_tree_delete_free
 fc_solve_kaz_tree_insert
-fc_solve_merge_large_and_small_sorted_arrays
 fc_solve_move_sequence_function
 fc_solve_move_stack_compact_allocate
 fc_solve_move_stack_normalize
@@ -964,7 +926,6 @@ fc_solve_soft_thread_update_initial_cards_val
 fc_solve_st_free_pq
 fc_solve_start_instance_process_with_board
 fc_solve_state_compare_equal
-fc_solve_state_compare_indirect
 fc_solve_state_compare_with_context
 fc_solve_state_init_proto
 fc_solve_state_string_to_enc
@@ -1014,7 +975,6 @@ fcs__should_state_be_pruned
 fcs_by_depth_tests_order_array_t
 fcs_by_depth_tests_order_t
 fcs_char2card
-fcs_col_flip_card
 fcs_col_get_rank
 fcs_col_is_king
 fcs_col_transfer_cards
@@ -1036,7 +996,6 @@ fcs_depth_t
 fcs_derived_state_debug_t
 fcs_derived_state_struct
 fcs_duplicate_kv_state
-fcs_duplicate_kv_state_extra
 fcs_duplicate_preset
 fcs_duplicate_state
 fcs_fcc_moves_list_item_struct
@@ -1104,7 +1063,6 @@ fcs_state_validity_ret_t
 fcs_states_linked_list_item_struct
 fcs_super_method_type_t
 fcs_tests_group_type_t
-fcs_u2p_flipped_status
 fd_set
 fgets
 find_card_src_string
@@ -1125,7 +1083,6 @@ fork
 foundation_rank
 fputc
 free_instance_hard_thread_callback
-free_instance_soft_thread_callback
 free_nodes
 free_position_non_recursive
 free_position_recursive
@@ -1160,7 +1117,6 @@ freecell_solver_user_limit_current_instance_iterations
 freecell_solver_user_limit_depth
 freecell_solver_user_limit_iterations
 freecell_solver_user_limit_num_states_in_collection
-freecell_solver_user_move_ptr_to_string_w_state
 freecell_solver_user_move_to_string
 freecell_solver_user_move_to_string_w_state
 freecell_solver_user_next_flare
@@ -1206,7 +1162,6 @@ g_tree_destroy
 g_tree_insert
 g_tree_lookup
 g_tree_new
-generator
 generic_false_seq_index_loop
 generic_populate_seq_points
 get
@@ -1215,7 +1170,6 @@ get_flare_move_count
 get_idx_from_env
 get_pilenum
 get_possible_moves
-get_the_positions_by_rank_data__ss_generator
 get_top_rank_for_iter
 getpid
 gettimeofday
@@ -1238,14 +1192,11 @@ how_much_proto
 ht
 i_card
 in_word_set
-index
 indexes
-init_soft_thread
 init_solver_state
 init_stacks_map
 init_state_enc
 init_state_pair
-initial_pass
 initial_which_irreversible_moves_bitmask
 inline
 input_s
@@ -1297,7 +1248,6 @@ max_ptr
 max_rank
 max_sequence_len
 max_var_depth_to_check
-memchr
 memmove
 meta_request_new_buffer
 meth
@@ -1340,7 +1290,6 @@ new_factor
 new_move
 new_moves_to_parent
 new_page
-new_position
 new_ptr
 new_ptr_state
 new_size_bitmask
@@ -1358,7 +1307,6 @@ nfds
 nicev
 normalize_iters_quota
 not_King_only
-not_append_ws
 not_king_only
 nullify_newline
 num_additional_moves
@@ -1372,7 +1320,6 @@ num_cards_not_on_parents_factor
 num_cards_not_on_parents_weight
 num_cards_out_factor
 num_cards_to_move_from_columns
-num_checked_states_started_at
 num_finished_boards
 num_flares
 num_founds
@@ -1385,8 +1332,6 @@ num_true_seqs_out_ptr
 octet_a
 octet_b
 octet_c
-old_buffer
-one
 only_recognized
 open
 opened_files_dir_to_assign
@@ -1408,8 +1353,6 @@ p_quota
 p_scan
 p_scan_copy
 pack_position
-packs_end
-padding_len
 param_num
 pass_copy
 past_end_board
@@ -1457,13 +1400,10 @@ ptr_to_pos_in_moves
 ptr_trace
 ptr_trace_num
 put
-putchar
 qsort
-quit
 r_minus
 rand_indexes
 rand_int_ptr
-randp
 rank_idx
 rbdestroy
 rbinit
@@ -1523,7 +1463,6 @@ should_modify_parent
 should_search
 should_src_col
 sid
-sig
 signed
 snprintf
 soft_dfs
@@ -1537,21 +1476,16 @@ sort_ds_dcs
 sorted_idx
 source_col_cards_num
 source_col_idx
-srando
-srandp
 src_cards_num
 src_cards_ptr
-src_stack_idx
 ssize_t
 st_tests_order
 stack_ptr__moves_to_parent
-stack_ptr_this_state_val
 stacks_allocator
 stage_id
 start_enc_state
 start_from
 start_game_idx
-start_idx
 start_key_moves_count
 start_key_ptr
 start_state
@@ -1569,14 +1503,12 @@ stddef
 stdin
 stdint
 stimev
-strcat
 strcpy
 strecpy
 string_end
 strncmp
 strnicmp
 strtod
-strtoul
 suit_bit
 suit_positions_by_rank_step
 swap_save
@@ -1585,9 +1517,7 @@ synergy
 t_card
 tcomm
 temp_card
-temp_new_state_val
 temp_str
-test_num
 tests_define_accessors_freecell_only
 tests_define_accessors_no_stacks
 tests_define_accessors_rcs_states
@@ -1627,7 +1557,6 @@ unlink
 unpack_position
 unsigned_foo
 unused
-unused__rank_is_null
 update_col_cards_under_sequences
 upon_new_state
 upper_card
@@ -1642,20 +1571,14 @@ utime
 va_end
 val_ptr_state_val
 valid
-var_prefix
-var_prefix_len
 vasprintf
 verify_bintree
 verify_soft_dfs_stack
 vfprintf
 visibility
 visited_iter
-void_array
-void_big_array
 void_context
-void_small_array
 vsize
-vsprintf
 w_col_data
 wait
 wanted_opt
