@@ -211,6 +211,7 @@ FCS_S_NEXT
 FCS_TALON_GYPSY
 FCS_TALON_KLONDIKE
 FCS_TALON_NONE
+FCS_TRACE_MEM
 FCS_VISITED_ALL_TESTS_DONE
 FCS_VISITED_GENERATED_BY_PRUNING
 FCS_VISITED_IN_OPTIMIZED_PATH
@@ -313,6 +314,7 @@ MAX_WORD_LENGTH
 MIN_HASH_VALUE
 MIN_WORD_LENGTH
 MOVES_PROCESSED_GROW_BY
+MOVE_FUNCS__should_not_empty_columns
 MY_HASH_COMPARE
 MY_HASH_CONTEXT_VAR
 MY_MARGIN
@@ -460,6 +462,8 @@ befs_positions_by_rank
 befs_rate_state
 bfs_queue
 bfs_queue_last_item
+bin_close
+bin_init
 bit_idx
 bitmask
 bool
@@ -1103,6 +1107,7 @@ func
 func_ptr
 function
 further_depth_idx
+fwrite
 g_hash_table_destroy
 g_hash_table_insert
 g_hash_table_lookup
@@ -1350,10 +1355,12 @@ num_total_cards_moved
 num_true_seqs_out_ptr
 num_unique_FCCs_for_depth
 num_units
+num_valid_move_funcs
 octet_a
 octet_b
 octet_c
 old_hard_thread
+old_size
 only_recognized
 open
 opened_files_dir_to_assign
@@ -1367,8 +1374,11 @@ other_page
 out_derived_states
 out_fcc_start_points
 out_is_fcc_new
+out_item
 out_move_funcs_list
 out_moves_seq
+out_new_state_out
+out_of_loop
 out_sum
 p_by_r
 p_quota
@@ -1376,10 +1386,15 @@ p_scan
 p_scan_copy
 pack_position
 param_num
+parent_ptr
+parent_suit
 pass_copy
+pass_key
 past_end_board
+path_idx
 pats__init_soft_thread_and_instance
 pclose
+perform_FCC_brfs
 perl_hash_function
 perror
 pgid
@@ -1389,9 +1404,12 @@ pipe
 place
 popen
 populate_instance_with_intermediate_input_line
+populate_seq_points
 pos0
+pos_moves_so_far
 pow
 ppid
+pre_cache_does_key_exist
 pre_cache_offload_and_reset
 prepare_state_str
 prev_rss
@@ -1438,6 +1456,7 @@ rbtree
 rcs_states_get_state
 read
 read_fd
+read_int
 read_next_preset
 read_preset
 readchar
@@ -1567,10 +1586,12 @@ timezone
 to_prune
 to_reparent_states
 top_card_proto
+total_iterations_limit_per_board_ptr
 total_num_boards_to_check
 total_num_iters_copy
 toupper
 trace_flare_solution
+trace_mem
 transaction
 trim_trailing_whitespace
 true
