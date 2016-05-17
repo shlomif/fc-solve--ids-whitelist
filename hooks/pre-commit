@@ -1,0 +1,26 @@
+#!/usr/bin/env perl
+
+use strict;
+use warnings;
+
+use Path::Tiny qw/ path /;
+
+my $fn = 'ids-whitelist.txt';
+
+my $content = path($fn)->slurp_utf8;
+if ($content ne `LC_ALL=C sort < "$fn"`)
+{
+    die "$fn is not sorted!";
+}
+
+if ($content =~ /[ \t]$/ms)
+{
+    die "$fn contains trailing whitespace!";
+}
+
+if ($content =~ /\n\n/ms)
+{
+    die "$fn contains empty lines!";
+}
+
+exit(0);
