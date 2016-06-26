@@ -763,7 +763,9 @@ error_code
 ev
 events
 existing_cache_state
+existing_key
 existing_opt
+existing_state_raw
 exit_code
 exit_code_t
 exported
@@ -778,6 +780,7 @@ fc_solve__calc_positions_by_rank_data
 fc_solve__cmd_line_callback
 fc_solve__hard_thread__compile_prelude
 fc_solve__internal__copy_moves
+fc_solve__patsolve_thread_struct
 fc_solve__setup_optimization_thread__helper
 fc_solve__soft_thread__do_solve
 fc_solve_add_start_point_in_mem
@@ -785,8 +788,10 @@ fc_solve_add_to_irrev_moves_bitmask
 fc_solve_alloc_instance
 fc_solve_append_string_init
 fc_solve_apply_preset_by_name
+fc_solve_apply_preset_by_ptr
 fc_solve_args_man_alloc
 fc_solve_args_man_chop
+fc_solve_args_man_free
 fc_solve_bit_data_t
 fc_solve_bit_reader_init
 fc_solve_bit_writer_init
@@ -1258,6 +1263,7 @@ hModule
 h_above_card
 h_card
 hard_thread_num_checked_states_ptr
+has_empty_col
 have_preset
 height
 height_right
