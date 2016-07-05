@@ -869,6 +869,7 @@ fc_solve_kaz_tree_delete_free
 fc_solve_kaz_tree_free_nodes
 fc_solve_kaz_tree_insert
 fc_solve_kaz_tree_lookup
+fc_solve_kaz_tree_next
 fc_solve_main__main
 fc_solve_move_sequence_function
 fc_solve_move_stack_compact_allocate
@@ -892,6 +893,8 @@ fc_solve_pats__Suits_string
 fc_solve_pats__before_play
 fc_solve_pats__configure_soft_thread
 fc_solve_pats__destroy_soft_thread
+fc_solve_pats__do_it
+fc_solve_pats__free_array
 fc_solve_pats__free_blocks
 fc_solve_pats__free_buckets
 fc_solve_pats__free_clusters
@@ -984,6 +987,7 @@ fc_solve_states_google_hash_insert
 fc_solve_states_google_hash_new
 fc_solve_string_to_test_num
 fc_solve_string_to_test_num_compare_func
+fc_solve_trace_solution
 fc_solve_u2p_rank
 fc_solve_u2p_suit
 fc_solve_user_INTERNAL_calc_derived_states_wrapper
@@ -1011,6 +1015,8 @@ fc_solve_var_base_writer_start
 fc_solve_var_base_writer_write
 fcc_entry_key
 fcc_entry_points_allocator
+fcc_entry_points_lock
+fcc_exit_points_output_lock
 fcc_loop_cleanup
 fcc_meta_alloc
 fcc_status_t
@@ -1020,6 +1026,7 @@ fcs_FCC_start_point_struct
 fcs_Q_item_wrapper_struct
 fcs_Q_item_wrapper_t
 fcs__is_state_a_dead_end
+fcs__positions_by_rank_t
 fcs__should_state_be_pruned
 fcs_by_depth_tests_order_array_t
 fcs_by_depth_tests_order_t
@@ -1027,6 +1034,8 @@ fcs_char2card
 fcs_col_get_rank
 fcs_col_is_king
 fcs_col_transfer_cards
+fcs_columns_google_hash_handle_t
+fcs_compact_alloc_release
 fcs_compare_context_t
 fcs_compile_flares_ret_t
 fcs_dbm_queue_item_struct
@@ -1040,6 +1049,7 @@ fcs_default_weights_t
 fcs_depth_multi_queue__destroy
 fcs_depth_multi_queue__extract
 fcs_depth_multi_queue__init
+fcs_depth_multi_queue__insert
 fcs_depth_multi_queue__new_queue
 fcs_depth_t
 fcs_derived_state_debug_t
@@ -1047,6 +1057,7 @@ fcs_derived_state_struct
 fcs_duplicate_kv_state
 fcs_duplicate_preset
 fcs_duplicate_state
+fcs_duplicate_state_extra
 fcs_fcc_moves_list_item_struct
 fcs_foreach_st_callback_choice_t
 fcs_freecell_card_suit
@@ -1056,9 +1067,15 @@ fcs_get_preset_by_id
 fcs_get_preset_id_by_name
 fcs_hash_compare_function_t
 fcs_hash_set_max_num_elems
+fcs_instance_debug_iter_output_context_t
+fcs_int_move_get_dest_freecell
+fcs_int_move_get_num_cards_in_seq
+fcs_int_move_get_type
 fcs_int_move_set_dest_freecell
 fcs_int_move_set_foundation
+fcs_int_move_set_src_freecell
 fcs_is_parent_card__helper
+fcs_is_ss_true_parent
 fcs_libavl2_stacks_tree_create
 fcs_libavl2_stacks_tree_destroy
 fcs_libavl2_stacks_tree_insert
@@ -1099,6 +1116,7 @@ fcs_pats__solve_depth_t
 fcs_pats__tree_node_struct
 fcs_pats__treelist_struct
 fcs_pats_is_king_only
+fcs_pats_is_suitable
 fcs_pats_next_card
 fcs_pats_xy_param_t
 fcs_pdfs_cache_destroy
@@ -1112,12 +1130,14 @@ fcs_prelude_item_t
 fcs_preset_name_t
 fcs_preset_names
 fcs_presets
+fcs_push_1card_seq
 fcs_st_instance
 fcs_stack_compare
 fcs_stack_compare_for_comparison_with_context
 fcs_standalone_state_ptrs_t
 fcs_state_extra_info_struct
 fcs_state_ia_alloc_into_var
+fcs_state_keyval_pair_struct
 fcs_state_pop_col_card
 fcs_state_validity_ret_t
 fcs_states_linked_list_item_struct
