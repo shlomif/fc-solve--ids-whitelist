@@ -1434,6 +1434,7 @@ gmp
 gnGameNumber
 good
 good_automove
+group_ptr
 groups_end
 guint
 hModule
@@ -1441,11 +1442,14 @@ h_above_card
 h_card
 hard_thread_num_checked_states_ptr
 has_empty_col
+hash_type
 height
+height_left
 height_right
 help_key
 help_screen_t
 help_screens
+hex_digits
 home_dir
 home_dir_presetrc
 how_much
@@ -1454,6 +1458,7 @@ ht
 ht_soft_threads
 i_card
 in_arg
+in_fh
 in_fh_should_be_closed
 in_item
 in_word_set
@@ -1468,6 +1473,7 @@ init_state_pair
 init_state_ptr
 initial_cards_under_sequences_value
 initial_hash_size
+initial_quota
 initial_readers
 initial_state_locs
 initial_which_irreversible_moves_bitmask
@@ -1476,6 +1482,8 @@ input_s
 input_str
 insert_node
 insert_state
+instance__calc_stats
+instance__check_exceeded_stats
 instance__inspect_new_state
 instance__load_coords_from_fh
 instance__print_coords_to_log
@@ -1489,7 +1497,9 @@ instance_print_reached
 instance_recycle
 instance_run
 instance_run_solver
+instance_run_solver_thread
 instance_struct
+instance_tests_order
 intermediate_input_filename
 internal_move_to_user_move
 into
@@ -1497,7 +1507,11 @@ intptr_t
 is
 is_a_complete_scan
 is_card_dest
+is_col
 is_fcc_new
+is_filled_by_any_card
+is_finished
+is_group
 is_irreversible_move
 is_optimize_scan
 is_reachable
@@ -1629,6 +1643,7 @@ new_dfs_max_depth
 new_entries
 new_factor
 new_fingerprint
+new_flare_stats
 new_flares_choice_string
 new_last_arg
 new_lim
