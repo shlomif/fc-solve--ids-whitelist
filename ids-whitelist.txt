@@ -33,6 +33,7 @@ DBT
 DB_BTREE
 DB_CREATE
 DB_NOTFOUND
+DEBUG_FOO
 DEBUG_VERIFY_SOFT_DFS_STACK
 DECKS_NUM__ARG
 DECLARE_STATE
@@ -545,7 +546,6 @@ allowed_tests
 app_str_struct
 append
 are
-arg1
 arg_argc
 arg_index
 argc0
@@ -567,6 +567,7 @@ avl_destroy
 avl_find
 avl_get_decommissioned_flag
 avl_insert
+avl_node
 avl_set_decommissioned_flag
 avl_t_first
 avl_t_init
@@ -616,6 +617,7 @@ calc_max_sequence_move
 calc_moves_flare
 calc_moves_seq
 calc_num_vacant_slots
+calc_out_fh
 calc_start_end_src_stack
 calc_trace
 calc_variant_suit_mask_and_desired_suit_value
@@ -639,6 +641,7 @@ cards_size
 cards_under_sequences
 cards_under_sequences_factor
 cb
+check
 check_for_exceeded
 check_if_limits_exceeded
 check_if_limits_exceeded__num
@@ -665,6 +668,7 @@ column_inv_idxs
 command
 command_signal_handler
 comparator
+compare_enc_states
 compare_function
 compare_piles
 compare_rating_with_index
@@ -675,6 +679,8 @@ condition_expr
 consumed_states_fh
 consumed_states_fn
 consumed_states_fn_temp
+context_argc
+context_argv
 context_t
 coord
 coord_from_input
@@ -706,6 +712,9 @@ datum
 db_create
 db_open
 db_strerror
+dbm__calc_threads
+dbm__free_threads
+dbm__spawn_threads
 dc_ptr
 deal
 deal_idx
@@ -1305,6 +1314,8 @@ free_resources
 free_states
 free_states_handle_soft_dfs_soft_thread
 free_states_should_delete
+free_thread
+free_thread_cb
 freecell
 freecell_locs
 freecell_preset
@@ -1416,6 +1427,7 @@ get
 get_board_l
 get_flare_move_count
 get_idx_from_env
+get_move_from_parent_to_child
 get_pilenum
 get_possible_moves
 get_seq_h
@@ -1426,6 +1438,7 @@ gettimeofday
 gint
 give_back_block
 glib
+global_delta_stater
 global_display_context
 global_instance_ptr
 global_presetrc
@@ -1434,6 +1447,7 @@ gmp
 gnGameNumber
 good
 good_automove
+got_child
 group_ptr
 groups_end
 guint
@@ -1464,6 +1478,8 @@ in_item
 in_word_set
 increment
 indexes
+init__num_checked_states
+init__num_states_in_collection
 init_card
 init_solver_state
 init_stacks_map
@@ -1471,6 +1487,8 @@ init_state_enc
 init_state_kv_ptr
 init_state_pair
 init_state_ptr
+init_thread
+init_thread_cb
 initial_cards_under_sequences_value
 initial_hash_size
 initial_quota
@@ -1482,7 +1500,6 @@ input_s
 input_str
 insert_node
 insert_state
-instance__calc_stats
 instance__check_exceeded_stats
 instance__inspect_new_state
 instance__load_coords_from_fh
@@ -1513,9 +1530,12 @@ is_filled_by_any_card
 is_finished
 is_group
 is_irreversible_move
+is_min_by_sorting_new
 is_optimize_scan
 is_reachable
+is_reversible
 is_scan_visited
+is_start_group
 is_start_of_flare_solving
 is_state_new
 is_ultimate_iter
@@ -1526,10 +1546,12 @@ it
 it_real_value
 item_opt
 item_placeholder
+items_count
 iter_handler_wrapper
 iters_limit
 judy_array
 junk_move_to_stacks
+key_depth
 key_id
 known_param
 kv_allocator
@@ -1537,16 +1559,20 @@ kv_ptr
 kv_ptr_new_state
 kv_recycle_bin
 label
+last_arg_end
 last_card
 last_dest
 last_elem
 last_item
+last_item_next
 last_line_fh
 last_one
 last_pos_idx
+likely
 lim
 limit_idx
 line_size
+list_of_vacant_items
 load_begin_internal
 loadnil
 local_limit
@@ -1557,12 +1583,15 @@ lowleft
 lowright
 lp_instance
 maj_flt
+mark_and_sweep_old_states
 mark_as_dead_end__proto
 mark_irreversible
 master_to_randomize
 max0
 max_count_next_states
+max_freecell_idx
 max_info_ptr
+max_num_checked_states
 max_num_elems_before_resize
 max_ptr
 max_rank
@@ -1578,6 +1607,7 @@ memmove
 meta_request_new_buffer
 meth
 method
+method_specific
 microsoft_rand__game_num_rand
 microsoft_rand_rand
 microsoft_rand_randp
@@ -1600,6 +1630,8 @@ move_funcs_idxs
 move_funcs_list
 move_num
 move_sequences_analysis_seqs_loop
+move_to_return
+move_to_string
 moves_base64_encoding_buffer_max_len
 moves_count
 moves_end
@@ -1643,7 +1675,6 @@ new_dfs_max_depth
 new_entries
 new_factor
 new_fingerprint
-new_flare_stats
 new_flares_choice_string
 new_last_arg
 new_lim
@@ -1705,7 +1736,7 @@ num_deals
 num_elems
 num_finished_boards
 num_flares
-num_founds
+num_foundations
 num_instances
 num_new_positions_temp
 num_out_derived_states
@@ -1807,6 +1838,7 @@ prune_redundant
 prune_ret
 prune_seahaven
 pruning
+pthread
 pthread_create
 pthread_join
 pthread_rwlock_fcfs_alloc
@@ -1814,6 +1846,7 @@ pthread_rwlock_fcfs_destroy
 pthread_rwlock_fcfs_gain_write
 pthread_rwlock_fcfs_release
 pthread_rwlock_fcfs_t
+pthread_t
 ptr_initial_record
 ptr_new_state_foo
 ptr_next_state
@@ -1857,6 +1890,8 @@ read_int
 read_int_wrapper
 read_next_preset
 read_preset
+read_state_from_file
+read_state_from_file
 readchar
 readers
 readstr
@@ -1972,6 +2007,7 @@ stack_ptr__moves_to_parent
 stacks_allocator
 stacks_judy_array
 stage_id
+start_board_idx
 start_board_ptr
 start_dc
 start_enc_state
@@ -2016,6 +2052,7 @@ strnicmp
 strtod
 strtoul
 suit_bit
+suit_cards
 suit_mask
 suit_positions_by_rank_step
 suit_times_two
