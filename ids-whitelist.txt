@@ -93,6 +93,7 @@ FCS_DBM_USE_RWLOCK
 FCS_DISABLE_SIMPLE_SIMON
 FCS_DISABLE_STATE_VALIDITY_CHECK
 FCS_ENCODED_STATE_COUNT_CHARS
+FCS_EXPLICIT_REFCOUNT
 FCS_FOUNDATIONS_OFFSET
 FCS_FREECELLS_OFFSET
 FCS_GEN_BOARDS_WITH_EXTERNAL_API
@@ -120,6 +121,7 @@ FCS_METHOD_PATSOLVE
 FCS_METHOD_RANDOM_DFS
 FCS_METHOD_SOFT_DFS
 FCS_MOVE_FUNCS_ALIASES_NUM
+FCS_MOVE_FUNCS_NUM
 FCS_MOVE_NUM_CARDS_FLIPPED
 FCS_MOVE_NUM_CARDS_IN_SEQ
 FCS_MOVE_SRC
@@ -273,6 +275,7 @@ FCS_TALON_KLONDIKE
 FCS_TALON_NONE
 FCS_TRACE_MEM
 FCS_USE_COMPACT_MOVE_TOKENS
+FCS_USE_INT128_FOR_VAR_BASE
 FCS_VISITED_ALL_TESTS_DONE
 FCS_VISITED_GENERATED_BY_PRUNING
 FCS_VISITED_IN_OPTIMIZED_PATH
@@ -280,7 +283,16 @@ FCS_VISITED_IN_SOLUTION_PATH
 FCS_WEIGHTING
 FCS_WITHOUT_EXPORTED_RESUME_SOLUTION
 FCS_WITH_CARD_COMPARE_LOOKUP
+FCS__RENDER_STATE
 FCS__SEQS_ARE_BUILT_BY_RANK
+FCS_var_base_int__add
+FCS_var_base_int__addmul_ui
+FCS_var_base_int__get_ui
+FCS_var_base_int__left_shift
+FCS_var_base_int__mod_div
+FCS_var_base_int__mul_ui
+FCS_var_base_int__not_zero
+FCS_var_base_int__set_ui
 FC_SOLVE_BUCKETLIST_NBUCKETS
 FC_SOLVE_JAVASCRIPT_QUERYING
 FC_SOLVE_MAP_CHAR
@@ -513,6 +525,7 @@ __builtin_expect
 __declspec
 __gnu_inline__
 __inline
+__int128
 __int64
 __linux__
 __unused
@@ -537,6 +550,7 @@ after_at_sign
 after_end_of_junk
 after_prefix
 after_pruning_state
+after_quote
 after_scan_delta
 after_start_moves_seq
 alias
@@ -709,6 +723,7 @@ current_hard_thread
 cutime
 dashes_ptr
 dashes_s
+data_byte_offset
 data_len
 datum
 db_create
@@ -808,7 +823,6 @@ dnode_put
 dont_exit_on_sol
 ds_dc_t
 dummy
-dump_pqueue
 duplicate_string_while_adding_a_trailing_newline
 effective_trim_states_in_collection_from
 elem
@@ -866,6 +880,9 @@ fc_solve__calc_positions_by_rank_data
 fc_solve__cmd_line_callback
 fc_solve__freecell_to_char
 fc_solve__hard_thread__compile_prelude
+fc_solve__hll_ms_rand__get_singleton
+fc_solve__hll_ms_rand__init
+fc_solve__hll_ms_rand__mod_rand
 fc_solve__internal__copy_moves
 fc_solve__patsolve_thread_struct
 fc_solve__setup_optimization_thread__helper
@@ -1040,6 +1057,7 @@ fc_solve_release_tests_list
 fc_solve_reset_hard_thread
 fc_solve_reset_soft_thread
 fc_solve_resume_instance
+fc_solve_seq_cards_power_type_t
 fc_solve_seqs_over_cards_lookup
 fc_solve_set_weights
 fc_solve_sfs_atomic_move_card_to_empty_stack
@@ -1200,6 +1218,7 @@ fcs_libavl2_states_tree_destroy
 fcs_libavl2_states_tree_insert
 fcs_libavl2_states_tree_table_t
 fcs_lru_side_t
+fcs_move_func_aliases_mapping_t
 fcs_move_get_foundation
 fcs_move_get_type
 fcs_move_set_dest_freecell
@@ -1265,6 +1284,7 @@ fcs_state_pop_col_card
 fcs_state_validity_ret_t
 fcs_states_google_hash_handle_t
 fcs_states_linked_list_item_struct
+fcs_stats_t
 fcs_super_method_type_t
 fcs_tests_by_depth_array_t
 fcs_tests_by_depth_unit_t
@@ -1422,6 +1442,7 @@ g_tree_destroy
 g_tree_insert
 g_tree_lookup
 g_tree_new
+gamenumber_s
 gconstpointer
 generic_false_seq_index_loop
 generic_populate_seq_points
@@ -1474,6 +1495,7 @@ how_much_proto
 ht
 ht_soft_threads
 i_card
+i_mod
 in_arg
 in_fh
 in_fh_should_be_closed
@@ -1495,6 +1517,7 @@ initial_hash_size
 initial_quota
 initial_readers
 initial_state_locs
+initial_stats
 initial_which_irreversible_moves_bitmask
 inline
 input_s
@@ -1611,6 +1634,7 @@ meta_request_new_buffer
 meth
 method
 method_specific
+microsoft_rand__calc_init_seedx
 microsoft_rand__game_num_rand
 microsoft_rand_rand
 microsoft_rand_randp
@@ -1655,6 +1679,7 @@ mpz_mul_2exp
 mpz_mul_ui
 mpz_set_ui
 mpz_t
+multiplier
 my_brfs_queue
 my_brfs_queue_last_item
 my_card
@@ -1753,6 +1778,7 @@ num_cards_to_move_from_columns
 num_deals
 num_elems
 num_fcpro_moves
+num_file_args_to_skip
 num_finished_boards
 num_flares
 num_foundations
@@ -1930,6 +1956,7 @@ recycle_instance
 redblack
 refcount
 release_starting_state_specific_instance_resources
+rem
 remainder
 remaining
 remaining_quota
@@ -1989,6 +2016,7 @@ sextet_a
 sextet_b
 sextet_c
 sextet_d
+shift
 shift_count
 should_break
 should_delete_ptr
@@ -2002,6 +2030,7 @@ sid
 signal_num
 signed
 simple_alloc_and_parse
+singleton
 size_bitmask
 snprintf
 soft_dfs
@@ -2031,7 +2060,6 @@ st_tests_order
 stack_ptr__moves_to_parent
 stacks_allocator
 stacks_judy_array
-stage_id
 start_board_idx
 start_board_ptr
 start_dc
