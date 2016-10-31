@@ -43,6 +43,8 @@ DEFAULT_MAX_NUM_ELEMENTS_IN_CACHE
 DEFINE_fc_solve_empty_card
 DEPTH_Q_GROW_BY
 DERIVED_STATES_LIST_GROW_BY
+DESTROY_CACHE
+DESTROY_STORE
 DICTCOUNT_T_MAX
 DICT_DEPTH_MAX
 DICT_IMPLEMENTATION
@@ -54,10 +56,6 @@ EPOLL_CTL_ADD
 ERROR
 EXIT_AND_RETURN_0
 EXIT_FAILURE
-FCC_IMPOSSIBLE
-FCC_INTERRUPTED
-FCC_SOLVED
-FCCs_by_depth
 FCS_ASSIGN_STATE_KEY
 FCS_BEFS_SEQS_OVER_RENEGADE_CARDS_EXPONENT
 FCS_BEFS_WEIGHT_CARDS_OUT
@@ -456,6 +454,7 @@ PQ_FIRST_ENTRY
 PQ_LEFT_CHILD_INDEX
 PQ_PARENT_INDEX
 PRELUDE_GROW_BY
+PRE_CACHE_OFFLOAD
 PROCESS_CARD
 PTHREAD_MUTEX_INITIALIZER
 PWord_t
@@ -623,6 +622,7 @@ bytes_per_tree_node
 c1
 c2
 c_bottom
+cache_destroy
 cache_does_key_exist
 cache_populate_from_pre_cache
 calc_child_card_option
@@ -830,7 +830,6 @@ empty_col_idx
 empty_fc_idx
 empty_ret
 empty_stack_col
-enc_state_copy_ptr
 encoding_table
 end_args
 end_board_ptr
@@ -922,6 +921,7 @@ fc_solve_compact_allocator_init_helper
 fc_solve_compact_allocator_recycle
 fc_solve_compare_lru_cache_keys
 fc_solve_compare_pre_cache_keys
+fc_solve_dbm_store_destroy
 fc_solve_dbm_store_does_key_exist
 fc_solve_dbm_store_get_dict
 fc_solve_dbm_store_lookup_parent
@@ -1139,9 +1139,7 @@ fcc_entry_key
 fcc_entry_points_allocator
 fcc_entry_points_lock
 fcc_exit_points_output_lock
-fcc_loop_cleanup
 fcc_meta_alloc
-fcc_status_t
 fcntl
 fcs_DEBUG_STATES_stack_t
 fcs_FCC_start_point_result_t
@@ -1162,6 +1160,9 @@ fcs_columns_google_hash_handle_t
 fcs_compact_alloc_release
 fcs_compare_context_t
 fcs_compile_flares_ret_t
+fcs_dbm__common_init
+fcs_dbm__found_solution
+fcs_dbm_instance_common_elems_t
 fcs_dbm_queue_item_struct
 fcs_dbm_record_decrement_refcount
 fcs_dbm_record_get_parent_ptr
@@ -1184,12 +1185,9 @@ fcs_duplicate_kv_state
 fcs_duplicate_preset
 fcs_duplicate_state
 fcs_duplicate_state_extra
-fcs_fcc_collection_by_depth
 fcs_fcc_moves_list_item_struct
-fcs_fcc_solver_state
 fcs_foreach_st_callback_choice_t
 fcs_freecell_card_suit
-fcs_fully_connected_component_struct
 fcs_get_calc_real_depth
 fcs_get_preset_by_id
 fcs_get_preset_id_by_name
@@ -1463,7 +1461,6 @@ give_back_block
 glib
 global_delta_stater
 global_display_context
-global_instance_ptr
 global_presetrc
 global_tests_order
 gmp
@@ -1504,9 +1501,7 @@ in_word_set
 increment
 indexes
 init_card
-init_solver_state
 init_stacks_map
-init_state_enc
 init_state_kv_ptr
 init_state_pair
 init_state_ptr
@@ -1533,12 +1528,10 @@ instance_check_multiple_keys
 instance_debug_out_state
 instance_free
 instance_free_solution_moves
-instance_print_processed_FCCs
-instance_print_reached
+instance_increment
 instance_print_stats
 instance_recycle
 instance_run
-instance_run_solver
 instance_run_solver_thread
 instance_struct
 instance_tests_order
@@ -1550,7 +1543,6 @@ is
 is_a_complete_scan
 is_card_dest
 is_col
-is_fcc_new
 is_filled_by_any_card
 is_finished
 is_group
@@ -1641,8 +1633,6 @@ microsoft_rand_randp
 microsoft_rand_t
 microsoft_rand_uint_t
 millitm
-min_by_absolute_depth
-min_by_sorting_copy_ptr
 min_card
 min_flt
 min_len
@@ -1651,7 +1641,6 @@ min_states
 misplaced_card
 mod_base64_fcc_fingerprint
 mod_table
-more_start_point_iter
 move_func_num
 move_func_ptr
 move_funcs_idxs
@@ -1735,10 +1724,8 @@ new_top_most_cards
 newnode
 next_arg
 next_board
-next_count_num_processed_landmark
 next_derived_iter
 next_element
-next_fcc
 next_freecell_idx
 next_i
 next_milestone
@@ -1759,9 +1746,7 @@ normalize_iters_quota
 not_King_only
 not_king_only
 nullify_newline
-num_FCCs_processed_for_depth
 num_active_children
-num_additional_moves
 num_back_end_moves
 num_bits
 num_cards_1
@@ -1795,7 +1780,6 @@ num_solutions
 num_src_junk_true_seqs
 num_total_cards_moved
 num_true_seqs_out_ptr
-num_unique_FCCs_for_depth
 num_units
 num_vacant_slots
 num_vacant_slots_plus_1
@@ -1825,7 +1809,6 @@ out_fcc_start_points
 out_is_fcc_new
 out_item
 out_move_funcs_list
-out_moves_seq
 out_new_state_out
 out_num_new_positions
 out_num_new_positions
@@ -1866,17 +1849,22 @@ populate_instance_with_intermediate_input_line
 populate_seq_points
 pos0
 pos_moves_so_far
+pos_proto
 position_size
 pow
 ppid
 pq_rating_t
 pre_cache_does_key_exist
+pre_cache_init
+pre_cache_offload_and_destroy
 pre_cache_offload_and_reset
 pre_cache_ptr
+prelude_idx
 prepare_state_str
 preset_args
 preset_index
 presetrc_pathes
+prev
 prev_rss
 prev_src
 print_help_string
@@ -1884,11 +1872,13 @@ print_msg
 print_ts
 prioritize
 priority
+program_name
 proposed_quota_end
 proto_name
 prune_redundant
 prune_ret
 prune_seahaven
+pruner
 pruning
 pthread
 pthread_create
@@ -1918,6 +1908,8 @@ put
 putchar
 qsort
 queue_id
+queue_solution
+queue_solution_ptr
 quota
 r_minus
 rand_gen
@@ -1933,6 +1925,7 @@ rbdestroy
 rbinit
 rbsearch
 rbtree
+rc_int
 rc_word
 rcs_states_get_state
 read
@@ -1972,8 +1965,11 @@ ret_moves
 ret_state_s
 ret_val
 return_depth
+return_item
 reusable_move_stack
 rollback_ptr
+rotate_left
+rotate_right
 rounded_x
 rss
 rss_delta
@@ -1982,6 +1978,7 @@ run_hard_thread
 running_indirect_stacks_buffer
 running_min_was_assigned
 running_moves
+running_parent
 rwlock_fcfs
 s_e
 s_e_src_t
@@ -2040,8 +2037,6 @@ solution_was_found
 solutions_directory
 solve
 solve_board
-solver_state__free_dcc_depth
-solver_state_free
 solving_soft_thread
 sort_derived_states
 sort_ds_dcs
@@ -2092,7 +2087,6 @@ stdbool
 stddef
 stdin
 stdint
-step
 stimev
 store_t
 strcpy
