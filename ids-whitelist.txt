@@ -15,6 +15,7 @@ CALC_HARD_THREAD_MAX_NUM_CHECKED_STATES__HELPER
 CALC_SEQUENCES_ARE_BUILT_BY
 CALC_VACANCY_VAL
 CALC_num_cards_in_col_threshold
+CALC_num_virtual_vacant_stacks
 CALL
 CARD
 CARD_DEBUG_PRES
@@ -1723,8 +1724,10 @@ mark_and_sweep_old_states
 mark_as_dead_end__proto
 mark_irreversible
 master_to_randomize
+math
 max0
 max_count_next_states
+max_depth_margin
 max_freecell_idx
 max_info_ptr
 max_moves_to_state_len
@@ -1737,6 +1740,7 @@ max_rss_delta_deal
 max_sequence_len
 max_sequence_move_factor
 max_size
+max_solve_depth
 max_stack_depth
 max_var_depth_to_check
 memdup
@@ -1753,8 +1757,12 @@ microsoft_rand_randp
 microsoft_rand_t
 microsoft_rand_uint_t
 millitm
+min_by_sorting
 min_card
+min_card_height
+min_depth_for_scan2
 min_flt
+min_idx
 min_len
 min_num_cards
 min_states
@@ -1767,6 +1775,7 @@ move_func_ptr
 move_funcs_idxs
 move_funcs_list
 move_num
+move_ptr
 move_sequences_analysis_seqs_loop
 move_to_return
 move_to_string
@@ -1777,6 +1786,8 @@ moves_idx
 moves_list_compact_alloc
 moves_processed_add_new_move
 moves_ptr
+moves_to_state_enc
+moves_to_state_len
 mpz_add
 mpz_addmul_ui
 mpz_clear
@@ -1807,6 +1818,7 @@ myslot
 mytype
 myvar
 name_len
+needed_cards
 needed_len
 needle
 negated_depth
@@ -1822,6 +1834,7 @@ new_entries
 new_factor
 new_fingerprint
 new_flares_choice_string
+new_key
 new_last_arg
 new_lim
 new_max_enc_len
@@ -1842,9 +1855,11 @@ new_source_col
 new_state_info
 new_state_kv_ptr
 new_top_most_cards
+new_val
 newnode
 next_arg
 next_board
+next_dc
 next_derived_iter
 next_element
 next_freecell_idx
@@ -1855,6 +1870,7 @@ next_move_ptr
 next_new_top_most_cards
 next_pile_idx
 next_queue_id
+next_soft_thread_id
 next_st_idx
 next_start_points_list
 next_state
@@ -1882,8 +1898,11 @@ num_cards_not_on_parents_weight
 num_cards_out
 num_cards_out_factor
 num_cards_to_move_from_columns
+num_childs
 num_deals
+num_derived_cards
 num_elems
+num_empty_cols
 num_fcpro_moves
 num_file_args_to_skip
 num_finished_boards
@@ -1892,12 +1911,15 @@ num_foundations
 num_hard_threads_finished
 num_instances
 num_items
+num_move_funcs
 num_moves_to_cut_off
 num_new_positions
 num_new_positions_temp
+num_non_reversible_moves_including_prune
 num_out_derived_states
 num_piles
 num_positions_in_clusters
+num_positions_in_queue
 num_so_far
 num_soft_threads_finished
 num_solutions
@@ -1908,6 +1930,7 @@ num_units
 num_vacant_slots
 num_vacant_slots_plus_1
 num_valid_move_funcs
+num_virtual_vacant_stacks
 octet_a
 octet_b
 octet_c
@@ -1919,8 +1942,11 @@ one_card_buffer
 only_recognized
 open
 open_paren
+opt
 optimize
 or
+orig_col
+orig_col_len
 orig_pos_opt
 orig_ptr_state_val
 orig_str
@@ -1945,11 +1971,13 @@ p_quota
 p_scan
 p_scan_copy
 pack_position
+page_filename
 page_idx_for_backup
 param_num
 parent_ptr
 parent_state
 parent_suit
+parent_to_child_pipe
 parents_stack_max_len
 pass_copy
 pass_key
@@ -1985,6 +2013,7 @@ pre_cache_ptr
 prelude_idx
 prepare_state_str
 preset_args
+preset_id
 preset_index
 presetrc_pathes
 prev
@@ -2012,6 +2041,7 @@ pthread_rwlock_fcfs_gain_write
 pthread_rwlock_fcfs_release
 pthread_rwlock_fcfs_t
 pthread_t
+ptr_dest
 ptr_initial_record
 ptr_new_state_foo
 ptr_next_state
@@ -2031,6 +2061,8 @@ put
 putchar
 qsort
 queue_id
+queue_instance
+queue_last_item
 queue_solution
 queue_solution_ptr
 quota
@@ -2105,6 +2137,7 @@ rwlock_fcfs
 s_e
 s_e_src_t
 safe_traverse
+save_item
 save_queue
 saved
 scan1_to
@@ -2262,6 +2295,7 @@ temp_str
 temp_visited
 test_name
 test_ptr
+tests__is_filled_by_any_card
 tests_by_depth_array
 tests_define_accessors_freecell_only
 tests_define_accessors_move_stack
