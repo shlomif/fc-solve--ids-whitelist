@@ -909,6 +909,7 @@ end_soft_dfs_info
 end_soft_thread
 end_stack_item
 end_time
+endif
 entry_
 env_var_presetrc
 epoll
@@ -1911,6 +1912,7 @@ num_foundations
 num_hard_threads_finished
 num_instances
 num_items
+num_left_cards
 num_move_funcs
 num_moves_to_cut_off
 num_new_positions
@@ -2189,6 +2191,7 @@ signal
 signal_num
 signed
 simple_alloc_and_parse
+single_derived_state
 single_flare
 singleton
 size_bitmask
@@ -2198,6 +2201,7 @@ soft_dfs
 soft_thread_clean_soft_dfs
 soft_thread_id
 soft_thread_struct__dont_use_directly
+solution_moves_ptr
 solution_was_found
 solutions_directory
 solve
@@ -2206,6 +2210,7 @@ solving_soft_thread
 sort_derived_states
 sort_ds_dcs
 sorted_idx
+source
 source_col_cards_num
 source_col_idx
 srando
@@ -2216,6 +2221,7 @@ src_cards_ptr
 src_col_i
 src_len
 src_moves_seq
+src_stack
 sscanf
 ssize_t
 st_tests_order
@@ -2291,6 +2297,7 @@ temp_allocator
 temp_card
 temp_freecell
 temp_moves
+temp_stack
 temp_str
 temp_visited
 test_name
@@ -2319,6 +2326,8 @@ timeb
 timeval
 timezone
 to_col
+to_empty_stack
+to_insert
 to_output
 to_prune
 to_release
@@ -2328,7 +2337,9 @@ top_card_proto
 top_opt
 top_rank_for_iter
 total_iterations_limit_per_board_ptr
+total_move_funcs_bitmask
 total_num_boards_to_check
+total_num_finished_boards
 total_num_iters_copy
 total_num_moves
 toupper
@@ -2339,6 +2350,7 @@ trace_solution
 trace_solution_state_locs
 trailing_newline
 transaction
+traversed_states
 tree_new_state
 tree_new_state_key
 trim_trailing_whitespace
@@ -2359,6 +2371,7 @@ uint16_t
 uint8_t
 uintptr_t
 ul
+uncle
 union
 unistd
 unit
@@ -2402,6 +2415,7 @@ verify_soft_dfs_stack
 verify_state_sanity
 vfprintf
 virt_num_cards
+virtual_freecell_len
 visibility
 visited
 visited_iter
@@ -2419,6 +2433,7 @@ was_all_freecells_occupied
 was_card_moved
 was_card_moved_or_dest
 was_consumed
+was_flare_finished
 was_flare_found
 was_init
 was_run_now
@@ -2435,6 +2450,7 @@ with
 word
 wordlist
 worker_func
+worker_t
 worker_thread
 wrap_up_solve
 write
