@@ -101,6 +101,7 @@ FCS_DISABLE_SIMPLE_SIMON
 FCS_DISABLE_STATE_VALIDITY_CHECK
 FCS_ENABLE_SECONDARY_HASH_VALUE
 FCS_ENCODED_STATE_COUNT_CHARS
+FCS_ES_FILLED_BY_NONE
 FCS_EXPLICIT_REFCOUNT
 FCS_FOUNDATIONS_OFFSET
 FCS_FREECELLS_OFFSET
@@ -145,6 +146,8 @@ FCS_MOVE_TYPE_KLONDIKE_TALON_TO_STACK
 FCS_MOVE_TYPE_NULL
 FCS_MOVE_TYPE_SEPARATOR
 FCS_MOVE_TYPE_SEQ_TO_FOUNDATION
+FCS_NO_SHUFFLING
+FCS_NUM_BEFS_WEIGHTS
 FCS_OPT_BEFS_WEIGHTS
 FCS_OPT_CACHE_LIMIT
 FCS_OPT_CALC_REAL_DEPTH
@@ -188,6 +191,7 @@ FCS_OPT_TRIM_MAX_STORED_STATES
 FCS_OPT_UNRECOGNIZED
 FCS_PATSOLVE__WITH_FAIL_REASON
 FCS_PATS__COLOR
+FCS_PATS__FAIL
 FCS_PATS__FAIL_CHECKED_STATES
 FCS_PATS__FAIL_OTHER
 FCS_PATS__INSERT_CODE_ERR
@@ -240,6 +244,7 @@ FCS_RCS_CACHE_STORAGE_KAZ_TREE
 FCS_RUNTIME_CALC_REAL_DEPTH
 FCS_RUNTIME_IN_OPTIMIZATION_THREAD
 FCS_RUNTIME_OPTIMIZE_SOLUTION_PATH
+FCS_RUNTIME_OPT_TESTS_ORDER_WAS_SET
 FCS_RUNTIME_SCANS_SYNERGY
 FCS_RUNTIME_TO_REPARENT_STATES_PROTO
 FCS_RUNTIME_TO_REPARENT_STATES_REAL
@@ -278,6 +283,8 @@ FCS_STATE_VALIDITY__EXTRA_CARD
 FCS_STATE_VALIDITY__MISSING_CARD
 FCS_STATE_VALIDITY__OK
 FCS_STATE_VALIDITY__PREMATURE_END_OF_INPUT
+FCS_STATE__DUP_keyval_pair
+FCS_STATE_collectible_to_kv
 FCS_STATE_keyval_pair_to_collectible
 FCS_STATE_keyval_pair_to_kv
 FCS_SUPER_METHOD_BEFS_BRFS
@@ -304,23 +311,28 @@ FCS_WEIGHTING
 FCS_WITHOUT_EXPORTED_RESUME_SOLUTION
 FCS_WITHOUT_VISITED_ITER
 FCS_WITH_CARD_COMPARE_LOOKUP
+FCS_WITH_CONTEXT_VARIABLE
 FCS__OUTPUT_STATE
 FCS__RENDER_STATE
 FCS__SEQS_ARE_BUILT_BY_RANK
 FCS_var_base_int__add
 FCS_var_base_int__addmul_ui
+FCS_var_base_int__clear
 FCS_var_base_int__get_ui
+FCS_var_base_int__init
 FCS_var_base_int__left_shift
 FCS_var_base_int__mod_div
 FCS_var_base_int__mul_ui
 FCS_var_base_int__not_zero
 FCS_var_base_int__set_ui
 FC_SOLVE_BUCKETLIST_NBUCKETS
+FC_SOLVE_IMPLICIT_PARSABLE_OUTPUT
 FC_SOLVE_JAVASCRIPT_QUERYING
 FC_SOLVE_MAP_CHAR
 FC_SOLVE_PATS__DOWN
 FC_SOLVE_PATS__MYDIR
 FC_SOLVE_PATS__NUM_QUEUES
+FC_SOLVE_PATS__NUM_X_PARAM
 FC_SOLVE_PATS__NUM_Y_PARAM
 FC_SOLVE_PATS__PARAM_PRESET__FreecellBest
 FC_SOLVE_PATS__PARAM_PRESET__FreecellBestA
@@ -367,6 +379,7 @@ FREECELL2MOVE
 FREECELLS_NUM__ARG
 FREECELLS_STACKS_DECKS__ARGS
 FREECELL_SOLVER_PKG_DATA_DIR
+FROM_COL_IS_REVERSIBLE_MOVE
 FccEntryPointList_init
 FccEntryPointNode_compare
 GEN_CARD_MAP
@@ -384,6 +397,7 @@ HAVE_C_INLINE
 HAVE_STRNCASECMP
 HAVE_VASPRINTF
 HMODULE
+HT_LOOP_START
 INDEX
 INFO_STATE_PTR
 INITIAL_DISPLAY_CONTEXT
@@ -421,6 +435,7 @@ LOOK_FOR_TRUE_PARENT_AT_TOP__END
 LOOK_FOR_TRUE_PARENT_AT_TOP__START
 LOOK_FOR_TRUE_PARENT_with_ds_dc__END
 LOOK_FOR_TRUE_PARENT_with_ds_dc__START
+MAKE_GAME_PARAMS
 MAKE_MOVE
 MAP
 MARK_AS_DEAD_END
@@ -446,6 +461,7 @@ MY_HASH_COMPARE_PROTO
 MY_HASH_CONTEXT_VAR
 MY_MARGIN
 NEW_BRFS_QUEUE_ITEM
+NEW_STATE_BY_REF
 NEXT_CACHE_STATE
 NUM_BITS
 NUM_BITS_IN_BYTES
@@ -481,6 +497,7 @@ O_RDWR
 OptionCode
 PARAMETERIZED_FIXED_LIMIT
 PARAMETERIZED_LIMIT
+PASS_DECKS
 PASS_IND_BUF_T
 PATH_MAX
 PATSOLVE_STANDALONE
@@ -527,10 +544,12 @@ STACK_COMPARE
 STACK_DEST_LOOP_END
 STACK_DEST_LOOP_START
 STATE_KEY
+STATE_POS
 STATE_STORAGE_TREE_COMPARE
 STATE_STORAGE_TREE_CONTEXT
 STRUCT_CLEAR_FLAG
 STRUCT_SET_FLAG_TO
+ST_LOOP_START
 ST_LOOP__GET_INDEX
 ST_LOOP__WAS_FINISHED
 SUCCESS
@@ -601,7 +620,9 @@ all_instances_were_suspended
 all_plan_items_finished_so_far
 alloc_instance_and_parse
 allocated_from_list
+allocnode
 allowed_tests
+ancestor
 app_str_struct
 append
 apply_game_params_for_all_instances
@@ -609,6 +630,7 @@ are
 arg_argc
 arg_index
 arg_ptr
+arg_str
 argc0
 argc_ptr
 args_man_wrapper_t
@@ -641,8 +663,10 @@ base64_encode
 base64_encoding_buffer
 base64_encoding_buffer_max_len
 baselevel
+befs
 befs_positions_by_rank
 befs_rate_state
+behavior_flag
 below_c
 bfs_queue
 bfs_queue_last_item
@@ -660,6 +684,7 @@ brfs
 bsearch
 bucket
 bucket_from_pile_lookup
+buckets_list
 buffer_end
 buffer_size
 build_decoding_table
@@ -716,6 +741,7 @@ check_num_states_in_collection
 child_idx
 child_num_true_seqs
 child_seq_index
+child_to_parent_pipe
 clean_soft_dfs
 clear_error
 clear_junk_dest_col
@@ -734,6 +760,7 @@ column_inv_idxs
 command
 command_num
 command_signal_handler
+comp
 comparator
 compare_enc_states
 compare_function
@@ -793,8 +820,10 @@ dc_ptr
 deal
 deal_idx
 deals
+debug_iter_output_context
 debug_iter_output_on
 debug_iter_state_output
+debug_ret
 decks_index
 decoded_data
 decoding_table
@@ -808,6 +837,7 @@ dequeue_position
 derived_end
 derived_stacks_buffer
 derived_state
+derived_state_str_proto
 derived_states
 derived_states_list_struct
 dest_below_card
