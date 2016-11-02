@@ -412,6 +412,8 @@ INSTANCE_UNLIMITED_SEQUENCE_MOVE
 INST_HT0
 INTPTR_MAX
 INT_MAX
+IS_FILLED_BY_KINGS_ONLY
+IS_FILLED_BY_NONE
 IS_IN_FOUNDATIONS
 IS_false_seq_index_loop
 ITEM_ALLOC
@@ -524,6 +526,7 @@ RB_INSERT
 READ_FD
 RECALC_BY_DEPTH_LIMITS
 RECYCLE_BIN_NEXT
+REPLACE_WITH_CACHED
 RET
 Rank
 SEEK_END
@@ -739,6 +742,7 @@ check_if_limits_exceeded
 check_if_limits_exceeded__num
 check_len
 check_num_states_in_collection
+checked_states_step
 child_idx
 child_num_true_seqs
 child_seq_index
@@ -1274,7 +1278,6 @@ fcc_exit_points_out_fn
 fcc_exit_points_out_fn_temp
 fcc_exit_points_output_lock
 fcc_meta_alloc
-fcntl
 fcs_DEBUG_STATES_stack_t
 fcs_FCC_start_point_result_t
 fcs_FCC_start_point_struct
@@ -1856,6 +1859,7 @@ misplaced_card
 mod_base64_fcc_fingerprint
 mod_table
 move_buffer
+move_func_idx
 move_func_num
 move_func_ptr
 move_funcs_idxs
@@ -1955,6 +1959,7 @@ newnode
 next_arg
 next_board
 next_board_num_lock
+next_board_num_ptr
 next_dc
 next_derived_iter
 next_element
@@ -1977,6 +1982,8 @@ nfds
 nicev
 noreturn
 normalize_iters_quota
+normalized_befs_weights
+not
 not_King_only
 not_king_only
 nullify_newline
@@ -2010,9 +2017,11 @@ num_items
 num_left_cards
 num_move_funcs
 num_moves_to_cut_off
+num_moves_to_win
 num_new_positions
 num_new_positions_temp
 num_non_reversible_moves_including_prune
+num_orig_cards
 num_out_derived_states
 num_piles
 num_positions_in_clusters
@@ -2068,9 +2077,12 @@ p_quota
 p_scan
 p_scan_copy
 pack_position
+packed_foundations
 page_filename
 page_idx_for_backup
 param_num
+parent_and_refcount
+parent_card_height
 parent_ptr
 parent_state
 parent_suit
@@ -2079,6 +2091,7 @@ parents_stack_max_len
 pass_copy
 pass_key
 past_end_board
+path
 path_idx
 path_to_output_dir
 pats__init_soft_thread_and_instance
@@ -2112,11 +2125,13 @@ prepare_state_str
 preset_args
 preset_id
 preset_index
+preset_name
 presetrc_pathes
 prev
 prev_rss
 prev_src
 print_help_string
+print_int
 print_msg
 print_ts
 prioritize
@@ -2129,9 +2144,11 @@ prune_ret
 prune_seahaven
 pruner
 pruning
+pseduo_dfs_stack_item_t
 pthread
 pthread_create
 pthread_join
+pthread_mutex_t
 pthread_rwlock_fcfs_alloc
 pthread_rwlock_fcfs_destroy
 pthread_rwlock_fcfs_gain_write
@@ -2227,6 +2244,7 @@ rss_delta
 rss_found
 run_hard_thread
 running_indirect_stacks_buffer
+running_min
 running_min_was_assigned
 running_moves
 running_parent
@@ -2296,6 +2314,7 @@ soft_dfs
 soft_thread_clean_soft_dfs
 soft_thread_id
 soft_thread_struct__dont_use_directly
+solution_fn
 solution_moves_ptr
 solution_was_found
 solutions_directory
@@ -2344,8 +2363,13 @@ start_state_moves
 start_state_moves_count
 start_state_str_proto
 start_time
+stat
 stat_fn
+state_base64
+state_context_value
+state_depth
 state_indirect_stacks_buffer
+state_locs
 state_pair
 state_raw
 state_s_proto
@@ -2353,6 +2377,7 @@ state_string_copy
 state_validity_card
 state_validity_ret
 states_in_cache
+static_error_string
 status1
 status2
 stdarg
@@ -2415,6 +2440,7 @@ the_num_true_seqs
 the_tests_list_ptr
 theme_error
 this_real_depth
+thread_arg_t
 thread_meta_alloc
 time
 timeb
@@ -2445,7 +2471,9 @@ trace_solution
 trace_solution_state_locs
 trailing_newline
 transaction
+trav
 traversed_states
+tree_list
 tree_new_state
 tree_new_state_key
 trim_trailing_whitespace
@@ -2499,7 +2527,9 @@ va_list
 va_start
 val_ptr
 val_ptr_state_val
+val_to_inspect
 valid
+var_AUTO
 variant_is_freecell
 vasprintf
 verify_bintree
@@ -2518,6 +2548,7 @@ void
 void_arg
 void_context
 vsize
+w_card
 w_col_data
 w_col_len
 wait
@@ -2538,6 +2569,7 @@ was_start_key_reachable
 was_total_iterations_limit_per_board_set
 wcmp
 weight
+which_no_use
 win
 windows
 windows_global_presetc
