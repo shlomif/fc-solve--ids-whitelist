@@ -96,16 +96,20 @@ FCS_DBM_RECORD_SHIFT
 FCS_DBM_SINGLE_THREAD
 FCS_DBM_USE_LIBAVL
 FCS_DBM_USE_RWLOCK
+FCS_DBM_VARIANT_2FC_FREECELL
 FCS_DEBONDT_DELTA_STATES
 FCS_DISABLE_SIMPLE_SIMON
 FCS_DISABLE_STATE_VALIDITY_CHECK
 FCS_ENABLE_SECONDARY_HASH_VALUE
 FCS_ENCODED_STATE_COUNT_CHARS
+FCS_ES_FILLED_BY_ANY_CARD
 FCS_ES_FILLED_BY_NONE
 FCS_EXPLICIT_REFCOUNT
 FCS_FOUNDATIONS_OFFSET
 FCS_FREECELLS_OFFSET
 FCS_GEN_BOARDS_WITH_EXTERNAL_API
+FCS_HARD_CODE_CALC_REAL_DEPTH_AS_FALSE
+FCS_HARD_CODE_SCANS_SYNERGY_AS_TRUE
 FCS_IA_PACK_SIZE
 FCS_IMPLICIT_T_RANK
 FCS_INLINED_HASH_DATA_TYPE
@@ -200,6 +204,7 @@ FCS_PATS__INSERT_CODE_FOUND_BETTER
 FCS_PATS__INSERT_CODE_NEW
 FCS_PATS__KING
 FCS_PATS__MAX_NUM_MOVES
+FCS_PATS__NOSOL
 FCS_PATS__SOLVE_LEVEL_GROW_BY
 FCS_PATS__SUIT
 FCS_PATS__TREE_LIST_NUM_BUCKETS
@@ -218,6 +223,7 @@ FCS_PRESET_BELEAGUERED_CASTLE
 FCS_PRESET_CODE_DECKS_EXCEED_MAX
 FCS_PRESET_CODE_FREECELLS_EXCEED_MAX
 FCS_PRESET_CODE_NOT_FOUND
+FCS_PRESET_CODE_OK
 FCS_PRESET_CODE_STACKS_EXCEED_MAX
 FCS_PRESET_CRUEL
 FCS_PRESET_DER_KATZENSCHWANZ
@@ -1303,6 +1309,7 @@ fcs_copy_stack
 fcs_dbm__cache_store__common_t
 fcs_dbm__cache_store__init
 fcs_dbm__common_init
+fcs_dbm__extract_game_variant_from_argv
 fcs_dbm__found_solution
 fcs_dbm_collection_by_depth_t
 fcs_dbm_instance_common_elems_t
@@ -1663,6 +1670,7 @@ hex_digits
 home_dir
 home_dir_presetrc
 horne_prune
+horne_prune__simple
 how_much
 how_much_proto
 ht
@@ -1700,7 +1708,6 @@ initial_quota
 initial_readers
 initial_state_locs
 initial_stats
-initial_which_irreversible_moves_bitmask
 inline
 input_s
 input_str
@@ -2157,6 +2164,7 @@ pthread_rwlock_fcfs_t
 pthread_t
 ptr_dest
 ptr_initial_record
+ptr_local_variant
 ptr_new_state_foo
 ptr_next_state
 ptr_src
@@ -2569,7 +2577,6 @@ was_start_key_reachable
 was_total_iterations_limit_per_board_set
 wcmp
 weight
-which_no_use
 win
 windows
 windows_global_presetc
