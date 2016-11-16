@@ -577,12 +577,14 @@ SUCCESS
 SUIT
 Suit
 TERMINATE_REASON
+THE_MOVE_FUNCS_LIST
 TOTAL_KEYWORDS
 TRAILING_CHAR
 UINT
 ULONG_MAX
 UP_LEVEL
 USAGE
+USER_STATE_SIZE
 USE_EPOLL
 Unknown
 Usage
@@ -646,6 +648,7 @@ allowed_tests
 ancestor
 app_str_struct
 append
+append_char
 apply_game_params_for_all_instances
 are
 arg_argc
@@ -712,6 +715,7 @@ build_decoding_table
 by_depth_max_depth
 by_depth_min_depth
 by_rank_ptr
+bytes_per_pile
 bytes_per_tree_node
 c1
 c2
@@ -734,7 +738,9 @@ calc_start_end_src_stack
 calc_trace
 calc_variant_suit_mask_and_desired_suit_value
 calculate_real_depth
+callback
 callback_choice
+callback_context
 calloc
 came_from
 candidate_card
@@ -760,6 +766,7 @@ check_if_limits_exceeded__num
 check_len
 check_num_states_in_collection
 checked_states_step
+child_card_height
 child_idx
 child_num_true_seqs
 child_seq_index
@@ -855,6 +862,7 @@ depth_factor
 depth_num
 depth_ptr
 depth_queue
+dequeue__minpos
 dequeue_position
 derived_end
 derived_stacks_buffer
@@ -865,6 +873,8 @@ derived_states
 derived_states_list_struct
 derived_states_random_indexes_max_size
 dest_below_card
+dest_col_i
+dest_fc_idx
 dest_found
 dest_info
 dest_num_cards
@@ -907,6 +917,7 @@ dict_nodecount
 dict_parent
 dict_prev
 dict_process
+dict_recycle_bin
 dict_ret_key_t
 dict_right
 dict_set_allocator
@@ -915,6 +926,7 @@ dict_strict_lower_bound
 dict_strict_upper_bound
 dict_upper_bound
 dict_verify
+dictnil
 dictptr
 diff
 dir
@@ -942,6 +954,7 @@ ds_dc_t
 ds_dcs
 dummy
 duplicate_string_while_adding_a_trailing_newline
+dynamic_state
 effective_max_num_checked_states
 effective_max_num_states_in_collection
 effective_trim_states_in_collection_from
@@ -952,8 +965,10 @@ empty_ret
 empty_stack_col
 empty_two_cols_from_new_state
 empty_two_cols_ret_t
+enc
 encoded_data
 encoding_table
+end
 end_args
 end_board_idx
 end_board_ptr
@@ -962,6 +977,7 @@ end_game_idx
 end_hard_thread
 end_num
 end_of_arg_loop
+end_of_child_seq
 end_of_hard_threads
 end_of_hard_threads_loop
 end_of_junk
@@ -995,11 +1011,15 @@ existing_state_raw
 exit_code
 exit_code_t
 exported
+extra_move
+extracted_item
 fail_reason
 false
+false_seq_idx
 false_seq_index_limit
 false_seq_index_loop
 fatalerr
+fc_locs
 fc_pro_get_board
 fc_solve_PQueueFree
 fc_solve__assign_dest_stack_and_col_ptr
@@ -1105,6 +1125,7 @@ fc_solve_hash_insert
 fc_solve_hash_rehash
 fc_solve_hash_symlink_item_struct
 fc_solve_hash_symlink_t
+fc_solve_hash_t
 fc_solve_hash_value_t
 fc_solve_increase_dfs_max_depth
 fc_solve_init_instance
@@ -1117,6 +1138,7 @@ fc_solve_instance__recycle_hard_thread
 fc_solve_instance_get_first_soft_thread
 fc_solve_instance_struct
 fc_solve_is_pqueue_empty
+fc_solve_kaz_tree_create
 fc_solve_kaz_tree_delete
 fc_solve_kaz_tree_delete_by_value
 fc_solve_kaz_tree_delete_free
@@ -1295,6 +1317,7 @@ fcc_exit_points_out_fn
 fcc_exit_points_out_fn_temp
 fcc_exit_points_output_lock
 fcc_meta_alloc
+fcc_start_points
 fcs_DEBUG_STATES_stack_t
 fcs_FCC_start_point_result_t
 fcs_FCC_start_point_struct
@@ -1308,6 +1331,7 @@ fcs__should_state_be_pruned
 fcs_by_depth_tests_order_array_t
 fcs_by_depth_tests_order_t
 fcs_cache_key_info_struct
+fcs_card2char
 fcs_char2card
 fcs_col_get_rank
 fcs_col_is_king
@@ -1467,6 +1491,7 @@ fcs_tests_group_type_t
 fcs_tests_list_of_lists
 fcs_tests_list_t
 fcs_tests_order_group_t
+fcs_user_state_str_t
 fcs_var_base_reader_t
 fcs_var_base_writer_t
 fd
@@ -1514,6 +1539,7 @@ foundation_rank
 foundations
 fputc
 fr
+fread
 free_instance_hard_thread_callback
 free_nodes
 free_position_non_recursive
@@ -1696,7 +1722,6 @@ i_mult
 if
 in_arg
 in_fh
-in_fh_should_be_closed
 in_item
 in_word_set
 increment
@@ -2223,6 +2248,7 @@ read_int
 read_int_wrapper
 read_next_preset
 read_preset
+read_state
 read_state_from_file
 readchar
 readers
