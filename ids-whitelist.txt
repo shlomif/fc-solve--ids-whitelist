@@ -310,6 +310,7 @@ FCS_TALON_NONE
 FCS_TIME_GET_SEC
 FCS_TIME_GET_USEC
 FCS_TRACE_MEM
+FCS_T_FMT
 FCS_USE_COMPACT_MOVE_TOKENS
 FCS_USE_INT128_FOR_VAR_BASE
 FCS_VISITED_ALL_TESTS_DONE
@@ -405,6 +406,7 @@ GetModuleFileName
 GetModuleHandle
 HANDLE_EOS
 HARD_CODED_UNUSED
+HAVE_GETLINE
 HAVE_STRNCASECMP
 HAVE_VASPRINTF
 HMODULE
@@ -573,6 +575,8 @@ Suit
 TERMINATE_REASON
 THE_MOVE_FUNCS_LIST
 TRAILING_CHAR
+TRY_P
+TRY_PARAM
 UINT
 ULONG_MAX
 UP_LEVEL
@@ -838,6 +842,7 @@ depth_queue
 dequeue__minpos
 dequeue_position
 derived_end
+derived_lists
 derived_stacks_buffer
 derived_state
 derived_state_s
@@ -1188,7 +1193,10 @@ fc_solve_pq_pop
 fc_solve_pq_push
 fc_solve_preset_ret_code_t
 fc_solve_print_finished
+fc_solve_print_intractable
+fc_solve_print_reached
 fc_solve_print_started_at
+fc_solve_print_unsolved
 fc_solve_rand_get_random_number
 fc_solve_rand_init
 fc_solve_rand_rand15
@@ -1284,6 +1292,7 @@ fc_solve_var_base_writer_init
 fc_solve_var_base_writer_release
 fc_solve_var_base_writer_start
 fc_solve_var_base_writer_write
+fcc_brfs_add_key_to_tree
 fcc_brfs_kaz_tree_create
 fcc_entry_key
 fcc_entry_points
@@ -1323,6 +1332,7 @@ fcs_condvar_broadcast
 fcs_condvar_destroy
 fcs_condvar_init
 fcs_condvar_signal
+fcs_condvar_t
 fcs_copy_stack
 fcs_dbm__cache_store__common_t
 fcs_dbm__cache_store__init
@@ -1331,6 +1341,7 @@ fcs_dbm__extract_common_from_argv
 fcs_dbm__found_solution
 fcs_dbm_collection_by_depth_t
 fcs_dbm_common_input_init
+fcs_dbm_common_input_t
 fcs_dbm_instance_common_elems_t
 fcs_dbm_queue_item_struct
 fcs_dbm_record_decrement_refcount
@@ -1391,6 +1402,7 @@ fcs_libavl2_states_tree_create
 fcs_libavl2_states_tree_destroy
 fcs_libavl2_states_tree_insert
 fcs_libavl2_states_tree_table_t
+fcs_lock_init
 fcs_locs_t
 fcs_lru_side_t
 fcs_move_func_aliases_mapping_t
@@ -1410,6 +1422,7 @@ fcs_move_stack_params_push
 fcs_move_stack_push
 fcs_move_stack_reset
 fcs_move_stack_static_destroy
+fcs_moves_processed_t
 fcs_offloading_queue__destroy
 fcs_offloading_queue__extract
 fcs_offloading_queue__insert
@@ -1426,6 +1439,7 @@ fcs_offloading_queue_page__read_next_from_disk
 fcs_offloading_queue_page__recycle
 fcs_offloading_queue_page__start_after
 fcs_pats__block_struct
+fcs_pats__block_t
 fcs_pats__bucket_list_struct
 fcs_pats__bucket_list_t
 fcs_pats__insert_code_t
@@ -1444,8 +1458,10 @@ fcs_pdfs_cache_insert
 fcs_pdfs_cache_key_info_t
 fcs_pdfs_key_info_struct
 fcs_pdfs_key_t
+fcs_portable_time_t
 fcs_pq_rating
 fcs_pre_cache_key_val_pair_struct
+fcs_pre_cache_key_val_pair_t
 fcs_prelude_item_t
 fcs_preset_name_t
 fcs_preset_names
@@ -1464,10 +1480,12 @@ fcs_state_foundation_t
 fcs_state_ia_alloc_into_var
 fcs_state_keyval_pair_struct
 fcs_state_pop_col_card
+fcs_state_pop_col_top
 fcs_state_string_t
 fcs_state_validity_ret_t
 fcs_states_google_hash_handle_t
 fcs_states_linked_list_item_struct
+fcs_states_linked_list_item_t
 fcs_stats_t
 fcs_super_method_type_t
 fcs_tests_by_depth_array_t
@@ -1476,6 +1494,7 @@ fcs_tests_group_type_t
 fcs_tests_list_of_lists
 fcs_tests_list_t
 fcs_tests_order_group_t
+fcs_trace
 fcs_user_state_str_t
 fcs_var_base_reader_t
 fcs_var_base_writer_t
@@ -1590,6 +1609,7 @@ freecell_solver_user_set_a_star_weight
 freecell_solver_user_set_cache_limit
 freecell_solver_user_set_calc_real_depth
 freecell_solver_user_set_depth_tests_order
+freecell_solver_user_set_empty_stacks_filled_by
 freecell_solver_user_set_flare_name
 freecell_solver_user_set_flares_choice
 freecell_solver_user_set_flares_iters_factor
@@ -1656,6 +1676,7 @@ get_pilenum
 get_possible_moves
 get_seq_h
 get_top_rank_for_iter
+getenv
 getline
 getpid
 gettimeofday
@@ -1664,6 +1685,7 @@ give_back_block
 glib
 global_delta_stater
 global_display_context
+global_lock
 global_presetrc
 global_tests_order
 gmp
@@ -1699,11 +1721,14 @@ how_much_proto
 ht
 ht__max_num_checked_states
 ht__num_checked_states
+ht_idx
 ht_soft_threads
 i_card
 i_col
+i_col_len
 i_mod
 i_mult
+ident
 if
 in_arg
 in_fh
@@ -1726,6 +1751,7 @@ initial_cond_constant
 initial_derived_states_num_states
 initial_hash_size
 initial_mutex_constant
+initial_non_canonized_state
 initial_quota
 initial_readers
 initial_state_locs
@@ -1749,6 +1775,7 @@ instance_free
 instance_free_solution_moves
 instance_increment
 instance_is_ready
+instance_num_checked_states_ptr
 instance_print_stats
 instance_recycle
 instance_run
@@ -1787,6 +1814,7 @@ is_win
 isdigit
 it
 it_real_value
+item_idx
 item_opt
 item_placeholder
 item_start
@@ -1798,6 +1826,7 @@ junk_move_to_stacks
 key_depth
 key_id
 key_raw
+key_to_add
 known_param
 kv_allocator
 kv_calc_depth
@@ -1835,6 +1864,7 @@ lp_instance
 main_thread_item_t
 main_thread_item_t
 maj_flt
+malloc
 mark_and_sweep_old_states
 mark_as_dead_end__proto
 mark_irreversible
@@ -1846,7 +1876,9 @@ max_count_next_states
 max_depth_margin
 max_freecell_idx
 max_info_ptr
+max_iters
 max_moves_to_state_len
+max_num_cards
 max_num_checked_states
 max_num_elems_before_resize
 max_ptr
@@ -1887,6 +1919,7 @@ min_states_iter
 misplaced_card
 mod_base64_fcc_fingerprint
 mod_table
+monitor
 move_buffer
 move_func_idx
 move_func_num
@@ -1904,6 +1937,7 @@ moves_base64_encoding_buffer_max_len
 moves_count
 moves_end
 moves_idx
+moves_iter
 moves_list_compact_alloc
 moves_processed_add_new_move
 moves_ptr
@@ -1979,6 +2013,7 @@ new_ptr_state
 new_size
 new_size_bitmask
 new_source_col
+new_start_point
 new_state_info
 new_state_kv_ptr
 new_state_val
@@ -1989,11 +2024,15 @@ next_arg
 next_board
 next_board_num_lock
 next_board_num_ptr
+next_card
+next_char
+next_char
 next_dc
 next_derived_iter
 next_element
 next_freecell_idx
 next_i
+next_item
 next_milestone
 next_move_idx
 next_move_ptr
@@ -2158,7 +2197,9 @@ preset_index
 preset_name
 presetrc_pathes
 prev
+prev_item
 prev_rss
+prev_size
 prev_src
 print_help_string
 print_int
@@ -2263,6 +2304,7 @@ readchar
 readers
 readstr
 readunsigned
+real_arg
 realloc
 record
 record_on_stack
@@ -2508,6 +2550,7 @@ to_output
 to_prune
 to_release
 to_reparent_states
+tokens
 top_card_idx
 top_card_proto
 top_opt
