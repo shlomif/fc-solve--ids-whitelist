@@ -45,7 +45,6 @@ DECKS_NUM__ARG
 DECLARE_STATE
 DECLARE_TEMP_STACK
 DECODE
-DEFAULT_MAX_NUM_ELEMENTS_IN_CACHE
 DEFINE_fc_solve_empty_card
 DEPTH_Q_GROW_BY
 DERIVED_STATES_LIST_GROW_BY
@@ -397,7 +396,6 @@ FccEntryPointNode_compare
 GEN_CARD_MAP
 GET_CARD
 GET_DEPTH
-GET_READ_FD
 GET_SUIT_BIT
 GHashTable
 GROW_BY
@@ -441,6 +439,7 @@ JLI
 Judy
 KAZLIB_OBSOLESCENT_DEBUG
 KAZLIB_OPAQUE_DEBUG
+KEY_PTR
 King_only
 LOCAL_DECKS_NUM
 LOCAL_VARIANT
@@ -700,7 +699,11 @@ c_bottom
 cache_destroy
 cache_does_key_exist
 cache_init
+cache_insert
 cache_populate_from_pre_cache
+cache_ret
+cache_store__has_key
+cache_store__insert_key
 calc_child_card_option
 calc_depth
 calc_empty_col_idx
@@ -761,8 +764,11 @@ cmin_flt
 col_enc
 col_idx_val
 col_len_minus_1
+colls_by_depth
 cols
+column
 column_inv_idxs
+columns
 command
 command_num
 command_signal_handler
@@ -1056,6 +1062,7 @@ fc_solve_dbm_store_destroy
 fc_solve_dbm_store_does_key_exist
 fc_solve_dbm_store_get_dict
 fc_solve_dbm_store_init
+fc_solve_dbm_store_insert_key_value
 fc_solve_dbm_store_lookup_parent
 fc_solve_dbm_store_offload_pre_cache
 fc_solve_debondt_delta_stater__fill_column_with_descendent_cards
@@ -1069,6 +1076,7 @@ fc_solve_debondt_delta_stater_init
 fc_solve_debondt_delta_stater_release
 fc_solve_debondt_delta_stater_set_derived
 fc_solve_default_befs_weights
+fc_solve_delta__promote_empty_cols
 fc_solve_delta_stater_decode
 fc_solve_delta_stater_decode_into_state_proto
 fc_solve_delta_stater_encode_composite
@@ -1468,13 +1476,14 @@ fcs_preset_names
 fcs_presets
 fcs_pseudo_dfs_lru_cache_t
 fcs_push_1card_seq
+fcs_queue_stats_init
+fcs_queue_stats_t
 fcs_rand_t
 fcs_st_instance
 fcs_stack_compare
 fcs_stack_compare_for_comparison_with_context
 fcs_standalone_state_ptrs_t
 fcs_state_extra_info_struct
-fcs_state_extra_info_t
 fcs_state_extra_info_t
 fcs_state_foundation_t
 fcs_state_ia_alloc_into_var
@@ -1862,7 +1871,6 @@ lowleft
 lowright
 lp_instance
 main_thread_item_t
-main_thread_item_t
 maj_flt
 malloc
 mark_and_sweep_old_states
@@ -1939,6 +1947,7 @@ moves_end
 moves_idx
 moves_iter
 moves_list_compact_alloc
+moves_list_of_lists
 moves_processed_add_new_move
 moves_ptr
 moves_to_state_enc
@@ -2026,7 +2035,6 @@ next_board_num_lock
 next_board_num_ptr
 next_card
 next_char
-next_char
 next_dc
 next_derived_iter
 next_element
@@ -2048,6 +2056,7 @@ nextcolor
 nextparent
 nfds
 nicev
+non_orig_idx
 noreturn
 normalize_iters_quota
 normalized_befs_weights
@@ -2075,14 +2084,17 @@ num_derived_cards
 num_derived_states
 num_elems
 num_empty_cols
+num_extracted
 num_fcpro_moves
 num_file_args_to_skip
 num_finished_boards
 num_flares
 num_foundations
 num_hard_threads_finished
+num_inserted
 num_instances
 num_items
+num_items_in_queue
 num_left_cards
 num_move_funcs
 num_moves_to_cut_off
@@ -2183,12 +2195,15 @@ pos_proto
 position_size
 pow
 ppid
+pq_element_t
 pq_rating_t
 pre_cache_does_key_exist
 pre_cache_init
+pre_cache_insert
 pre_cache_offload_and_destroy
 pre_cache_offload_and_reset
 pre_cache_ptr
+prelude_as_string
 prelude_idx
 prepare_state_str
 preset_args
@@ -2201,6 +2216,8 @@ prev_item
 prev_rss
 prev_size
 prev_src
+pri_queue_t
+print_help
 print_help_string
 print_int
 print_msg
@@ -2227,7 +2244,9 @@ pthread_cond_wait
 pthread_create
 pthread_join
 pthread_mutex_destroy
+pthread_mutex_lock
 pthread_mutex_t
+pthread_mutex_unlock
 pthread_rwlock_fcfs_alloc
 pthread_rwlock_fcfs_destroy
 pthread_rwlock_fcfs_gain_write
@@ -2251,7 +2270,11 @@ ptr_trace_num
 push_args_last_arg
 push_next_arg_flag
 put
+put_cards_in_col_idx
 putchar
+q_stats_extract
+q_stats_insert
+q_stats_is_empty
 qsort
 queue_id
 queue_instance
@@ -2259,6 +2282,7 @@ queue_last_item
 queue_solution
 queue_solution_ptr
 quota
+quota_end
 r_minus
 rand_gen
 rand_index_ptr
@@ -2290,6 +2314,7 @@ rbsearch
 rbtree
 rc_int
 rc_word
+rcs_states_cache
 rcs_states_get_state
 read
 read_fd
@@ -2367,6 +2392,7 @@ select
 select_ret
 select_signal_handler
 seq_move
+seq_points
 seq_start
 seqs_build_by
 seqs_over_renegade_cards
@@ -2378,6 +2404,7 @@ set_debug_iter_output_func_to_val
 set_iter_handler
 set_next_prelude_item
 set_next_soft_thread
+set_param
 set_scan_visited
 sextet_a
 sextet_b
@@ -2429,6 +2456,7 @@ src_card_height
 src_cards_num
 src_cards_ptr
 src_col_i
+src_col_idx
 src_len
 src_moves_seq
 src_stack
@@ -2575,6 +2603,7 @@ tree_list
 tree_new_state
 tree_new_state_key
 trim_trailing_whitespace
+triple
 true
 try_argv_param
 try_str_prefix
@@ -2667,11 +2696,14 @@ was_start_key_reachable
 was_total_iterations_limit_per_board_set
 wcmp
 weight
+weights
 win
 windows
+windows_exe_dir
 windows_global_presetc
 with
 word
+worker
 worker_func
 worker_t
 worker_thread
