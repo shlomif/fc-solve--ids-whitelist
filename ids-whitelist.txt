@@ -14,6 +14,7 @@ BUMP_NUM_CHECKED_STATES__HT
 CALC_FOUNDATION_TO_PUT_CARD_ON
 CALC_HARD_THREAD_MAX_NUM_CHECKED_STATES
 CALC_HARD_THREAD_MAX_NUM_CHECKED_STATES__HELPER
+CALC_POSITIONS_BY_RANK
 CALC_SEQUENCES_ARE_BUILT_BY
 CALC_VACANCY_VAL
 CALC_num_cards_in_col_threshold
@@ -42,6 +43,7 @@ DB_NOTFOUND
 DEBUG_FOO
 DEBUG_VERIFY_SOFT_DFS_STACK
 DECKS_NUM__ARG
+DECLARE_STACKS
 DECLARE_STATE
 DECLARE_TEMP_STACK
 DECODE
@@ -109,10 +111,13 @@ FCS_EXPLICIT_REFCOUNT
 FCS_FOUNDATIONS_OFFSET
 FCS_FREECELLS_OFFSET
 FCS_GEN_BOARDS_WITH_EXTERNAL_API
+FCS_GET_TIME
 FCS_HARD_CODE_CALC_REAL_DEPTH_AS_FALSE
+FCS_HARD_CODE_REPARENT_STATES_AS_FALSE
 FCS_HARD_CODE_SCANS_SYNERGY_AS_TRUE
 FCS_IA_PACK_SIZE
 FCS_IMPLICIT_T_RANK
+FCS_INLINED_HASH_COMPARISON
 FCS_INLINED_HASH_DATA_TYPE
 FCS_INLINED_HASH__COLUMNS
 FCS_INLINED_HASH__STATES
@@ -121,6 +126,7 @@ FCS_KAZ_TREE_USE_RECORD_DICT_KEY
 FCS_LIBAVL_STORE_WHOLE_KEYS
 FCS_LL6_FMT
 FCS_LL9_FMT
+FCS_LL_FMT
 FCS_LRU_KEY_IS_STATE
 FCS_MAX_FLARE_NAME_LEN
 FCS_MAX_IDENT_LEN
@@ -145,6 +151,7 @@ FCS_MOVE_TYPE
 FCS_MOVE_TYPE_CANONIZE
 FCS_MOVE_TYPE_DEAL_GYPSY_TALON
 FCS_MOVE_TYPE_FLIP_CARD
+FCS_MOVE_TYPE_FREECELL_TO_FOUNDATION
 FCS_MOVE_TYPE_FREECELL_TO_FREECELL
 FCS_MOVE_TYPE_KLONDIKE_FLIP_TALON
 FCS_MOVE_TYPE_KLONDIKE_REDEAL_TALON
@@ -154,6 +161,7 @@ FCS_MOVE_TYPE_SEPARATOR
 FCS_MOVE_TYPE_SEQ_TO_FOUNDATION
 FCS_NO_SHUFFLING
 FCS_NUM_BEFS_WEIGHTS
+FCS_NUM_SUITS
 FCS_OPT_BEFS_WEIGHTS
 FCS_OPT_CACHE_LIMIT
 FCS_OPT_CALC_REAL_DEPTH
@@ -244,6 +252,7 @@ FCS_PROTO_CARD_SUIT_POSITIONS_BY_RANK_INITIAL_OFFSET
 FCS_PROTO_CARD_SUIT_POSITIONS_BY_RANK_STEP
 FCS_RAND
 FCS_RANK_KING
+FCS_RCS_CACHE_STORAGE_JUDY
 FCS_RCS_CACHE_STORAGE_KAZ_TREE
 FCS_RUNTIME_CALC_REAL_DEPTH
 FCS_RUNTIME_IN_OPTIMIZATION_THREAD
@@ -252,6 +261,7 @@ FCS_RUNTIME_OPT_TESTS_ORDER_WAS_SET
 FCS_RUNTIME_SCANS_SYNERGY
 FCS_RUNTIME_TO_REPARENT_STATES_PROTO
 FCS_RUNTIME_TO_REPARENT_STATES_REAL
+FCS_SCANS_the_state
 FCS_SEQS_OVER_RENEGADE_POWER
 FCS_SEQ_BUILT_BY_RANK
 FCS_SOFT_THREAD_INITIALIZED
@@ -281,6 +291,7 @@ FCS_STATE_STORAGE_DB_FILE
 FCS_STATE_STORAGE_GLIB_HASH
 FCS_STATE_STORAGE_GLIB_TREE
 FCS_STATE_STORAGE_GOOGLE_DENSE_HASH
+FCS_STATE_STORAGE_INTERNAL_HASH
 FCS_STATE_STORAGE_JUDY
 FCS_STATE_STORAGE_KAZ_TREE
 FCS_STATE_STORAGE_LIBAVL2_TREE
@@ -294,9 +305,11 @@ FCS_STATE__DUP_keyval_pair
 FCS_STATE_collectible_to_kv
 FCS_STATE_keyval_pair_to_collectible
 FCS_STATE_keyval_pair_to_kv
+FCS_STATE_kv_to_collectible
 FCS_SUPER_METHOD_BEFS_BRFS
 FCS_SUPER_METHOD_DFS
 FCS_SUPER_METHOD_PATSOLVE
+FCS_S_ACCESSOR
 FCS_S_DEPTH
 FCS_S_MOVES_TO_PARENT
 FCS_S_NEXT
@@ -386,6 +399,7 @@ FOUNDATION_BASE
 FPRINTF_TIME
 FREECELL
 FREECELL2MOVE
+FREECELLS_AND_STACKS_ARGS
 FREECELLS_NUM__ARG
 FREECELLS_STACKS_DECKS__ARGS
 FREECELL_SOLVER_PKG_DATA_DIR
@@ -416,6 +430,7 @@ INITIAL_DISPLAY_CONTEXT
 INIT_BINARY_OUTPUT
 INSTANCES_LOOP_END
 INSTANCES_LOOP_START
+INSTANCE_EMPTY_STACKS_FILL
 INSTANCE_GAME_FLAGS
 INSTANCE_ITEM_FLARES_LOOP_END
 INSTANCE_ITEM_FLARES_LOOP_START
@@ -460,6 +475,7 @@ MAX_ERROR_STRING_LEN
 MAX_EVENTS
 MAX_FCC_DEPTH
 MAX_ITERS_TERMINATE
+MAX_NUM_DECKS
 MAX_NUM_INITIAL_CARDS_IN_A_STACK
 MAX_NUM_SCANS
 MAX_PATH
@@ -492,7 +508,9 @@ NUM_PRESETS
 NUM_PRIORITIZE_PILES
 NUM_THREADS
 NUM__BAKERS_DOZEN__OPTS
+Neither
 OLD_LIST_DATA
+OLD_LIST_NEXT
 ON_STATE_NEW
 OPT_DONT_CARE
 OPT_FREECELL
@@ -551,6 +569,7 @@ SIMPS_define_accessors
 SIMPS_define_vacant_stacks_accessors
 SIZEOF_VOID_P
 SIZE_INT
+SMALLOC1
 SOFT_DFS_DEPTH_GROW_BY
 SOLUTION_FOUND_TERMINATE
 SSIZE_MAX
@@ -559,12 +578,15 @@ STACKS_NUM__ARG
 STACK_COMPARE
 STACK_DEST_LOOP_END
 STACK_DEST_LOOP_START
+STACK_SOURCE_LOOP_END
+STACK_SOURCE_LOOP_START
 STATE_KEY
 STATE_POS
 STATE_STORAGE_TREE_COMPARE
 STATE_STORAGE_TREE_CONTEXT
 STRUCT_CLEAR_FLAG
 STRUCT_SET_FLAG_TO
+STRUCT_TURN_ON_FLAG
 ST_LOOP_START
 ST_LOOP__GET_INDEX
 ST_LOOP__WAS_FINISHED
@@ -587,6 +609,7 @@ Usage
 VALUE
 VERIFY_DERIVED_STATE
 VERIFY_PTR_STATE_AND_DERIVED_TRACE0
+VERIFY_PTR_STATE_TRACE0
 VERIFY_SOFT_DFS_STACK
 VERIFY_STATE_SANITY
 VERSION
@@ -663,6 +686,7 @@ base64_encode
 base64_encoding_buffer
 base64_encoding_buffer_max_len
 baselevel
+batch_size_t
 befs
 befs_positions_by_rank
 befs_rate_state
@@ -727,6 +751,7 @@ candidate_card
 candidate_rank
 canonize_move
 card_char
+card_counts
 card_map_3_10
 card_map_3_T
 card_str
@@ -767,6 +792,7 @@ col_len_minus_1
 colls_by_depth
 cols
 column
+column_idxs
 column_inv_idxs
 columns
 command
@@ -808,6 +834,8 @@ count_start_state_moves
 count_to_add
 create_plan_item
 cstime
+ctype
+curr_by_depth_unit
 curr_solve_depth
 curr_solve_dir
 curr_solve_pos
@@ -816,6 +844,7 @@ current_hard_thread
 current_iterations_limit
 current_plan_item
 current_plan_item_idx
+current_size
 cutime
 dashes_ptr
 dashes_s
@@ -892,6 +921,7 @@ dict_left
 dict_load_begin
 dict_load_end
 dict_load_next
+dict_load_t
 dict_lower_bound
 dict_maxcount
 dict_merge
@@ -997,6 +1027,8 @@ exit_code_t
 exported
 extra_move
 extracted_item
+f_idx
+f_idx
 fail_reason
 false
 false_seq_idx
@@ -1132,6 +1164,7 @@ fc_solve_kaz_tree_first
 fc_solve_kaz_tree_free_nodes
 fc_solve_kaz_tree_insert
 fc_solve_kaz_tree_lookup
+fc_solve_kaz_tree_lookup_value
 fc_solve_kaz_tree_next
 fc_solve_lookup_state_key_from_val
 fc_solve_main__main
@@ -1254,6 +1287,7 @@ fc_solve_soft_thread_init_befs_or_bfs
 fc_solve_soft_thread_init_soft_dfs
 fc_solve_soft_thread_struct
 fc_solve_soft_thread_update_initial_cards_val
+fc_solve_solve_for_state_move_func_t
 fc_solve_st_free_pq
 fc_solve_stack_compare_for_comparison
 fc_solve_start_instance_process_with_board
@@ -1312,7 +1346,6 @@ fcc_exit_points_out_fn_temp
 fcc_exit_points_output_lock
 fcc_meta_alloc
 fcc_start_points
-fcs_DEBUG_STATES_stack_t
 fcs_FCC_start_point_result_t
 fcs_FCC_start_point_struct
 fcs_FCC_start_point_t
@@ -1326,6 +1359,8 @@ fcs_by_depth_tests_order_array_t
 fcs_by_depth_tests_order_t
 fcs_cache_key_info_struct
 fcs_card2char
+fcs_card_is_empty
+fcs_card_is_empty
 fcs_char2card
 fcs_col_get_rank
 fcs_col_is_king
@@ -1375,8 +1410,10 @@ fcs_duplicate_preset
 fcs_duplicate_state
 fcs_duplicate_state_extra
 fcs_fcc_moves_list_item_struct
+fcs_fcc_moves_seq_allocator_t
 fcs_foreach_st_callback_choice_t
 fcs_freecell_card_suit
+fcs_freecell_is_empty
 fcs_game_type_params_t
 fcs_get_calc_real_depth
 fcs_get_preset_by_id
@@ -1410,12 +1447,15 @@ fcs_libavl2_states_tree_create
 fcs_libavl2_states_tree_destroy
 fcs_libavl2_states_tree_insert
 fcs_libavl2_states_tree_table_t
+fcs_lock_destroy
 fcs_lock_init
 fcs_locs_t
 fcs_lru_side_t
 fcs_move_func_aliases_mapping_t
 fcs_move_get_dest_freecell
 fcs_move_get_foundation
+fcs_move_get_num_cards_in_seq
+fcs_move_get_src_freecell
 fcs_move_get_type
 fcs_move_set_dest_freecell
 fcs_move_set_dest_stack
@@ -1431,8 +1471,10 @@ fcs_move_stack_push
 fcs_move_stack_reset
 fcs_move_stack_static_destroy
 fcs_moves_processed_t
+fcs_moves_sequence_t
 fcs_offloading_queue__destroy
 fcs_offloading_queue__extract
+fcs_offloading_queue__init
 fcs_offloading_queue__insert
 fcs_offloading_queue_page__bump
 fcs_offloading_queue_page__calc_filename
@@ -1470,6 +1512,8 @@ fcs_portable_time_t
 fcs_pq_rating
 fcs_pre_cache_key_val_pair_struct
 fcs_pre_cache_key_val_pair_t
+fcs_pre_cache_t
+fcs_pre_cache_t
 fcs_prelude_item_t
 fcs_preset_name_t
 fcs_preset_names
@@ -1479,6 +1523,7 @@ fcs_push_1card_seq
 fcs_queue_stats_init
 fcs_queue_stats_t
 fcs_rand_t
+fcs_set_foundation
 fcs_st_instance
 fcs_stack_compare
 fcs_stack_compare_for_comparison_with_context
@@ -1505,6 +1550,7 @@ fcs_tests_list_t
 fcs_tests_order_group_t
 fcs_trace
 fcs_user_state_str_t
+fcs_var_base_int_t
 fcs_var_base_reader_t
 fcs_var_base_writer_t
 fd
@@ -1527,6 +1573,7 @@ fingerprint_input_location_path
 fingerprint_line
 fingerprint_line_size
 first_depth
+first_item
 first_key
 first_line
 first_state_to_check
@@ -1940,6 +1987,7 @@ move_ptr
 move_sequences_analysis_seqs_loop
 move_to_return
 move_to_string
+move_type
 moves_base64_encoding_buffer
 moves_base64_encoding_buffer_max_len
 moves_count
@@ -2057,6 +2105,7 @@ nextparent
 nfds
 nicev
 non_orig_idx
+nor
 noreturn
 normalize_iters_quota
 normalized_befs_weights
@@ -2131,7 +2180,6 @@ open
 open_paren
 opt
 optimize
-or
 orig_col
 orig_col_len
 orig_pos_opt
@@ -2580,7 +2628,6 @@ to_release
 to_reparent_states
 tokens
 top_card_idx
-top_card_proto
 top_opt
 top_rank_for_iter
 total_iterations_limit_per_board_ptr
