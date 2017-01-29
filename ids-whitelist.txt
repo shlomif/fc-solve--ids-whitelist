@@ -5,6 +5,7 @@ ASSIGN_ERR_STR_AND_FREE
 ASSIGN_ptr_state
 AVL_SET_NEXT
 BEFS_MAX_DEPTH
+BEFS_VAR
 BEGIN_NEW_STATE
 BINARY_OUTPUT_BUF_SIZE
 BINARY_OUTPUT_NUM_INTS
@@ -25,6 +26,7 @@ CARD
 CARD_DEBUG_PRES
 CARD_ZERO
 CHECK_KEY_CALC_DEPTH
+COL2MOVE
 COLUMN
 COL_TYPE_EMPTY
 COL_TYPE_ENTIRELY_NON_ORIG
@@ -42,8 +44,10 @@ DB_BTREE
 DB_CREATE
 DB_NOTFOUND
 DEBUG_FOO
+DEBUG_OUT
 DEBUG_VERIFY_SOFT_DFS_STACK
 DECKS_NUM__ARG
+DECKS_NUM__VAL
 DECLARE_STACKS
 DECLARE_STATE
 DECLARE_TEMP_STACK
@@ -107,6 +111,7 @@ FCS_DISABLE_STATE_VALIDITY_CHECK
 FCS_ENABLE_SECONDARY_HASH_VALUE
 FCS_ENCODED_STATE_COUNT_CHARS
 FCS_ES_FILLED_BY_ANY_CARD
+FCS_ES_FILLED_BY_KINGS_ONLY
 FCS_ES_FILLED_BY_NONE
 FCS_EXPLICIT_REFCOUNT
 FCS_FOUNDATIONS_OFFSET
@@ -160,6 +165,8 @@ FCS_MOVE_TYPE_KLONDIKE_TALON_TO_STACK
 FCS_MOVE_TYPE_NULL
 FCS_MOVE_TYPE_SEPARATOR
 FCS_MOVE_TYPE_SEQ_TO_FOUNDATION
+FCS_MOVE_TYPE_STACK_TO_FOUNDATION
+FCS_MOVE_TYPE_STACK_TO_FREECELL
 FCS_NO_SHUFFLING
 FCS_NUM_BEFS_WEIGHTS
 FCS_NUM_SUITS
@@ -333,6 +340,7 @@ FCS_VISITED_IN_OPTIMIZED_PATH
 FCS_VISITED_IN_SOLUTION_PATH
 FCS_WEIGHTING
 FCS_WITHOUT_EXPORTED_RESUME_SOLUTION
+FCS_WITHOUT_FC_PRO_MOVES_COUNT
 FCS_WITHOUT_VISITED_ITER
 FCS_WITH_CARD_COMPARE_LOOKUP
 FCS_WITH_CONTEXT_VARIABLE
@@ -484,6 +492,9 @@ MAX_PATH_LEN
 MAX_PREVIOUS_MOVES
 MAX_STATE_STRING_COPY_LEN
 MOVES_PROCESSED_GROW_BY
+MOVE_FUNCS__define_common
+MOVE_FUNCS__define_empty_stacks_fill
+MOVE_FUNCS__define_seqs_built_by
 MOVE_FUNCS__should_not_empty_columns
 MY_HASH_COMPARE
 MY_HASH_COMPARE_PROTO
@@ -546,6 +557,7 @@ PTHREAD_COND_INITIALIZER
 PTHREAD_MUTEX_INITIALIZER
 PWord_t
 Please
+Pvoid_t
 QUEUE_TERMINATE
 RB_ENTRY
 RB_FIND
@@ -636,6 +648,7 @@ _ftime
 _timeb
 abort_signal_handler
 above_c
+above_card
 above_num_true_seqs
 accumulate_tests_by_ptr
 accumulate_tests_order
@@ -653,6 +666,7 @@ additional_moves
 aft_open_paren
 after_at_sign
 after_end_of_junk
+after_junk_num_freestacks
 after_prefix
 after_pruning_state
 after_quote
@@ -677,6 +691,7 @@ arg_ptr
 arg_str
 argc0
 argc_ptr
+args_man_t
 args_man_wrapper_t
 argv0
 argv_ptr
@@ -733,6 +748,7 @@ cache_populate_from_pre_cache
 cache_ret
 cache_store__has_key
 cache_store__insert_key
+caches_delta
 calc_child_card_option
 calc_depth
 calc_empty_col_idx
@@ -821,7 +837,6 @@ const
 consumed_states_fh
 context_argc
 context_argv
-context_t
 coord
 coord_from_input
 copy_col_idx
@@ -998,7 +1013,6 @@ end_args
 end_board_idx
 end_board_ptr
 end_element
-end_game_idx
 end_hard_thread
 end_num
 end_of_arg_loop
@@ -1036,6 +1050,7 @@ existing_state_raw
 exit_code
 exit_code_t
 exported
+extern
 extra_move
 extracted_item
 f_idx
@@ -2001,6 +2016,7 @@ misplaced_card
 mod_base64_fcc_fingerprint
 mod_table
 monitor
+move
 move_buffer
 move_func_idx
 move_func_num
@@ -2674,6 +2690,7 @@ to_output
 to_prune
 to_release
 to_reparent_states
+to_stack
 tokens
 top_card_idx
 top_opt
@@ -2731,8 +2748,10 @@ unused_str
 unused_unsigned
 up_above_card
 update_col_cards_under_sequences
+update_total_num_iters_threshold
 upon_new_state
 upper_card
+user
 user_compile_all_flares_plans
 user_free_resources
 user_initialize
