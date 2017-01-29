@@ -1,5 +1,6 @@
 ALIGN_BITS
 ALLOCED_SIZE
+ALLOC_ERROR_STRING
 ASSIGN_ERR_STR_AND_FREE
 ASSIGN_ptr_state
 AVL_SET_NEXT
@@ -491,6 +492,7 @@ MY_MARGIN
 NEW_BRFS_QUEUE_ITEM
 NEW_STATE_BY_REF
 NEXT_CACHE_STATE
+NULL
 NUM_BITS
 NUM_BITS_IN_BYTES
 NUM_CARDS
@@ -559,7 +561,9 @@ RET
 Rank
 SEEK_END
 SEEK_SET
+SET_ERR
 SET_ERROR
+SET_ERROR_VAR
 SET_INSTANCE_GAME_PARAMS
 SIGABRT
 SIGUSR1
@@ -704,6 +708,7 @@ block
 bool
 bool_unlimited_sequence_move
 botrowcount
+break
 brfs
 bsearch
 bucket
@@ -750,6 +755,7 @@ came_from
 candidate_card
 candidate_rank
 canonize_move
+card
 card_char
 card_counts
 card_map_3_10
@@ -764,10 +770,12 @@ cards_size
 cards_under_sequences
 cards_under_sequences_factor
 cb
+char
 check
 check_for_exceeded
 check_if_limits_exceeded
 check_if_limits_exceeded__num
+check_if_limits_exceeded__num_states
 check_len
 check_num_states_in_collection
 checked_states_step
@@ -786,6 +794,7 @@ cmaj_flt
 cmd_line_callback
 cmd_line_cb__handle_common
 cmin_flt
+col
 col_enc
 col_idx_val
 col_len_minus_1
@@ -868,6 +877,7 @@ debug_ret
 decks_index
 decoded_data
 decoding_table
+define
 delete_state
 delta_limit
 depth_factor
@@ -973,6 +983,7 @@ effective_max_num_checked_states
 effective_max_num_states_in_collection
 effective_trim_states_in_collection_from
 elem
+else
 empty_col_idx
 empty_fc_idx
 empty_ret
@@ -1517,6 +1528,7 @@ fcs_pre_cache_t
 fcs_prelude_item_t
 fcs_preset_name_t
 fcs_preset_names
+fcs_preset_t
 fcs_presets
 fcs_pseudo_dfs_lru_cache_t
 fcs_push_1card_seq
@@ -1590,6 +1602,7 @@ flares_plan_type_t
 floor
 fnv_hash
 fnv_hash_str
+for
 fork
 format
 found_idx
@@ -1693,6 +1706,7 @@ freecell_solver_user_set_solving_method
 freecell_solver_user_set_tests_order
 freecell_solver_user_stringify_move_ptr
 freecell_solver_user_stringify_move_w_state
+freecells
 freecells_s
 freecells_s_end
 from_bin
@@ -1786,10 +1800,14 @@ i_mod
 i_mult
 ident
 if
+ifdef
+ifndef
 in_arg
 in_fh
 in_item
+in_move
 in_word_set
+include
 increment
 indexes
 init_card
@@ -1814,7 +1832,6 @@ initial_state_locs
 initial_stats
 inline
 input_s
-input_str
 insert_node
 insert_state
 instance
@@ -1823,6 +1840,7 @@ instance__inspect_new_state
 instance__load_coords_from_fh
 instance__print_coords_to_log
 instance_alloc_num_moves
+instance_check_exceeded__num_states
 instance_check_key
 instance_check_multiple_keys
 instance_debug_out_state
@@ -1830,6 +1848,7 @@ instance_destroy
 instance_free
 instance_free_solution_moves
 instance_increment
+instance_init
 instance_is_ready
 instance_num_checked_states_ptr
 instance_print_stats
@@ -1876,9 +1895,11 @@ item_placeholder
 item_start
 items_count
 iter_handler_wrapper
+iterations_board_started_at
 iters_limit
 judy_array
 junk_move_to_stacks
+key
 key_depth
 key_id
 key_raw
@@ -1900,11 +1921,13 @@ last_item_next
 last_line_fh
 last_one
 last_pos_idx
+leftnode
 likely
 lim
 limit_idx
 line_size
 list_of_vacant_items
+list_of_vacant_states
 load_begin_internal
 loadnil
 local_limit
@@ -1912,6 +1935,7 @@ local_shuffling_type
 local_stacks_num
 location_in_file
 log_fh
+long
 lookup_state
 lower_card
 lowleft
@@ -1965,12 +1989,14 @@ min_by_sorting
 min_card
 min_card_height
 min_depth_for_scan2
+min_enc_state
 min_flt
 min_idx
 min_len
 min_num_cards
 min_states
 min_states_iter
+minimal_flare
 misplaced_card
 mod_base64_fcc_fingerprint
 mod_table
@@ -1998,6 +2024,7 @@ moves_list_compact_alloc
 moves_list_of_lists
 moves_processed_add_new_move
 moves_ptr
+moves_to_state
 moves_to_state_enc
 moves_to_state_len
 mpz_add
@@ -2014,6 +2041,7 @@ mpz_mul_ui
 mpz_set_ui
 mpz_t
 multiplier
+my_block
 my_brfs_queue
 my_brfs_queue_last_item
 my_brfs_recycle_bin
@@ -2126,6 +2154,7 @@ num_cards_not_on_parents_factor
 num_cards_not_on_parents_weight
 num_cards_out
 num_cards_out_factor
+num_cards_out_lookup_table
 num_cards_to_move_from_columns
 num_childs
 num_deals
@@ -2209,6 +2238,7 @@ pack_position
 packed_foundations
 page_filename
 page_idx_for_backup
+page_idx_to_read_from
 param_num
 parent_and_refcount
 parent_card_height
@@ -2253,7 +2283,8 @@ pre_cache_offload_and_reset
 pre_cache_ptr
 prelude_as_string
 prelude_idx
-prepare_state_str
+prelude_num_items
+preset
 preset_args
 preset_id
 preset_index
@@ -2265,6 +2296,7 @@ prev_rss
 prev_size
 prev_src
 pri_queue_t
+print_flares_plan_error
 print_help
 print_help_string
 print_int
@@ -2324,6 +2356,7 @@ q_stats_extract
 q_stats_insert
 q_stats_is_empty
 qsort
+queue_allocator
 queue_id
 queue_instance
 queue_last_item
@@ -2340,6 +2373,7 @@ rand_seed
 rando
 randp
 rank_idx
+rating
 raw_ptr_new_state_raw
 rb_count
 rb_create
@@ -2401,9 +2435,11 @@ resume_solution
 ret_moves
 ret_state_s
 ret_val
+return
 return_depth
 return_item
 reusable_move_stack
+rightnode
 rollback_ptr
 rotate_left
 rotate_right
@@ -2413,6 +2449,7 @@ rss_delta
 rss_found
 run_hard_thread
 running_indirect_stacks_buffer
+running_key
 running_min
 running_min_was_assigned
 running_moves
@@ -2454,6 +2491,7 @@ set_next_prelude_item
 set_next_soft_thread
 set_param
 set_scan_visited
+set_tests_order
 sextet_a
 sextet_b
 sextet_c
@@ -2482,6 +2520,7 @@ size_bitmask
 skip_queue_output
 snprintf
 soft_dfs
+soft_thread
 soft_thread_clean_soft_dfs
 soft_thread_id
 soft_thread_struct__dont_use_directly
@@ -2512,11 +2551,14 @@ sscanf
 ssize_t
 st_tests_order
 stack_card_str
+stack_depth
 stack_hashes
+stack_ids
 stack_ptr__moves_to_parent
 stacks_allocator
 stacks_copy_on_write_flags
 stacks_judy_array
+stacks_map
 start_arg
 start_board_idx
 start_board_ptr
@@ -2530,6 +2572,7 @@ start_key_moves_count
 start_key_ptr
 start_line
 start_num
+start_points_list
 start_state
 start_state_moves
 start_state_moves_count
@@ -2548,7 +2591,9 @@ state_s_proto
 state_string_copy
 state_validity_card
 state_validity_ret
+states_count
 states_in_cache
+static
 static_error_string
 status1
 status2
@@ -2560,6 +2605,7 @@ stdint
 stimev
 store_t
 strcpy
+strdup
 strecpy
 string_arg
 string_end
@@ -2576,6 +2622,7 @@ suit_mask
 suit_positions_by_rank_step
 suit_times_two
 suit_val
+sum
 swap_int
 swap_loc
 swap_save
@@ -2588,6 +2635,7 @@ tcomm
 temp_allocator
 temp_card
 temp_freecell
+temp_move
 temp_moves
 temp_stack
 temp_str
