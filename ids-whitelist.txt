@@ -755,6 +755,7 @@ calc_empty_col_idx
 calc_errstr_s
 calc_foundation_to_put_card_on
 calc_max_sequence_move
+calc_max_simple_simon_seq_move
 calc_moves_flare
 calc_moves_seq
 calc_num_vacant_slots
@@ -832,6 +833,7 @@ compare_rating_with_index
 compare_records
 compatible
 complete_path
+cond
 condition_expr
 const
 consumed_states_fh
@@ -869,6 +871,7 @@ current_iterations_limit
 current_plan_item
 current_plan_item_idx
 current_size
+current_state_index
 cutime
 dashes_ptr
 dashes_s
@@ -881,6 +884,7 @@ db_strerror
 dbm__calc_threads
 dbm__free_threads
 dbm__spawn_threads
+dbm_store_path
 dc_ptr
 deal
 deal_idx
@@ -894,6 +898,7 @@ decoded_data
 decoding_table
 define
 delete_state
+delparent
 delta_limit
 depth_factor
 depth_num
@@ -971,6 +976,7 @@ diff
 dir
 display_moves
 display_parent_iter_num
+display_states
 dll_ind_buf_t
 dllexport
 dllimport
@@ -1019,6 +1025,7 @@ end_of_arg_loop
 end_of_child_seq
 end_of_hard_threads
 end_of_hard_threads_loop
+end_of_instances_list
 end_of_junk
 end_of_src_seq
 end_of_stacks
@@ -1029,6 +1036,7 @@ end_stack_item
 end_time
 endif
 entry_
+entry_point
 env_var_presetrc
 epoll
 epoll_create1
@@ -1053,7 +1061,6 @@ exported
 extern
 extra_move
 extracted_item
-f_idx
 f_idx
 fail_reason
 false
@@ -1386,7 +1393,6 @@ fcs_by_depth_tests_order_t
 fcs_cache_key_info_struct
 fcs_card2char
 fcs_card_is_empty
-fcs_card_is_empty
 fcs_char2card
 fcs_col_get_rank
 fcs_col_is_king
@@ -1462,6 +1468,7 @@ fcs_int_move_set_foundation
 fcs_int_move_set_num_cards_in_seq
 fcs_int_move_set_src_freecell
 fcs_int_move_set_src_stack
+fcs_int_move_set_type
 fcs_is_parent_card__helper
 fcs_is_ss_suit_true
 fcs_is_ss_true_parent
@@ -1535,10 +1542,10 @@ fcs_pdfs_cache_key_info_t
 fcs_pdfs_key_info_struct
 fcs_pdfs_key_t
 fcs_portable_time_t
+fcs_pos_by_rank_t
 fcs_pq_rating
 fcs_pre_cache_key_val_pair_struct
 fcs_pre_cache_key_val_pair_t
-fcs_pre_cache_t
 fcs_pre_cache_t
 fcs_prelude_item_t
 fcs_preset_name_t
@@ -1550,6 +1557,7 @@ fcs_push_1card_seq
 fcs_queue_stats_init
 fcs_queue_stats_t
 fcs_rand_t
+fcs_rating_with_index_t
 fcs_set_foundation
 fcs_st_instance
 fcs_stack_compare
@@ -1583,6 +1591,7 @@ fcs_var_base_writer_t
 fd
 fd_set
 fgets
+field
 file_len
 final_move
 final_stack_encoded_state
@@ -1599,6 +1608,7 @@ fingerprint_data_len
 fingerprint_input_location_path
 fingerprint_line
 fingerprint_line_size
+fingerprint_which_irreversible_moves_bitmask
 first_depth
 first_item
 first_key
@@ -1626,6 +1636,7 @@ foundation_idx
 foundation_rank
 foundations
 fputc
+fputs
 fr
 fread
 free_instance_hard_thread_callback
@@ -1719,11 +1730,14 @@ freecell_solver_user_set_soft_thread_step
 freecell_solver_user_set_solution_optimization
 freecell_solver_user_set_solving_method
 freecell_solver_user_set_tests_order
+freecell_solver_user_solve_board
 freecell_solver_user_stringify_move_ptr
 freecell_solver_user_stringify_move_w_state
 freecells
 freecells_s
 freecells_s_end
+freecells_to_fill
+freenode
 from_bin
 from_col
 from_left
@@ -1778,6 +1792,7 @@ gnGameNumber
 good
 good_automove
 got_child
+gpointer
 group_ptr
 groups_end
 guint
@@ -1817,6 +1832,7 @@ ident
 if
 ifdef
 ifndef
+in
 in_arg
 in_fh
 in_item
@@ -1874,9 +1890,13 @@ instance_run_solver_thread
 instance_solver_thread_calc_derived_states
 instance_struct
 instance_tests_order
+instances_list
 int
+int8_t
+int_method
 intermediate_in_fh
 intermediate_input_filename
+internal_move
 internal_move_to_user_move
 into
 intptr_t
@@ -1888,12 +1908,14 @@ is_filled_by_any_card
 is_finished
 is_group
 is_irreversible_move
+is_last
 is_min_by_sorting_new
 is_optimization_st
 is_optimize_scan
 is_reachable
 is_reversible
 is_scan_visited
+is_simple_simon
 is_start_group
 is_start_of_flare_solving
 is_state_new
@@ -1909,6 +1931,7 @@ item_opt
 item_placeholder
 item_start
 items_count
+iter_handler_context
 iter_handler_wrapper
 iterations_board_started_at
 iters_limit
@@ -1940,6 +1963,7 @@ leftnode
 likely
 lim
 limit_idx
+limit_instance
 line_size
 list_of_vacant_items
 list_of_vacant_states
@@ -1956,6 +1980,7 @@ lower_card
 lowleft
 lowright
 lp_instance
+main_loop
 main_thread_item_t
 maj_flt
 malloc
@@ -1975,6 +2000,7 @@ max_moves_to_state_len
 max_num_cards
 max_num_checked_states
 max_num_elems_before_resize
+max_num_states
 max_ptr
 max_rank
 max_rss_delta
@@ -2122,7 +2148,6 @@ new_top_most_cards
 new_val
 newnode
 next_arg
-next_board
 next_board_num_lock
 next_board_num_ptr
 next_card
@@ -2367,6 +2392,7 @@ push_args_last_arg
 push_next_arg_flag
 put
 put_cards_in_col_idx
+putc
 putchar
 q_stats_extract
 q_stats_insert
@@ -2388,6 +2414,7 @@ rand_int_ptr
 rand_seed
 rando
 randp
+range_solvers__solve
 rank_idx
 rating
 raw_ptr_new_state_raw
@@ -2599,6 +2626,7 @@ stat_fn
 state_base64
 state_context_value
 state_depth
+state_idx
 state_indirect_stacks_buffer
 state_locs
 state_pair
