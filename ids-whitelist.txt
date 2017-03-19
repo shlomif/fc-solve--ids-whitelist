@@ -38,6 +38,7 @@ COMP_BY
 COMP_BY_IDX
 COPY_INDIRECT_COLS
 COPY_STACK
+COUNT_NON_REV
 DB
 DBT
 DB_BTREE
@@ -122,7 +123,6 @@ FCS_HARD_CODE_CALC_REAL_DEPTH_AS_FALSE
 FCS_HARD_CODE_REPARENT_STATES_AS_FALSE
 FCS_HARD_CODE_SCANS_SYNERGY_AS_TRUE
 FCS_IA_PACK_SIZE
-FCS_IMPLICIT_T_RANK
 FCS_INLINED_HASH_COMPARISON
 FCS_INLINED_HASH_DATA_TYPE
 FCS_INLINED_HASH__COLUMNS
@@ -167,6 +167,7 @@ FCS_MOVE_TYPE_SEPARATOR
 FCS_MOVE_TYPE_SEQ_TO_FOUNDATION
 FCS_MOVE_TYPE_STACK_TO_FOUNDATION
 FCS_MOVE_TYPE_STACK_TO_FREECELL
+FCS_MOVE_TYPE_STACK_TO_STACK
 FCS_NO_SHUFFLING
 FCS_NUM_BEFS_WEIGHTS
 FCS_NUM_SUITS
@@ -339,6 +340,7 @@ FCS_VISITED_GENERATED_BY_PRUNING
 FCS_VISITED_IN_OPTIMIZED_PATH
 FCS_VISITED_IN_SOLUTION_PATH
 FCS_WEIGHTING
+FCS_WITHOUT_DEPTH_FIELD
 FCS_WITHOUT_EXPORTED_RESUME_SOLUTION
 FCS_WITHOUT_FC_PRO_MOVES_COUNT
 FCS_WITHOUT_VISITED_ITER
@@ -359,6 +361,7 @@ FCS_var_base_int__not_zero
 FCS_var_base_int__set_ui
 FC_SOLVE_BUCKETLIST_NBUCKETS
 FC_SOLVE_IMPLICIT_PARSABLE_OUTPUT
+FC_SOLVE_IMPLICIT_T_RANK
 FC_SOLVE_JAVASCRIPT_QUERYING
 FC_SOLVE_MAP_CHAR
 FC_SOLVE_PATS__DOWN
@@ -484,7 +487,9 @@ MAX_ERROR_STRING_LEN
 MAX_EVENTS
 MAX_FCC_DEPTH
 MAX_ITERS_TERMINATE
+MAX_NUM_CARDS_IN_A_STACK
 MAX_NUM_DECKS
+MAX_NUM_FREECELLS
 MAX_NUM_INITIAL_CARDS_IN_A_STACK
 MAX_NUM_SCANS
 MAX_PATH
@@ -500,6 +505,7 @@ MY_HASH_COMPARE
 MY_HASH_COMPARE_PROTO
 MY_HASH_CONTEXT_VAR
 MY_MARGIN
+NDEBUG
 NEW_BRFS_QUEUE_ITEM
 NEW_STATE_BY_REF
 NEXT_CACHE_STATE
@@ -542,6 +548,7 @@ PARAMETERIZED_FIXED_LIMIT
 PARAMETERIZED_LIMIT
 PASS_DECKS
 PASS_IND_BUF_T
+PASS_sequences_are_built_by
 PATH_MAX
 PATSOLVE_STANDALONE
 PENULTIMATE_DEPTH
@@ -715,8 +722,10 @@ bfs_queue
 bfs_queue_last_item
 bin_close
 bin_init
+binary_output
 binary_output_t
 bit_idx
+bit_r
 bitmask
 bits_per_orig_cards_in_column
 block
@@ -773,6 +782,7 @@ candidate_card
 candidate_rank
 canonize_move
 card
+card_cannot_be_placed
 card_char
 card_counts
 card_map_3_10
@@ -786,6 +796,7 @@ cards_num_min_limit
 cards_size
 cards_under_sequences
 cards_under_sequences_factor
+cards_were_moved
 cb
 char
 check
@@ -805,7 +816,9 @@ clean_soft_dfs
 clear_error
 clear_junk_dest_col
 clear_junk_stack_len
+close
 close_paren
+close_ret
 cluster_tree
 cmaj_flt
 cmd_line_callback
@@ -815,6 +828,11 @@ col
 col_enc
 col_idx_val
 col_len_minus_1
+col_num_cards
+col_seqs_iter__advance
+col_seqs_iter__calc_end
+col_seqs_iter__create
+col_seqs_iter_t
 colls_by_depth
 cols
 column
@@ -856,6 +874,10 @@ count_next_states
 count_num_vacant_freecells
 count_num_vacant_stacks
 count_of_instance_runs
+count_of_items_in_queue
+count_of_items_in_queue
+count_of_items_in_queue
+count_of_items_in_queue
 count_start_state_moves
 count_to_add
 create_plan_item
@@ -1393,6 +1415,7 @@ fcs_by_depth_tests_order_t
 fcs_cache_key_info_struct
 fcs_card2char
 fcs_card_is_empty
+fcs_card_is_valid
 fcs_char2card
 fcs_col_get_rank
 fcs_col_is_king
@@ -1893,6 +1916,8 @@ instance_tests_order
 instances_list
 int
 int8_t
+int_fast16_t
+int_fast32_t
 int_method
 intermediate_in_fh
 intermediate_input_filename
@@ -2002,6 +2027,7 @@ max_num_checked_states
 max_num_elems_before_resize
 max_num_states
 max_ptr
+max_queue_idx
 max_rank
 max_rss_delta
 max_rss_delta_deal
@@ -2012,6 +2038,7 @@ max_size
 max_solve_depth
 max_stack_depth
 max_var_depth_to_check
+memcpy
 memdup
 memmove
 message
@@ -2056,6 +2083,7 @@ move_sequences_analysis_seqs_loop
 move_to_return
 move_to_string
 move_type
+moved_card
 moves_base64_encoding_buffer
 moves_base64_encoding_buffer_max_len
 moves_count
@@ -2088,6 +2116,7 @@ my_brfs_queue
 my_brfs_queue_last_item
 my_brfs_recycle_bin
 my_card
+my_close
 my_format
 my_index
 my_iter_handler
@@ -2159,6 +2188,7 @@ next_freecell_idx
 next_i
 next_item
 next_milestone
+next_move
 next_move_idx
 next_move_ptr
 next_new_top_most_cards
@@ -2169,6 +2199,7 @@ next_st_idx
 next_start_points_list
 next_state
 next_state_idx
+next_states
 nextcolor
 nextparent
 nfds
@@ -2190,6 +2221,7 @@ num_cards_2
 num_cards_in_col_threshold
 num_cards_in_freecells
 num_cards_left
+num_cards_moved
 num_cards_not_on_parents
 num_cards_not_on_parents_factor
 num_cards_not_on_parents_weight
@@ -2209,12 +2241,14 @@ num_file_args_to_skip
 num_finished_boards
 num_flares
 num_foundations
+num_hard_threads
 num_hard_threads_finished
 num_inserted
 num_instances
 num_items
 num_items_in_queue
 num_left_cards
+num_lists
 num_move_funcs
 num_moves_to_cut_off
 num_moves_to_win
@@ -2230,7 +2264,6 @@ num_so_far
 num_soft_threads_finished
 num_solutions
 num_src_junk_true_seqs
-num_total_cards_moved
 num_true_seqs_out_ptr
 num_units
 num_vacant_slots
@@ -2249,6 +2282,8 @@ only_recognized
 open
 open_paren
 opt
+opt_tests_order
+optimization_soft_thread
 optimize
 orig_col
 orig_col_len
@@ -2269,8 +2304,11 @@ out_num_new_positions
 out_of_loop
 out_state
 out_sum
+output_filename
+output_length
 output_lock
 output_s
+output_string
 p_by_r
 p_quota
 p_scan
@@ -2280,6 +2318,8 @@ packed_foundations
 page_filename
 page_idx_for_backup
 page_idx_to_read_from
+page_idx_to_write_to
+page_index
 param_num
 parent_and_refcount
 parent_card_height
@@ -2309,6 +2349,7 @@ popen
 populate_instance_with_intermediate_input_line
 populate_seq_points
 pos0
+pos_idx_to_check
 pos_moves_so_far
 pos_proto
 position_size
@@ -2330,8 +2371,10 @@ preset_args
 preset_id
 preset_index
 preset_name
+preset_ptr
 presetrc_pathes
 prev
+prev_card
 prev_item
 prev_rss
 prev_size
@@ -2402,6 +2445,7 @@ queue_allocator
 queue_id
 queue_instance
 queue_last_item
+queue_meta_alloc
 queue_solution
 queue_solution_ptr
 quota
@@ -2417,6 +2461,7 @@ randp
 range_solvers__solve
 rank_idx
 rating
+raw_ptr_new_state
 raw_ptr_new_state_raw
 rb_count
 rb_create
@@ -2463,9 +2508,11 @@ recycle_flare
 recycle_instance
 redblack
 refcount
+register
 rem
 remainder
 remaining
+remaining_memory
 remaining_quota
 rename
 render_freecell_card
@@ -2603,6 +2650,7 @@ stacks_copy_on_write_flags
 stacks_judy_array
 stacks_map
 start_arg
+start_board
 start_board_idx
 start_board_ptr
 start_dc
@@ -2619,6 +2667,7 @@ start_points_list
 start_state
 start_state_moves
 start_state_moves_count
+start_state_moves_seq
 start_state_str_proto
 start_time
 stat
@@ -2703,6 +2752,7 @@ the_card
 the_num_true_seqs
 the_tests_list_ptr
 theme_error
+this_card
 this_real_depth
 thread_arg_t
 thread_end
@@ -2759,6 +2809,8 @@ u_int8_t
 ub1
 uint16_t
 uint8_t
+uint_fast16_t
+uint_fast32_t
 uintptr_t
 ul
 uncle
@@ -2766,6 +2818,7 @@ union
 unistd
 unit
 unit_idx
+unlikely
 unlimited_sequence_move_var
 unlink
 unpack_position
