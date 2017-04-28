@@ -537,7 +537,6 @@ NUM_BITS_IN_BYTES
 NUM_CARDS
 NUM_CHAINS_TO_RELEASE
 NUM_CHECKED_STATES
-NUM_CHECKED_STATES_STEP
 NUM_HARD_THREADS
 NUM_ITEMS_PER_PAGE
 NUM_ITERS_LIMITS
@@ -675,6 +674,7 @@ __builtin_expect
 __declspec
 __int128
 __linux__
+__unix__
 __unused
 _ftime
 _timeb
@@ -1311,8 +1311,6 @@ fc_solve_new_hard_thread
 fc_solve_new_soft_thread
 fc_solve_optimize_solution
 fc_solve_output_result_to_file
-fc_solve_p2u_rank
-fc_solve_p2u_suit
 fc_solve_pats__Ranks_string
 fc_solve_pats__Suits_string
 fc_solve_pats__align
@@ -1433,8 +1431,6 @@ fc_solve_states_google_hash_new
 fc_solve_string_to_test_num
 fc_solve_string_to_test_num_compare_func
 fc_solve_trace_solution
-fc_solve_u2p_rank
-fc_solve_u2p_suit
 fc_solve_user_INTERNAL_calc_derived_states_wrapper
 fc_solve_user_INTERNAL_compile_all_flares_plans
 fc_solve_user_INTERNAL_debondt_delta_states_enc_and_dec
@@ -1542,7 +1538,6 @@ fcs_duplicate_kv_state
 fcs_duplicate_preset
 fcs_duplicate_state
 fcs_duplicate_state_extra
-fcs_extended_move_t
 fcs_extended_move_t
 fcs_fcc_moves_list_item_struct
 fcs_fcc_moves_seq_allocator_t
@@ -1692,6 +1687,8 @@ fcs_states_google_hash_handle_t
 fcs_states_linked_list_item_struct
 fcs_states_linked_list_item_t
 fcs_stats_t
+fcs_str2rank
+fcs_str2suit
 fcs_super_method_type_t
 fcs_tests_by_depth_array_t
 fcs_tests_by_depth_unit_t
@@ -2109,6 +2106,7 @@ likely
 lim
 limit_idx
 limit_instance
+limits
 line_num
 line_size
 list_next
@@ -2128,6 +2126,7 @@ lower_card
 lowleft
 lowright
 lp_instance
+main
 main_loop
 main_thread_item_t
 maj_flt
@@ -2141,6 +2140,7 @@ max
 max0
 max_batch_size
 max_count_next_states
+max_count_num_processed
 max_depth_margin
 max_freecell_idx
 max_info_ptr
@@ -2238,6 +2238,7 @@ mpz_mul_2exp
 mpz_mul_ui
 mpz_set_ui
 mpz_t
+msg
 multiplier
 my_block
 my_brfs_queue
@@ -2261,6 +2262,7 @@ myslot
 mytype
 myvar
 name_len
+nanosleep
 needed_cards
 needed_len
 needle
@@ -2421,6 +2423,7 @@ opt
 opt_tests_order
 optimization_soft_thread
 optimize
+orig
 orig_col
 orig_col_len
 orig_idx
@@ -2466,6 +2469,7 @@ parent_card_height
 parent_iter_num
 parent_ptr
 parent_state
+parent_state_enc
 parent_suit
 parent_to_child_pipe
 parents_stack_max_len
@@ -2486,6 +2490,7 @@ perror
 pgid
 physical_item
 pid
+pile
 pilenum
 pipe
 place
@@ -2497,6 +2502,8 @@ pos_idx_to_check
 pos_moves_so_far
 pos_proto
 position_size
+positions_by_rank
+possible_moves
 pow
 ppid
 pq_element_t
@@ -2530,7 +2537,6 @@ print_flares_plan_error
 print_help
 print_help_string
 print_int
-print_msg
 print_ts
 prioritize
 priority
@@ -2608,9 +2614,9 @@ rand_seed
 rando
 randp
 range_solvers__solve
+rank2str
 rank_idx
 rank_min_1
-rank_min_2
 rank_min_2
 rating
 raw_ptr_new_state
@@ -2698,7 +2704,9 @@ running_min
 running_min_was_assigned
 running_moves
 running_parent
+running_state
 rwlock_fcfs
+s2
 s_and_info
 s_e
 s_e_src_t
@@ -2722,6 +2730,7 @@ seedx_ptr
 select
 select_ret
 select_signal_handler
+seq_end
 seq_move
 seq_points
 seq_start
@@ -2755,6 +2764,7 @@ should_search
 should_src_col
 should_still_loop
 show_exceeded_limits
+shuffling_type
 sid
 signal
 signal_num
@@ -2788,15 +2798,18 @@ source_col_cards_num
 source_col_idx
 srando
 srandp
+src_card
 src_card_height
 src_cards_num
 src_cards_ptr
+src_col
 src_col_i
 src_col_idx
 src_idx
 src_len
 src_moves_seq
 src_stack
+srccard
 sscanf
 ssize_t
 st_idx
@@ -2806,6 +2819,7 @@ stack_card_str
 stack_depth
 stack_hashes
 stack_ids
+stack_locs
 stack_ptr__moves_to_parent
 stacks_allocator
 stacks_copy_on_write_flags
@@ -2862,8 +2876,11 @@ stdbool
 stddef
 stdin
 stdint
+stdio
+stdlib
 stimev
 store_t
+strchr
 strcpy
 strdup
 strecpy
@@ -2877,6 +2894,7 @@ strncpy
 strnicmp
 strtod
 strtoul
+suit2str
 suit_bit
 suit_mask
 suit_positions_by_rank_step
@@ -2890,6 +2908,7 @@ swap_save
 swap_temp
 switch_to_next_soft_thread
 synergy
+sys
 t_card
 tb
 tcomm
@@ -2929,6 +2948,7 @@ thread_end
 thread_meta_alloc
 time
 timeb
+timespec
 timeval
 timezone
 to_col
@@ -2968,9 +2988,11 @@ triple
 true
 try_argv_param
 try_str_prefix
+ts
 tty_nr
 tty_pgrp
 tv
+tv_nsec
 tv_sec
 tv_usec
 types
@@ -3015,7 +3037,6 @@ user_next_flare
 user_next_instance
 user_obj
 user_preset_dir
-usleep
 utime
 v_s1
 v_s2
