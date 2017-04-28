@@ -1600,6 +1600,7 @@ fcs_move_get_dest_stack
 fcs_move_get_foundation
 fcs_move_get_num_cards_in_seq
 fcs_move_get_src_freecell
+fcs_move_get_src_stack
 fcs_move_get_type
 fcs_move_set_dest_freecell
 fcs_move_set_dest_stack
@@ -1863,6 +1864,7 @@ freecells
 freecells_s
 freecells_s_end
 freecells_to_fill
+freed_positions
 freenode
 freestacks_to_fill
 from_bin
@@ -1888,6 +1890,8 @@ g_tree_destroy
 g_tree_insert
 g_tree_lookup
 g_tree_new
+game_variant_desired_suit_value
+game_variant_suit_mask
 gamenumber_s
 gconstpointer
 generic_false_seq_index_loop
@@ -1957,6 +1961,7 @@ i_col
 i_col_len
 i_mod
 i_mult
+id
 ident
 idx1
 idx2
