@@ -900,6 +900,7 @@ cond
 condition_expr
 const
 consumed_states_fh
+context_arg
 context_argc
 context_argv
 coord
@@ -984,7 +985,6 @@ derived_stacks_buffer
 derived_start_idx
 derived_state
 derived_state_s
-derived_state_str_proto
 derived_states
 derived_states_list_struct
 derived_states_random_indexes
@@ -1699,6 +1699,7 @@ fcs_state_ia_alloc_into_var
 fcs_state_keyval_pair_struct
 fcs_state_pop_col_card
 fcs_state_pop_col_top
+fcs_state_push
 fcs_state_string_t
 fcs_state_validity_ret_t
 fcs_states_google_hash_handle_t
@@ -2038,6 +2039,7 @@ instance_free_solution_moves
 instance_increment
 instance_init
 instance_is_ready
+instance_item_t
 instance_num_checked_states_ptr
 instance_print_stats
 instance_recycle
@@ -2072,6 +2074,7 @@ is_last
 is_min_by_sorting_new
 is_optimization_st
 is_optimize_scan
+is_quiet
 is_reachable
 is_reversible
 is_scan_visited
@@ -2095,6 +2098,7 @@ items_count
 iter_handler
 iter_handler_context
 iter_handler_wrapper
+iter_next
 iter_num
 iterations_board_started_at
 iters_delta_limit
@@ -2144,6 +2148,7 @@ log_fh
 long
 long_iter_handler
 lookup_state
+lower
 lower_card
 lowleft
 lowright
@@ -2185,6 +2190,7 @@ max_solve_depth
 max_stack_depth
 max_var_depth_to_check
 maxcount
+memcmp
 memcpy
 memdup
 memmove
@@ -2273,6 +2279,7 @@ my_index
 my_iter_handler
 my_iter_handler_base
 my_new_out_state_key
+my_rand
 my_return_label
 my_size
 my_va_list
@@ -2430,9 +2437,11 @@ num_vacant_slots
 num_vacant_slots_plus_1
 num_valid_move_funcs
 num_virtual_vacant_stacks
+obj_stats
 octet_a
 octet_b
 octet_c
+off_q_page_t
 old_hard_thread
 old_list
 old_move_stack_to_parent
@@ -2441,6 +2450,7 @@ one_card_buffer
 only_recognized
 open
 open_paren
+opened_files_dir
 opt
 opt_tests_order
 optimization_soft_thread
@@ -2523,6 +2533,7 @@ pos0
 pos_idx_to_check
 pos_moves_so_far
 pos_proto
+position
 position_size
 positions_by_rank
 possible_moves
@@ -2598,6 +2609,7 @@ ptr_new_state_foo
 ptr_next_state
 ptr_src
 ptr_state_input
+ptr_state_key
 ptr_state_orig
 ptr_state_raw
 ptr_state_void
@@ -2676,6 +2688,7 @@ read_preset
 read_state
 read_state_from_file
 readchar
+reader
 readers
 readstr
 readunsigned
@@ -2891,6 +2904,8 @@ states_values_to_keys_allocator
 states_values_to_keys_map
 static
 static_error_string
+stats
+stats
 status1
 status2
 stdarg
@@ -2900,7 +2915,10 @@ stdin
 stdint
 stdio
 stdlib
+stdout
 stimev
+stop_at
+storage_lock
 store_t
 strchr
 strcpy
@@ -2954,6 +2972,7 @@ tests_define_accessors_no_stacks
 tests_define_accessors_rcs_states
 tests_define_indirect_stack_states_accessors
 tests_end
+tests_list
 tests_list_end
 tests_list_struct_ptr
 tests_order_dup
@@ -2991,11 +3010,13 @@ total_move_funcs_bitmask
 total_num_boards_to_check
 total_num_finished_boards
 total_num_iters_copy
+total_num_iters_lock
 total_num_moves
 toupper
 trace_flare_solution
 trace_max_num
 trace_mem
+trace_num
 trace_solution
 trace_solution_state_locs
 trailing_newline
@@ -3069,6 +3090,7 @@ val_proto
 val_ptr
 val_to_inspect
 valid
+var
 var_AUTO
 variant_is_freecell
 vasprintf
