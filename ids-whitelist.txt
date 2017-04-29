@@ -469,6 +469,7 @@ INIT_BINARY_OUTPUT
 INSTANCES_LOOP_END
 INSTANCES_LOOP_START
 INSTANCE_EMPTY_STACKS_FILL
+INSTANCE_FREECELLS_NUM
 INSTANCE_GAME_FLAGS
 INSTANCE_ITEM_FLARES_LOOP_END
 INSTANCE_ITEM_FLARES_LOOP_START
@@ -646,6 +647,7 @@ SUIT
 Suit
 TERMINATE_REASON
 THE_MOVE_FUNCS_LIST
+TRACE
 TRAILING_CHAR
 TRY_P
 TRY_PARAM
@@ -743,6 +745,7 @@ arr_ptr
 as_str
 at_sign
 atof
+atol
 atoll
 bakers_dozen_topmost_cards_lookup
 base
@@ -892,6 +895,7 @@ columns
 command
 command_num
 command_signal_handler
+common_preset
 comp
 comparator
 compare_enc_states
@@ -961,6 +965,7 @@ dbm__calc_threads
 dbm__free_threads
 dbm__spawn_threads
 dbm_store_path
+dbm_t
 dc_ptr
 deal
 deal_idx
@@ -1101,6 +1106,7 @@ empty_col_idx
 empty_fc_idx
 empty_ret
 empty_stack_idx
+empty_stacks_fill
 empty_two_cols_from_new_state
 empty_two_cols_ret_t
 enable_pruning
@@ -2118,6 +2124,7 @@ junk_move_to_stacks
 key
 key_depth
 key_id
+key_ptr
 key_raw
 key_to_add
 known_param
@@ -2138,6 +2145,7 @@ last_line_fh
 last_one
 last_pos_idx
 leftnode
+level
 likely
 lim
 limit_idx
@@ -2148,6 +2156,7 @@ line_size
 list_next
 list_of_vacant_items
 list_of_vacant_states
+lists
 load_begin_internal
 loadnil
 local_limit
@@ -2262,6 +2271,7 @@ moves_list_compact_alloc
 moves_list_of_lists
 moves_processed_add_new_move
 moves_ptr
+moves_to_key
 moves_to_state
 moves_to_state_enc
 moves_to_state_len
@@ -2731,6 +2741,7 @@ response_t
 result_t
 results
 resume_solution
+ret
 ret_moves
 ret_state_s
 ret_val
@@ -3051,6 +3062,7 @@ tv
 tv_nsec
 tv_sec
 tv_usec
+typedef
 types
 tz
 u_int16_t
