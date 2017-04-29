@@ -49,16 +49,17 @@ DBT
 DB_BTREE
 DB_CREATE
 DB_NOTFOUND
+DEBUG
 DEBUG_FOO
 DEBUG_OUT
 DEBUG_VERIFY_SOFT_DFS_STACK
+DECKS_NUM
 DECKS_NUM__ARG
 DECKS_NUM__VAL
 DECLARE_STACKS
 DECLARE_STATE
 DECLARE_TEMP_STACK
 DECODE
-DEFINE_fc_solve_empty_card
 DEPTH_Q_GROW_BY
 DERIVED_STATES_LIST_GROW_BY
 DESTROY_CACHE
@@ -436,6 +437,7 @@ FREECELL_SOLVER_PKG_DATA_DIR
 FROM_COL_IS_REVERSIBLE_MOVE
 FccEntryPointList
 FccEntryPointList_init
+FccEntryPointNode
 FccEntryPointNode_compare
 GEN_CARD_MAP
 GET_CARD
@@ -473,6 +475,7 @@ INSTANCE_UNLIMITED_SEQUENCE_MOVE
 INST_HT0
 INTPTR_MAX
 INT_MAX
+IS_BAKERS_DOZEN
 IS_FILLED_BY_KINGS_ONLY
 IS_FILLED_BY_NONE
 IS_IN_FOUNDATIONS
@@ -608,6 +611,7 @@ SET_ERR
 SET_ERROR
 SET_ERROR_VAR
 SET_INSTANCE_GAME_PARAMS
+SFS__PASS_MOVE_STACK
 SIGABRT
 SIGUSR1
 SIGUSR2
@@ -715,6 +719,7 @@ allocated_from_list
 allocnode
 allowed_tests
 ancestor
+ap
 api_soft_thread
 app_str_struct
 append
@@ -731,6 +736,7 @@ args_man_t
 args_man_wrapper_t
 argv0
 argv_ptr
+arr
 arr_ptr
 as_str
 at_sign
@@ -742,6 +748,7 @@ base64_encode
 base64_encoding_buffer
 base64_encoding_buffer_max_len
 baselevel
+batch_size
 batch_size_t
 befs
 befs_positions_by_rank
@@ -775,6 +782,7 @@ buffer_size
 build_decoding_table
 by_depth_max_depth
 by_depth_min_depth
+by_depth_units
 by_rank_ptr
 bytes_per_pile
 bytes_per_tree_node
@@ -900,6 +908,7 @@ copy_col_idx
 copy_from_idx
 copy_from_iter
 copy_stack_col
+copy_two_stacks
 copyleft
 copyright
 core_irreversible_moves_count
@@ -984,6 +993,7 @@ dest_below_card
 dest_col_i
 dest_fc_idx
 dest_found
+dest_foundation
 dest_info
 dest_num_cards
 dest_rand_index_ptr
@@ -1025,6 +1035,7 @@ dict_lower_bound
 dict_maxcount
 dict_merge
 dict_next
+dict_nil
 dict_nilnode
 dict_nodecount
 dict_parent
@@ -1033,6 +1044,7 @@ dict_process
 dict_recycle_bin
 dict_ret_key_t
 dict_right
+dict_root
 dict_set_allocator
 dict_similar
 dict_strict_lower_bound
@@ -1087,6 +1099,7 @@ empty_stack_col
 empty_stack_idx
 empty_two_cols_from_new_state
 empty_two_cols_ret_t
+enable_pruning
 enc
 encoded_data
 encoding_table
@@ -1096,6 +1109,7 @@ end_board_idx
 end_board_ptr
 end_element
 end_hard_thread
+end_moves_iter
 end_num
 end_of_arg_loop
 end_of_child_seq
@@ -1123,6 +1137,7 @@ epoll_event
 epoll_wait
 epollfd
 err
+error
 error_code
 errstr
 es_fill
@@ -1235,6 +1250,7 @@ fc_solve_delta_stater_init
 fc_solve_delta_stater_release
 fc_solve_delta_stater_set_derived
 fc_solve_derived_states_list_add_state
+fc_solve_display_information_context_t
 fc_solve_empty_move
 fc_solve_fcc_alloc_moves_list_item
 fc_solve_fcc_release_moves_seq
@@ -1587,6 +1603,7 @@ fcs_lock_init
 fcs_lock_lock
 fcs_lock_unlock
 fcs_locs_t
+fcs_lru_cache_t
 fcs_lru_side_t
 fcs_make_card
 fcs_move_func_aliases_mapping_t
@@ -1606,6 +1623,7 @@ fcs_move_set_src_freecell
 fcs_move_set_src_stack
 fcs_move_set_type
 fcs_move_stack__new
+fcs_move_stack_non_seq_push
 fcs_move_stack_params_push
 fcs_move_stack_push
 fcs_move_stack_reset
@@ -1737,6 +1755,7 @@ flag
 flags
 flare_iters_quota
 flare_iters_quota_t
+flares
 flares_choice
 flares_choice_type_t
 flares_iters_factor
@@ -1756,6 +1775,7 @@ found_line
 foundation_idx
 foundation_rank
 foundations
+founds
 fputc
 fputs
 fr
@@ -1887,6 +1907,7 @@ g_tree_destroy
 g_tree_insert
 g_tree_lookup
 g_tree_new
+game_flags
 game_variant_desired_suit_value
 game_variant_suit_mask
 gamenumber_s
@@ -1984,6 +2005,7 @@ init_state_kv_ptr
 init_state_pair
 init_state_ptr
 init_state_s
+init_state_str_proto
 init_thread
 init_thread_cb
 initial_cards_under_sequences_value
