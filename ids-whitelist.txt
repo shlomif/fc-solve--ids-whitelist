@@ -237,6 +237,7 @@ FCS_PATS__SOLVE_LEVEL_GROW_BY
 FCS_PATS__SUIT
 FCS_PATS__TREE_LIST_NUM_BUCKETS
 FCS_PATS__TYPE_FOUNDATION
+FCS_PATS__TYPE_FREECELL
 FCS_PATS__WIN
 FCS_POS_BY_RANK_LEN
 FCS_POS_BY_RANK_MAP
@@ -732,6 +733,7 @@ arg_ptr
 arg_str
 argc0
 argc_ptr
+args_man
 args_man_t
 args_man_wrapper_t
 argv0
@@ -743,11 +745,13 @@ at_sign
 atof
 atoll
 bakers_dozen_topmost_cards_lookup
+base
 base64_decode
 base64_encode
 base64_encoding_buffer
 base64_encoding_buffer_max_len
 baselevel
+batch_i
 batch_size
 batch_size_t
 befs
@@ -827,6 +831,7 @@ card
 card_cannot_be_placed
 card_char
 card_counts
+card_idx
 card_map_3_10
 card_map_3_T
 card_states
@@ -1095,7 +1100,6 @@ else
 empty_col_idx
 empty_fc_idx
 empty_ret
-empty_stack_col
 empty_stack_idx
 empty_two_cols_from_new_state
 empty_two_cols_ret_t
@@ -1506,6 +1510,7 @@ fcs_col_get_rank
 fcs_col_is_king
 fcs_col_pop_card
 fcs_col_pop_top
+fcs_col_push_card
 fcs_col_transfer_cards
 fcs_columns_google_hash_handle_t
 fcs_compact_alloc_release
@@ -1536,6 +1541,7 @@ fcs_dbm_record_increment_refcount
 fcs_dbm_record_set_parent_ptr
 fcs_dbm_record_set_refcount
 fcs_dbm_solver_thread_struct
+fcs_dbm_solver_thread_t
 fcs_debondt_init_and_encode_state
 fcs_default_weights_t
 fcs_depth_multi_queue__destroy
@@ -1556,6 +1562,7 @@ fcs_duplicate_state
 fcs_duplicate_state_extra
 fcs_extended_move_t
 fcs_fcc_moves_list_item_struct
+fcs_fcc_moves_list_item_t
 fcs_fcc_moves_seq_allocator_t
 fcs_fcc_moves_seq_t
 fcs_foreach_st_callback_choice_t
@@ -1614,6 +1621,7 @@ fcs_move_get_num_cards_in_seq
 fcs_move_get_src_freecell
 fcs_move_get_src_stack
 fcs_move_get_type
+fcs_move_sequence
 fcs_move_set_dest_freecell
 fcs_move_set_dest_stack
 fcs_move_set_foundation
@@ -1942,6 +1950,7 @@ good
 good_automove
 got_child
 gpointer
+grandpa
 group_ptr
 groups_end
 guint
@@ -1975,6 +1984,7 @@ ht__max_num_checked_states
 ht__num_checked_states
 ht_idx
 ht_soft_threads
+i__num_checked_states
 i_card
 i_col
 i_col_len
@@ -2208,6 +2218,7 @@ microsoft_rand_randp
 microsoft_rand_t
 microsoft_rand_uint_t
 millitm
+min
 min_by_sorting
 min_card
 min_card_height
@@ -2230,6 +2241,7 @@ move_func_idx
 move_func_list_idx
 move_func_num
 move_func_ptr
+move_funcs
 move_funcs_idxs
 move_funcs_list
 move_idx
@@ -2297,7 +2309,6 @@ needed_len
 needle
 negated_depth
 new_arg
-new_b_col
 new_card
 new_count
 new_current_size
@@ -2427,6 +2438,7 @@ num_plan_items
 num_positions_in_clusters
 num_positions_in_queue
 num_so_far
+num_soft_threads
 num_soft_threads_finished
 num_solutions
 num_src_junk_true_seqs
@@ -2437,6 +2449,7 @@ num_vacant_slots
 num_vacant_slots_plus_1
 num_valid_move_funcs
 num_virtual_vacant_stacks
+num_workers
 obj_stats
 octet_a
 octet_b
@@ -2504,6 +2517,7 @@ parent_state
 parent_state_enc
 parent_suit
 parent_to_child_pipe
+parents_stack_len
 parents_stack_max_len
 pass
 pass_copy
@@ -2766,6 +2780,7 @@ select
 select_ret
 select_signal_handler
 seq_end
+seq_index
 seq_move
 seq_points
 seq_start
@@ -2905,7 +2920,6 @@ states_values_to_keys_map
 static
 static_error_string
 stats
-stats
 status1
 status2
 stdarg
@@ -2992,7 +3006,6 @@ timeb
 timespec
 timeval
 timezone
-to_col
 to_empty_stack
 to_insert
 to_output
@@ -3056,6 +3069,7 @@ unistd
 unit
 unit_idx
 unlikely
+unlimited_sequence_move
 unlimited_sequence_move_var
 unlink
 unpack_position
@@ -3109,6 +3123,7 @@ visited
 visited_iter
 void
 void_arg
+void_b
 void_context
 vsize
 w_card
@@ -3144,6 +3159,7 @@ worker
 worker_func
 worker_t
 worker_thread
+workers
 wrap_up_solve
 write
 write_me
