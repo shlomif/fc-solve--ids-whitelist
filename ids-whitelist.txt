@@ -524,6 +524,7 @@ MAX_PATH
 MAX_PATH_LEN
 MAX_PREVIOUS_MOVES
 MAX_STATE_STRING_COPY_LEN
+MOVES_GROW_BY
 MOVES_PROCESSED_GROW_BY
 MOVE_FUNCS__define_common
 MOVE_FUNCS__define_empty_stacks_fill
@@ -2271,6 +2272,7 @@ moves_list_compact_alloc
 moves_list_of_lists
 moves_processed_add_new_move
 moves_ptr
+moves_start
 moves_to_key
 moves_to_state
 moves_to_state_enc
@@ -2414,6 +2416,7 @@ num_cards_out
 num_cards_out_factor
 num_cards_out_lookup_table
 num_cards_to_move_from_columns
+num_cards_to_relocate
 num_childs
 num_deals
 num_derived_cards
@@ -2518,6 +2521,7 @@ page_idx_for_backup
 page_idx_to_read_from
 page_idx_to_write_to
 page_index
+pages
 param_num
 parent_and_refcount
 parent_card_height
@@ -2527,6 +2531,7 @@ parent_state
 parent_state_enc
 parent_suit
 parent_to_child_pipe
+parents_stack
 parents_stack_len
 parents_stack_max_len
 pass
@@ -2555,6 +2560,7 @@ populate_instance_with_intermediate_input_line
 populate_seq_points
 pos0
 pos_idx_to_check
+pos_in_moves
 pos_moves_so_far
 pos_proto
 position
@@ -2660,6 +2666,7 @@ queue_meta_alloc
 queue_solution
 queue_solution_ptr
 queue_solution_was_found
+queue_tail
 quota
 quota_end
 r_minus
@@ -3017,6 +3024,7 @@ timeb
 timespec
 timeval
 timezone
+to_check
 to_empty_stack
 to_insert
 to_output
@@ -3035,6 +3043,7 @@ total_num_boards_to_check
 total_num_finished_boards
 total_num_iters_copy
 total_num_iters_lock
+total_num_iters_temp
 total_num_moves
 toupper
 trace_flare_solution
@@ -3070,6 +3079,7 @@ u_int32_t
 u_int8_t
 ub1
 uint16_t
+uint32_t
 uint8_t
 uint_fast16_t
 uint_fast32_t
@@ -3095,6 +3105,7 @@ update_col_cards_under_sequences
 update_total_num_iters_threshold
 upon_new_state
 upparent
+upper
 upper_card
 user
 user_compile_all_flares_plans
@@ -3106,6 +3117,7 @@ user_next_flare
 user_next_instance
 user_obj
 user_preset_dir
+user_state
 utime
 v_s1
 v_s2
@@ -3130,6 +3142,7 @@ verify_state_sanity
 vfprintf
 virt_num_cards
 virtual_freecell_len
+virtual_stack_len
 visibility
 visited
 visited_iter
