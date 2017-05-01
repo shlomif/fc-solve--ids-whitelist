@@ -105,6 +105,7 @@ FCS_COMPILE_FLARES_RET_RUN_AT_SIGN_NOT_FOUND
 FCS_COMPILE_FLARES_RET_UNKNOWN_COMMAND
 FCS_COMPILE_FLARES_RET_UNKNOWN_FLARE_NAME
 FCS_COMPILE_FLARES_RUN_JUNK_AFTER_LAST_RUN_INDEF
+FCS_DBM_CACHE_ONLY
 FCS_DBM_FREECELLS_NUM
 FCS_DBM_RECORD_POINTER_REPR
 FCS_DBM_RECORD_SHIFT
@@ -305,6 +306,7 @@ FCS_STATE_EXCEEDS_MAX_DEPTH
 FCS_STATE_EXCEEDS_MAX_NUM_TIMES
 FCS_STATE_FLARES_PLAN_ERROR
 FCS_STATE_INVALID_STATE
+FCS_STATE_IS_NOT_SOLVEABLE
 FCS_STATE_NOT_BEGAN_YET
 FCS_STATE_OPTIMIZED
 FCS_STATE_ORIGINAL_STATE_IS_NOT_SOLVEABLE
@@ -454,7 +456,10 @@ GetModuleFileName
 GetModuleHandle
 HANDLE_EOS
 HANDLE_existing_void
+HARD_CODED_ALL
+HARD_CODED_NUM_DECKS
 HARD_CODED_UNUSED
+HARD__SET_GAME_PARAMS
 HAVE_GETLINE
 HAVE_STRNCASECMP
 HAVE_VASPRINTF
@@ -575,6 +580,7 @@ PARAMETERIZED_FIXED_LIMIT
 PARAMETERIZED_LIMIT
 PASS_DECKS
 PASS_IND_BUF_T
+PASS_T
 PASS_sequences_are_built_by
 PATH_MAX
 PATSOLVE_STANDALONE
@@ -638,6 +644,7 @@ STACK_SOURCE_LOOP_START
 STATE_STORAGE_TREE_COMPARE
 STATE_STORAGE_TREE_CONTEXT
 STRUCT_CLEAR_FLAG
+STRUCT_QUERY_FLAG
 STRUCT_SET_FLAG_TO
 STRUCT_TURN_ON_FLAG
 ST_LOOP_START
@@ -761,6 +768,7 @@ batch_size_t
 befs
 befs_positions_by_rank
 befs_rate_state
+befs_weights
 behavior_flag
 below_c
 bfs_queue
@@ -899,6 +907,7 @@ command_signal_handler
 common_preset
 comp
 comparator
+compare
 compare_enc_states
 compare_function
 compare_piles
@@ -1161,6 +1170,7 @@ existing_state
 existing_state_raw
 existing_state_val
 existing_void
+exit
 exit_code
 exit_code_t
 exported
@@ -1582,6 +1592,7 @@ fcs_get_preset_id_by_name
 fcs_hash_compare_function_t
 fcs_hash_item_t
 fcs_hash_set_max_num_elems
+fcs_increment_foundation
 fcs_init_and_encode_state
 fcs_init_encoded_state
 fcs_instance_debug_iter_output_context_t
@@ -1741,6 +1752,7 @@ fcs_which_moves_bitmask_t
 fd
 fd_set
 fgets
+fh
 field
 file_len
 file_nesting_count
@@ -1956,6 +1968,7 @@ gnGameNumber
 good
 good_automove
 got_child
+goto
 gpointer
 grandpa
 group_ptr
@@ -2158,6 +2171,7 @@ list_next
 list_of_vacant_items
 list_of_vacant_states
 lists
+load
 load_begin_internal
 loadnil
 local_limit
@@ -2268,6 +2282,7 @@ moves_count
 moves_end
 moves_idx
 moves_iter
+moves_list
 moves_list_compact_alloc
 moves_list_of_lists
 moves_processed_add_new_move
@@ -2298,6 +2313,7 @@ my_brfs_queue_last_item
 my_brfs_recycle_bin
 my_card
 my_close
+my_copy_stack
 my_format
 my_index
 my_iter_handler
@@ -2390,6 +2406,7 @@ nextparent
 nfds
 nicev
 no_use
+nodecount
 non_orig_idx
 nor
 noreturn
@@ -2402,6 +2419,7 @@ nullify_newline
 num_active_children
 num_back_end_moves
 num_bits
+num_cards
 num_cards_1
 num_cards_2
 num_cards_in_col_threshold
@@ -2463,6 +2481,7 @@ num_vacant_slots_plus_1
 num_valid_move_funcs
 num_virtual_vacant_stacks
 num_workers
+obj
 obj_stats
 octet_a
 octet_b
@@ -2559,9 +2578,11 @@ popen
 populate_instance_with_intermediate_input_line
 populate_seq_points
 pos0
+pos_by_rank__freecell
 pos_idx_to_check
 pos_in_moves
 pos_moves_so_far
+pos_pos
 pos_proto
 position
 position_size
@@ -2663,10 +2684,13 @@ queue_id
 queue_instance
 queue_last_item
 queue_meta_alloc
+queue_num_extracted_and_processed
+queue_recycle_bin
 queue_solution
 queue_solution_ptr
 queue_solution_was_found
 queue_tail
+queues_by_depth
 quota
 quota_end
 r_minus
@@ -3024,6 +3048,7 @@ timeb
 timespec
 timeval
 timezone
+tl
 to_check
 to_empty_stack
 to_insert
@@ -3174,6 +3199,7 @@ wcmp
 weight
 weights
 where
+which_irreversible_moves_bitmask
 win
 windows
 windows_exe_dir
