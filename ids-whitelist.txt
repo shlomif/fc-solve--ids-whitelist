@@ -273,6 +273,7 @@ FCS_PROTO_CARD_SUIT_POSITIONS_BY_RANK_INITIAL_OFFSET
 FCS_PROTO_CARD_SUIT_POSITIONS_BY_RANK_STEP
 FCS_RAND
 FCS_RANK_KING
+FCS_RCS_CACHE_STORAGE
 FCS_RCS_CACHE_STORAGE_JUDY
 FCS_RCS_CACHE_STORAGE_KAZ_TREE
 FCS_RUNTIME_CALC_REAL_DEPTH
@@ -476,6 +477,7 @@ INITIAL_DISPLAY_CONTEXT
 INIT_BINARY_OUTPUT
 INSTANCES_LOOP_END
 INSTANCES_LOOP_START
+INSTANCE_DECKS_NUM
 INSTANCE_EMPTY_STACKS_FILL
 INSTANCE_FREECELLS_NUM
 INSTANCE_GAME_FLAGS
@@ -996,6 +998,7 @@ debug_iter_output_on
 debug_iter_state_output
 debug_ret
 decks_index
+decks_num
 decoded_data
 decoding_table
 define
@@ -1314,6 +1317,7 @@ fc_solve_hash_t
 fc_solve_hash_value_t
 fc_solve_increase_dfs_max_depth
 fc_solve_init_instance
+fc_solve_init_locs
 fc_solve_init_soft_thread
 fc_solve_initial_user_state_to_c
 fc_solve_initial_user_state_to_c_proto
@@ -1516,6 +1520,7 @@ fcc_exit_points_out_fn_temp
 fcc_exit_points_output_lock
 fcc_meta_alloc
 fcc_start_points
+fclose
 fcs_FCC_start_point_result_t
 fcs_FCC_start_point_struct
 fcs_FCC_start_point_t
@@ -1621,6 +1626,7 @@ fcs_int_move_set_num_cards_in_seq
 fcs_int_move_set_src_freecell
 fcs_int_move_set_src_stack
 fcs_int_move_set_type
+fcs_is_parent_card
 fcs_is_parent_card__helper
 fcs_is_ss_false_parent
 fcs_is_ss_suit_true
@@ -2398,6 +2404,7 @@ next_element
 next_freecell_idx
 next_i
 next_item
+next_iter
 next_milestone
 next_move
 next_move_idx
@@ -2520,6 +2527,7 @@ orig_str
 orig_top_most_cards
 other_deck_idx
 other_page
+out
 out_derived_states
 out_enc_state
 out_fcc_start_points
@@ -2690,6 +2698,7 @@ q_stats_insert
 q_stats_is_empty
 qsort
 queue_allocator
+queue_head
 queue_id
 queue_instance
 queue_last_item
@@ -2807,6 +2816,7 @@ running_moves
 running_parent
 running_state
 rwlock_fcfs
+s1
 s2
 s_and_info
 s_e
@@ -2929,6 +2939,7 @@ stacks_hash
 stacks_judy_array
 stacks_map
 stacks_tree
+start
 start_arg
 start_board
 start_board_idx
@@ -2953,6 +2964,7 @@ stat
 stat_fn
 state_base64
 state_context_value
+state_copy_ptr
 state_depth
 state_idx
 state_indirect_stacks_buffer
@@ -2972,6 +2984,7 @@ states_values_to_keys_map
 static
 static_error_string
 stats
+status
 status1
 status2
 stdarg
@@ -2994,6 +3007,7 @@ string_arg
 string_end
 string_len
 string_starts_with
+strlen
 strncasecmp
 strncmp
 strncpy
@@ -3182,6 +3196,7 @@ visibility
 visited
 visited_iter
 void
+void_a
 void_arg
 void_b
 void_context
