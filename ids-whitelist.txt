@@ -61,6 +61,7 @@ DECLARE_STACKS
 DECLARE_STATE
 DECLARE_TEMP_STACK
 DECODE
+DEPTH
 DEPTH_Q_GROW_BY
 DERIVED_STATES_LIST_GROW_BY
 DESTROY_CACHE
@@ -117,6 +118,8 @@ FCS_DBM_USE_RWLOCK
 FCS_DBM_VARIANT_2FC_FREECELL
 FCS_DBM_VARIANT_BAKERS_DOZEN
 FCS_DEBONDT_DELTA_STATES
+FCS_DISABLE_NUM_STORED_STATES
+FCS_DISABLE_PATSOLVE
 FCS_DISABLE_SIMPLE_SIMON
 FCS_DISABLE_STATE_VALIDITY_CHECK
 FCS_ENABLE_SECONDARY_HASH_VALUE
@@ -125,6 +128,7 @@ FCS_ES_FILLED_BY_ANY_CARD
 FCS_ES_FILLED_BY_KINGS_ONLY
 FCS_ES_FILLED_BY_NONE
 FCS_EXPLICIT_REFCOUNT
+FCS_FCC_NUM_MOVES_IN_ITEM
 FCS_FOUNDATIONS_OFFSET
 FCS_FREECELLS_OFFSET
 FCS_GEN_BOARDS_WITH_EXTERNAL_API
@@ -223,6 +227,7 @@ FCS_OPT_ST_NAME
 FCS_OPT_TESTS_ORDER
 FCS_OPT_TRIM_MAX_STORED_STATES
 FCS_OPT_UNRECOGNIZED
+FCS_PARSE_try_prefix
 FCS_PATSOLVE__WITH_FAIL_REASON
 FCS_PATS__COLOR
 FCS_PATS__FAIL
@@ -415,6 +420,7 @@ FC_SOLVE__STANDARD_NOTATION_EXTENDED
 FC_SOLVE__STANDARD_NOTATION_NO
 FC_SOLVE__STANDARD_NOTATION_REGULAR
 FC_SOLVE__STRICTER_BOARD_PARSING
+FC__STACKS__SET_PARAMS
 FD_ISSET
 FD_SET
 FD_ZERO
@@ -462,6 +468,8 @@ HANDLE_EOS
 HANDLE_existing_void
 HARD_CODED_ALL
 HARD_CODED_NUM_DECKS
+HARD_CODED_NUM_FREECELLS
+HARD_CODED_NUM_STACKS
 HARD_CODED_UNUSED
 HARD__SET_GAME_PARAMS
 HAVE_GETLINE
@@ -530,6 +538,7 @@ MAX_NUM_DECKS
 MAX_NUM_FREECELLS
 MAX_NUM_INITIAL_CARDS_IN_A_STACK
 MAX_NUM_SCANS
+MAX_NUM_STACKS
 MAX_PATH
 MAX_PATH_LEN
 MAX_PREVIOUS_MOVES
@@ -584,6 +593,7 @@ OptionCode
 PARAMETERIZED_FIXED_LIMIT
 PARAMETERIZED_LIMIT
 PASS_DECKS
+PASS_FREECELLS
 PASS_IND_BUF_T
 PASS_T
 PASS_sequences_are_built_by
@@ -645,6 +655,7 @@ SOLUTION_FOUND_TERMINATE
 SSIZE_MAX
 STACKS_MAP_LEN
 STACKS_NUM__ARG
+STACKS__SET_PARAMS
 STACK_COMPARE
 STACK_DEST_LOOP_END
 STACK_DEST_LOOP_START
@@ -790,6 +801,7 @@ binary_output_t
 bit_idx
 bit_in_char_idx
 bit_r
+bit_w
 bitmask
 bits_per_orig_cards_in_column
 block
@@ -849,6 +861,7 @@ came_from
 candidate_card
 candidate_rank
 canonize_move
+canonized_order_output
 card
 card_cannot_be_placed
 card_char
@@ -877,6 +890,7 @@ check_if_limits_exceeded__num_states
 check_len
 check_num_states_in_collection
 checked_states_step
+child_card
 child_card_height
 child_idx
 child_num_true_seqs
@@ -925,6 +939,7 @@ compare_piles
 compare_rating_with_index
 compare_records
 compatible
+complete
 complete_path
 cond
 condition_expr
@@ -960,12 +975,15 @@ count_to_add
 create_plan_item
 cstime
 ctype
+curr_arg
 curr_by_depth_unit
+curr_depth
 curr_result
 curr_solve_depth
 curr_solve_dir
 curr_solve_pos
 curr_state
+current
 current_hard_thread
 current_instance
 current_iterations_limit
@@ -1012,6 +1030,7 @@ depth_queue
 dequeue__minpos
 dequeue__qpos
 dequeue_position
+derived
 derived_end
 derived_lists
 derived_stacks_buffer
@@ -1058,6 +1077,7 @@ dict_init_like
 dict_isempty
 dict_isfull
 dict_key
+dict_key_t
 dict_last
 dict_left
 dict_load_begin
@@ -1109,6 +1129,7 @@ dnode_init
 dnode_is_in_a_dict
 dnode_process_t
 dnode_put
+dnode_red
 do
 do_next_fcc_start_points_exist
 does_min_by_sorting_exist
@@ -1138,6 +1159,7 @@ encoded_data
 encoding_table
 end
 end_args
+end_board
 end_board_idx
 end_board_ptr
 end_element
@@ -1215,6 +1237,7 @@ fc_solve__internal__copy_moves
 fc_solve__patsolve_thread_struct
 fc_solve__setup_optimization_thread__helper
 fc_solve__soft_thread__do_solve
+fc_solve__try_prefixes
 fc_solve_add_start_point_in_mem
 fc_solve_add_to_irrev_moves_bitmask
 fc_solve_alloc_instance
@@ -1250,6 +1273,7 @@ fc_solve_columns_google_hash_free
 fc_solve_columns_google_hash_insert
 fc_solve_columns_google_hash_new
 fc_solve_compact_allocator_extend
+fc_solve_compact_allocator_init
 fc_solve_compact_allocator_init_helper
 fc_solve_compact_allocator_recycle
 fc_solve_compare_encoded_states
@@ -1554,6 +1578,7 @@ fcs_condvar_destroy
 fcs_condvar_init
 fcs_condvar_signal
 fcs_condvar_t
+fcs_const_cards_column_t
 fcs_copy_stack
 fcs_dbm__cache_store__common_t
 fcs_dbm__cache_store__init
@@ -1574,6 +1599,7 @@ fcs_dbm_record_set_parent_ptr
 fcs_dbm_record_set_refcount
 fcs_dbm_solver_thread_struct
 fcs_dbm_solver_thread_t
+fcs_dbm_store_t
 fcs_debondt_init_and_encode_state
 fcs_default_weights_t
 fcs_depth_multi_queue__destroy
@@ -1586,13 +1612,16 @@ fcs_depth_t
 fcs_derived_state_debug_t
 fcs_derived_state_list__recycle
 fcs_derived_state_struct
+fcs_derived_state_t
 fcs_derived_states_list_item_t
 fcs_derived_states_list_t
 fcs_duplicate_kv_state
 fcs_duplicate_preset
 fcs_duplicate_state
 fcs_duplicate_state_extra
+fcs_empty_freecell
 fcs_extended_move_t
+fcs_fcc_move_t
 fcs_fcc_moves_list_item_struct
 fcs_fcc_moves_list_item_t
 fcs_fcc_moves_seq_allocator_t
@@ -1604,6 +1633,7 @@ fcs_game_type_params_t
 fcs_get_calc_real_depth
 fcs_get_preset_by_id
 fcs_get_preset_id_by_name
+fcs_get_time
 fcs_hash_compare_function_t
 fcs_hash_item_t
 fcs_hash_set_max_num_elems
@@ -1642,6 +1672,7 @@ fcs_libavl2_states_tree_table_t
 fcs_lock_destroy
 fcs_lock_init
 fcs_lock_lock
+fcs_lock_t
 fcs_lock_unlock
 fcs_locs_t
 fcs_lru_cache_t
@@ -1670,6 +1701,7 @@ fcs_move_stack_params_push
 fcs_move_stack_push
 fcs_move_stack_reset
 fcs_move_stack_static_destroy
+fcs_move_t
 fcs_moves_processed_t
 fcs_moves_sequence_t
 fcs_offloading_queue__destroy
@@ -1696,6 +1728,7 @@ fcs_pats__bucket_list_t
 fcs_pats__insert_code_t
 fcs_pats__solve_depth_t
 fcs_pats__tree_node_struct
+fcs_pats__tree_t
 fcs_pats__treelist_struct
 fcs_pats__treelist_t
 fcs_pats_is_king_only
@@ -1760,6 +1793,7 @@ fcs_tests_order_group_t
 fcs_tests_order_t
 fcs_trace
 fcs_uchar_t
+fcs_user_errstr
 fcs_user_state_str_t
 fcs_var_base_int_t
 fcs_var_base_reader_t
@@ -1772,6 +1806,7 @@ fh
 field
 file_len
 file_nesting_count
+filename
 final_move
 final_stack_encoded_state
 final_state
@@ -1810,6 +1845,7 @@ flares_plan_type_t
 floor
 fnv_hash
 fnv_hash_str
+fopen
 for
 fork
 format
@@ -1934,6 +1970,7 @@ from_left
 from_make_pysol
 from_parent
 from_right
+fromtype
 fscanf
 fseek
 ftell
@@ -1987,6 +2024,7 @@ got_child
 goto
 gpointer
 grandpa
+group_idx
 group_ptr
 groups_end
 guint
@@ -2158,6 +2196,7 @@ key_ptr
 key_raw
 key_to_add
 known_param
+known_parameters
 kv_allocator
 kv_calc_depth
 kv_ptr
@@ -2178,11 +2217,14 @@ leftnode
 level
 likely
 lim
+limit
 limit_idx
 limit_instance
 limits
+line
 line_num
 line_size
+list_iter
 list_next
 list_of_vacant_items
 list_of_vacant_states
@@ -2194,6 +2236,7 @@ local_limit
 local_shuffling_type
 local_stacks_num
 location_in_file
+lock
 log_fh
 long
 long_iter_handler
@@ -2225,6 +2268,7 @@ max_iters
 max_moves_to_state_len
 max_num_cards
 max_num_checked_states
+max_num_elements_in_cache
 max_num_elems_before_resize
 max_num_states
 max_ptr
@@ -2244,6 +2288,7 @@ memcmp
 memcpy
 memdup
 memmove
+memset
 message
 meta
 meta_allocator
@@ -2262,6 +2307,7 @@ min
 min_by_sorting
 min_card
 min_card_height
+min_depth
 min_depth_for_scan2
 min_enc_state
 min_flt
@@ -2305,9 +2351,11 @@ moves_processed_add_new_move
 moves_ptr
 moves_start
 moves_to_key
+moves_to_parent
 moves_to_state
 moves_to_state_enc
 moves_to_state_len
+moves_to_win
 mpz_add
 mpz_addmul_ui
 mpz_clear
@@ -2344,6 +2392,7 @@ mydir
 mymax
 mymin
 myslot
+mytime
 mytype
 myvar
 name_len
@@ -2389,6 +2438,8 @@ new_start_point
 new_state_info
 new_state_val
 new_state_void
+new_str
+new_str2
 new_top_most_cards
 new_val
 newnode
@@ -2485,12 +2536,14 @@ num_piles
 num_plan_items
 num_positions_in_clusters
 num_positions_in_queue
+num_separate_false_seqs
 num_so_far
 num_soft_threads
 num_soft_threads_finished
 num_solutions
 num_src_junk_true_seqs
 num_to_skip
+num_true_seqs
 num_true_seqs_out_ptr
 num_units
 num_vacant_slots
@@ -2516,7 +2569,9 @@ opened_files_dir
 opt
 opt_tests_order
 optimization_soft_thread
+optimization_thread
 optimize
+order_group_moves
 orig
 orig_col
 orig_col_len
@@ -2549,6 +2604,7 @@ p_by_r
 p_list
 p_quota
 p_recycle_bin
+p_s
 p_scan
 p_scan_copy
 pack_position
@@ -2571,6 +2627,7 @@ parent_to_child_pipe
 parents_stack
 parents_stack_len
 parents_stack_max_len
+parseable_output
 pass
 pass_copy
 pass_key
@@ -2580,6 +2637,7 @@ path
 path_idx
 path_to_output_dir
 pats__init_soft_thread_and_instance
+pats_solve_params
 pclose
 perform_FCC_brfs
 perform_horne_prune
@@ -2608,6 +2666,7 @@ positions_by_rank
 possible_moves
 pow
 ppid
+pq
 pq_element_t
 pq_rating_t
 pqueue
@@ -2618,6 +2677,8 @@ pre_cache_max_count
 pre_cache_offload_and_destroy
 pre_cache_offload_and_reset
 pre_cache_ptr
+prefix
+prefixes
 prelude_as_string
 prelude_idx
 prelude_num_items
@@ -2729,6 +2790,7 @@ rank_min_2
 rating
 raw_ptr_new_state
 raw_ptr_new_state_raw
+raw_ptr_state_raw
 rb_count
 rb_create
 rb_data
@@ -2764,10 +2826,12 @@ read_state_from_file
 readchar
 reader
 readers
+readone
 readstr
 readunsigned
 real_arg
 realloc
+rec
 record
 record_on_stack
 recycle_bin_ptr
@@ -2885,6 +2949,7 @@ simple_alloc_and_parse
 single_derived_state
 single_flare
 singleton
+size
 size_bitmask
 skip_queue_output
 snprintf
@@ -2893,6 +2958,7 @@ soft_thread
 soft_thread_clean_soft_dfs
 soft_thread_id
 soft_thread_struct__dont_use_directly
+soft_threads
 solution_fn
 solution_moves
 solution_moves_ptr
@@ -3038,6 +3104,7 @@ temp_freecell
 temp_move
 temp_moves
 temp_stack
+temp_state
 temp_str
 temp_visited
 tentative
@@ -3082,6 +3149,7 @@ to_release
 to_reparent_states
 to_stack
 tokens
+top_card
 top_card_idx
 top_opt
 top_rank_for_iter
@@ -3090,11 +3158,13 @@ total_iterations_limit_per_board_ptr
 total_move_funcs_bitmask
 total_num_boards_to_check
 total_num_finished_boards
+total_num_iters
 total_num_iters_copy
 total_num_iters_lock
 total_num_iters_temp
 total_num_moves
 toupper
+trace
 trace_flare_solution
 trace_max_num
 trace_mem
@@ -3108,6 +3178,7 @@ traversed_states
 tree_list
 tree_new_state
 tree_new_state_key
+tree_recycle_bin
 trim_trailing_whitespace
 triple
 true
@@ -3179,6 +3250,7 @@ val_to_inspect
 valid
 var
 var_AUTO
+variant
 variant_is_freecell
 vasprintf
 verdict
@@ -3202,6 +3274,7 @@ void_b
 void_context
 vsize
 w_card
+w_col
 w_col_data
 w_col_len
 wait
