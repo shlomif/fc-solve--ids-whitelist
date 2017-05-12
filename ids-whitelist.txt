@@ -491,6 +491,7 @@ INSTANCE_FREECELLS_NUM
 INSTANCE_GAME_FLAGS
 INSTANCE_ITEM_FLARES_LOOP_END
 INSTANCE_ITEM_FLARES_LOOP_START
+INSTANCE_STACKS_NUM
 INSTANCE_UNLIMITED_SEQUENCE_MOVE
 INST_HT0
 INTPTR_MAX
@@ -560,13 +561,13 @@ NULL
 NUM_BITS
 NUM_BITS_IN_BYTES
 NUM_CARDS
-NUM_CHAINS_TO_RELEASE
 NUM_CHECKED_STATES
 NUM_HARD_THREADS
 NUM_ITEMS_PER_PAGE
 NUM_ITERS_LIMITS
 NUM_ITERS_LIMITS_MINUS_1
 NUM_KING_OPTS
+NUM_MOVES
 NUM_OPTS
 NUM_POS_BY_RANK_SLOTS
 NUM_PRESETS
@@ -828,6 +829,7 @@ c1
 c2
 c_bottom
 cache_destroy
+cache_destroy_key
 cache_does_key_exist
 cache_init
 cache_insert
@@ -1273,6 +1275,7 @@ fc_solve_columns_google_hash_free
 fc_solve_columns_google_hash_insert
 fc_solve_columns_google_hash_new
 fc_solve_compact_allocator_extend
+fc_solve_compact_allocator_finish
 fc_solve_compact_allocator_init
 fc_solve_compact_allocator_init_helper
 fc_solve_compact_allocator_recycle
@@ -1557,6 +1560,7 @@ fcs__should_state_be_pruned
 fcs_by_depth_tests_order_array_t
 fcs_by_depth_tests_order_t
 fcs_cache_key_info_struct
+fcs_cache_key_info_t
 fcs_cache_key_t
 fcs_card2char
 fcs_card_is_empty
@@ -1569,6 +1573,7 @@ fcs_col_pop_top
 fcs_col_push_card
 fcs_col_transfer_cards
 fcs_columns_google_hash_handle_t
+fcs_compact_alloc_ptr
 fcs_compact_alloc_release
 fcs_compare_context_t
 fcs_compile_flares_ret_t
@@ -1656,6 +1661,7 @@ fcs_int_move_set_num_cards_in_seq
 fcs_int_move_set_src_freecell
 fcs_int_move_set_src_stack
 fcs_int_move_set_type
+fcs_internal_move_t
 fcs_is_parent_card
 fcs_is_parent_card__helper
 fcs_is_ss_false_parent
@@ -1801,6 +1807,7 @@ fcs_var_base_writer_t
 fcs_which_moves_bitmask_t
 fd
 fd_set
+fflush
 fgets
 fh
 field
@@ -1964,6 +1971,7 @@ freecells_to_fill
 freed_positions
 freenode
 freestacks_to_fill
+from
 from_bin
 from_col
 from_left
@@ -2345,6 +2353,7 @@ moves_end
 moves_idx
 moves_iter
 moves_list
+moves_list_allocator
 moves_list_compact_alloc
 moves_list_of_lists
 moves_processed_add_new_move
@@ -2852,6 +2861,7 @@ request_t
 requires
 response
 response_t
+result
 result_t
 results
 resume_solution
@@ -2939,6 +2949,7 @@ should_modify_parent
 should_search
 should_src_col
 should_still_loop
+should_terminate
 show_exceeded_limits
 shuffling_type
 sid
@@ -3043,6 +3054,7 @@ state_string_copy
 state_val
 state_validity_card
 state_validity_ret
+states
 states_count
 states_in_cache
 states_values_to_keys_allocator
@@ -3145,7 +3157,6 @@ to_empty_stack
 to_insert
 to_output
 to_prune
-to_release
 to_reparent_states
 to_stack
 tokens
@@ -3163,6 +3174,7 @@ total_num_iters_copy
 total_num_iters_lock
 total_num_iters_temp
 total_num_moves
+totype
 toupper
 trace
 trace_flare_solution
