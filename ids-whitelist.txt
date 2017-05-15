@@ -43,6 +43,7 @@ COMP_BY
 COMP_BY_IDX
 COPY_INDIRECT_COLS
 COPY_STACK
+COUNT
 COUNT_NON_REV
 CURR_INST
 DB
@@ -373,6 +374,7 @@ FCS_WITHOUT_TRIM_MAX_STORED_STATES
 FCS_WITHOUT_VISITED_ITER
 FCS_WITH_CARD_COMPARE_LOOKUP
 FCS_WITH_CONTEXT_VARIABLE
+FCS_WITH_ERROR_STRS
 FCS__OUTPUT_STATE
 FCS__RENDER_STATE
 FCS__SEQS_ARE_BUILT_BY_RANK
@@ -443,6 +445,7 @@ FPRINTF_TIME
 FREECELL
 FREECELL2MOVE
 FREECELLS_AND_STACKS_ARGS
+FREECELLS_NUM
 FREECELLS_NUM__ARG
 FREECELLS_NUM__VAL
 FREECELLS_STACKS_DECKS__ARGS
@@ -515,6 +518,7 @@ KAZLIB_OBSOLESCENT_DEBUG
 KAZLIB_OPAQUE_DEBUG
 KEY_PTR
 King_only
+LAST
 LOCAL_DECKS_NUM
 LOCAL_VARIANT
 LOG_FILENAME
@@ -656,6 +660,7 @@ SOLUTION_FOUND_TERMINATE
 SSIZE_MAX
 STACKS_MAP_LEN
 STACKS_NUM__ARG
+STACKS_NUM__VAL
 STACKS__SET_PARAMS
 STACK_COMPARE
 STACK_DEST_LOOP_END
@@ -677,6 +682,7 @@ Suit
 TERMINATE_REASON
 THE_MOVE_FUNCS_LIST
 TRACE
+TRACE0
 TRAILING_CHAR
 TRY_P
 TRY_PARAM
@@ -1021,6 +1027,7 @@ decks_index
 decks_num
 decoded_data
 decoding_table
+default
 define
 delete_state
 delparent
@@ -1034,6 +1041,7 @@ dequeue__qpos
 dequeue_position
 derived
 derived_end
+derived_list_allocator
 derived_lists
 derived_stacks_buffer
 derived_start_idx
@@ -1044,6 +1052,7 @@ derived_states_list_struct
 derived_states_random_indexes
 derived_states_random_indexes_max_size
 dest_below_card
+dest_card
 dest_col_i
 dest_fc_idx
 dest_found
@@ -1137,6 +1146,7 @@ do_next_fcc_start_points_exist
 does_min_by_sorting_exist
 does_state_exist_in_any_FCC_cache
 dont_exit_on_sol
+double
 ds_dc_t
 ds_dcs
 dummy
@@ -1147,6 +1157,7 @@ effective_max_num_checked_states
 effective_max_num_states_in_collection
 effective_trim_states_in_collection_from
 elem
+elems
 else
 empty_col_idx
 empty_fc_idx
@@ -1714,6 +1725,7 @@ fcs_offloading_queue__destroy
 fcs_offloading_queue__extract
 fcs_offloading_queue__init
 fcs_offloading_queue__insert
+fcs_offloading_queue_item_t
 fcs_offloading_queue_page__bump
 fcs_offloading_queue_page__calc_filename
 fcs_offloading_queue_page__can_extract
@@ -1732,6 +1744,7 @@ fcs_pats__block_t
 fcs_pats__bucket_list_struct
 fcs_pats__bucket_list_t
 fcs_pats__insert_code_t
+fcs_pats__move_t
 fcs_pats__solve_depth_t
 fcs_pats__tree_node_struct
 fcs_pats__tree_t
@@ -2051,10 +2064,12 @@ have_more
 height
 height_left
 height_right
+help_err
 help_key
 help_screen_t
 help_screens
 hex_digits
+highest_pri
 home_dir
 home_dir_presetrc
 horne_prune
@@ -2088,6 +2103,7 @@ in_word_set
 include
 increment
 indexes
+info
 info_ptr
 init_card
 init_indirect_stacks_buffer
@@ -2269,6 +2285,7 @@ max0
 max_batch_size
 max_count_next_states
 max_count_num_processed
+max_depth
 max_depth_margin
 max_freecell_idx
 max_info_ptr
@@ -2512,6 +2529,7 @@ num_cards_out_factor
 num_cards_out_lookup_table
 num_cards_to_move_from_columns
 num_cards_to_relocate
+num_checked_states
 num_childs
 num_deals
 num_derived_cards
@@ -2659,6 +2677,7 @@ pile
 pilenum
 pipe
 place
+plan
 popen
 populate_instance_with_intermediate_input_line
 populate_seq_points
@@ -2688,6 +2707,7 @@ pre_cache_offload_and_reset
 pre_cache_ptr
 prefix
 prefixes
+prelude
 prelude_as_string
 prelude_idx
 prelude_num_items
@@ -2744,6 +2764,7 @@ pthread_rwlock_fcfs_t
 pthread_t
 ptr_dest
 ptr_initial_record
+ptr_new_state
 ptr_new_state_foo
 ptr_next_state
 ptr_src
@@ -2938,6 +2959,8 @@ sextet_a
 sextet_b
 sextet_c
 sextet_d
+sfs_check_state_begin
+sfs_check_state_end
 shift
 shift_count
 short
@@ -3008,6 +3031,7 @@ stack_card_str
 stack_depth
 stack_hashes
 stack_ids
+stack_item
 stack_locs
 stack_ptr__moves_to_parent
 stacks_allocator
@@ -3039,6 +3063,7 @@ start_state_str_proto
 start_time
 stat
 stat_fn
+state_as_string
 state_base64
 state_context_value
 state_copy_ptr
@@ -3047,6 +3072,7 @@ state_idx
 state_indirect_stacks_buffer
 state_locs
 state_pair
+state_ptr
 state_raw
 state_s_proto
 state_str
@@ -3068,6 +3094,7 @@ status2
 stdarg
 stdbool
 stddef
+stderr
 stdin
 stdint
 stdio
@@ -3108,6 +3135,7 @@ switch_to_next_soft_thread
 synergy
 sys
 t_card
+target
 tb
 tcomm
 temp_allocator
@@ -3146,6 +3174,7 @@ this_real_depth
 thread_arg_t
 thread_end
 thread_meta_alloc
+threads
 time
 timeb
 timespec
