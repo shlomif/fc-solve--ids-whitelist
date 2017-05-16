@@ -118,6 +118,7 @@ FCS_DBM_USE_OFFLOADING_QUEUE
 FCS_DBM_USE_RWLOCK
 FCS_DBM_VARIANT_2FC_FREECELL
 FCS_DBM_VARIANT_BAKERS_DOZEN
+FCS_DBM_WITHOUT_CACHES
 FCS_DEBONDT_DELTA_STATES
 FCS_DISABLE_NUM_STORED_STATES
 FCS_DISABLE_PATSOLVE
@@ -246,6 +247,7 @@ FCS_PATS__SUIT
 FCS_PATS__TREE_LIST_NUM_BUCKETS
 FCS_PATS__TYPE_FOUNDATION
 FCS_PATS__TYPE_FREECELL
+FCS_PATS__TYPE_WASTE
 FCS_PATS__WIN
 FCS_POS_BY_RANK_LEN
 FCS_POS_BY_RANK_MAP
@@ -282,6 +284,7 @@ FCS_RANK_KING
 FCS_RCS_CACHE_STORAGE
 FCS_RCS_CACHE_STORAGE_JUDY
 FCS_RCS_CACHE_STORAGE_KAZ_TREE
+FCS_RCS_STATES
 FCS_RUNTIME_CALC_REAL_DEPTH
 FCS_RUNTIME_IN_OPTIMIZATION_THREAD
 FCS_RUNTIME_OPTIMIZE_SOLUTION_PATH
@@ -460,6 +463,7 @@ GET_CARD
 GET_DEPTH
 GET_FREECELL
 GET_INSTANCE_SEQUENCES_ARE_BUILT_BY
+GET_PARAM
 GET_STACK
 GET_SUIT_BIT
 GHashTable
@@ -482,6 +486,7 @@ HMODULE
 HT_INSTANCE
 HT_LOOP_START
 INDEX
+INDIRECT_STACK_STATES
 IND_BUF_T_PARAM
 INFO_STATE_PTR
 INITIAL_DISPLAY_CONTEXT
@@ -499,6 +504,8 @@ INSTANCE_UNLIMITED_SEQUENCE_MOVE
 INST_HT0
 INTPTR_MAX
 INT_MAX
+IS_ARG
+IS_ARG_LONG
 IS_BAKERS_DOZEN
 IS_FILLED_BY_KINGS_ONLY
 IS_FILLED_BY_NONE
@@ -600,6 +607,7 @@ PARAMETERIZED_LIMIT
 PASS_DECKS
 PASS_FREECELLS
 PASS_IND_BUF_T
+PASS_STACKS
 PASS_T
 PASS_sequences_are_built_by
 PATH_MAX
@@ -615,6 +623,8 @@ PRE_CACHE_OFFLOAD
 PROCESS_CARD
 PTHREAD_COND_INITIALIZER
 PTHREAD_MUTEX_INITIALIZER
+PTR_STATE
+PValue
 PWord_t
 Please
 Pvoid_t
@@ -930,6 +940,7 @@ col_seqs_iter__create
 col_seqs_iter_t
 colls_by_depth
 cols
+cols_indexes
 column
 column_idxs
 column_inv_idxs
@@ -1014,6 +1025,7 @@ dbm__free_threads
 dbm__spawn_threads
 dbm_store_path
 dbm_t
+dbp
 dc_ptr
 deal
 deal_idx
@@ -1042,6 +1054,7 @@ dequeue_position
 derived
 derived_end
 derived_list_allocator
+derived_list_recycle_bin
 derived_lists
 derived_stacks_buffer
 derived_start_idx
@@ -1120,6 +1133,7 @@ dictnil
 dictptr
 diff
 dir
+display_10_as_t
 display_moves
 display_parent_iter_num
 display_states
@@ -1127,6 +1141,7 @@ dll_ind_buf_t
 dllexport
 dllimport
 dn
+dnode
 dnode_alloc
 dnode_alloc_t
 dnode_color_t
@@ -1233,6 +1248,7 @@ false_seq_idx
 false_seq_index_limit
 false_seq_index_loop
 fatalerr
+fc_idx
 fc_locs
 fc_pro_get_board
 fc_pro_moves
@@ -2227,6 +2243,7 @@ kv_ptr
 kv_ptr_new_state
 kv_recycle_bin
 label
+last_arg
 last_arg_end
 last_arg_ptr
 last_card
@@ -2253,6 +2270,7 @@ list_next
 list_of_vacant_items
 list_of_vacant_states
 lists
+lng
 load
 load_begin_internal
 loadnil
@@ -2267,6 +2285,7 @@ long_iter_handler
 lookup_state
 lower
 lower_card
+lower_pri
 lowleft
 lowright
 lp_instance
@@ -2644,6 +2663,7 @@ page_index
 pages
 param_num
 parent_and_refcount
+parent_card
 parent_card_height
 parent_iter_num
 parent_ptr
@@ -2887,6 +2907,7 @@ result_t
 results
 resume_solution
 ret
+ret_code
 ret_moves
 ret_state_s
 ret_val
@@ -2974,6 +2995,7 @@ should_src_col
 should_still_loop
 should_terminate
 show_exceeded_limits
+shrt
 shuffling_type
 sid
 signal
