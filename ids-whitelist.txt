@@ -58,6 +58,7 @@ DEBUG_VERIFY_SOFT_DFS_STACK
 DECKS_NUM
 DECKS_NUM__ARG
 DECKS_NUM__VAL
+DECLARE_IND_BUF_T
 DECLARE_STACKS
 DECLARE_STATE
 DECLARE_TEMP_STACK
@@ -67,6 +68,7 @@ DEPTH_Q_GROW_BY
 DERIVED_STATES_LIST_GROW_BY
 DESTROY_CACHE
 DESTROY_STORE
+DFS_VAR
 DICTCOUNT_T_MAX
 DICT_DEPTH_MAX
 DICT_IMPLEMENTATION
@@ -526,6 +528,7 @@ KAZLIB_OPAQUE_DEBUG
 KEY_PTR
 King_only
 LAST
+LEVEL
 LOCAL_DECKS_NUM
 LOCAL_VARIANT
 LOG_FILENAME
@@ -613,7 +616,6 @@ PASS_sequences_are_built_by
 PATH_MAX
 PATSOLVE_STANDALONE
 PENULTIMATE_DEPTH
-PLACE
 POPULATE_AND_CHECK_IF_FALSE_SEQ
 PQ_FIRST_ENTRY
 PQ_LEFT_CHILD_INDEX
@@ -621,6 +623,7 @@ PQ_PARENT_INDEX
 PRELUDE_GROW_BY
 PRE_CACHE_OFFLOAD
 PROCESS_CARD
+PROCESS_OPT_ARG
 PTHREAD_COND_INITIALIZER
 PTHREAD_MUTEX_INITIALIZER
 PTR_STATE
@@ -667,8 +670,10 @@ SIZE_INT
 SMALLOC1
 SOFT_DFS_DEPTH_GROW_BY
 SOLUTION_FOUND_TERMINATE
+SREALLOC
 SSIZE_MAX
 STACKS_MAP_LEN
+STACKS_NUM
 STACKS_NUM__ARG
 STACKS_NUM__VAL
 STACKS__SET_PARAMS
@@ -837,6 +842,7 @@ buffer_size
 build_decoding_table
 by_depth_max_depth
 by_depth_min_depth
+by_depth_moves
 by_depth_units
 by_rank_ptr
 bytes_per_pile
@@ -994,6 +1000,7 @@ count_to_add
 create_plan_item
 cstime
 ctype
+curr
 curr_arg
 curr_by_depth_unit
 curr_depth
@@ -1045,6 +1052,7 @@ delete_state
 delparent
 delta_limit
 depth_factor
+depth_idx
 depth_num
 depth_ptr
 depth_queue
@@ -1053,6 +1061,7 @@ dequeue__qpos
 dequeue_position
 derived
 derived_end
+derived_list
 derived_list_allocator
 derived_list_recycle_bin
 derived_lists
@@ -1066,6 +1075,7 @@ derived_states_random_indexes
 derived_states_random_indexes_max_size
 dest_below_card
 dest_card
+dest_cards_num
 dest_col_i
 dest_fc_idx
 dest_found
@@ -1144,6 +1154,7 @@ dn
 dnode
 dnode_alloc
 dnode_alloc_t
+dnode_black
 dnode_color_t
 dnode_create
 dnode_destroy
@@ -1212,6 +1223,7 @@ endif
 entries
 entry_
 entry_point
+enum
 env_var_presetrc
 epoll
 epoll_create1
@@ -1226,6 +1238,7 @@ errstr
 es_fill
 ev
 events
+existing
 existing_cache_state
 existing_key
 existing_opt
@@ -1337,6 +1350,7 @@ fc_solve_delta_stater_encode_into_buffer
 fc_solve_delta_stater_init
 fc_solve_delta_stater_release
 fc_solve_delta_stater_set_derived
+fc_solve_delta_stater_t
 fc_solve_derived_states_list_add_state
 fc_solve_display_information_context_t
 fc_solve_empty_move
@@ -1602,6 +1616,8 @@ fcs_col_transfer_cards
 fcs_columns_google_hash_handle_t
 fcs_compact_alloc_ptr
 fcs_compact_alloc_release
+fcs_compact_allocator_t
+fcs_compact_allocator_t
 fcs_compare_context_t
 fcs_compile_flares_ret_t
 fcs_condvar__wait_on
@@ -1658,9 +1674,11 @@ fcs_fcc_moves_list_item_struct
 fcs_fcc_moves_list_item_t
 fcs_fcc_moves_seq_allocator_t
 fcs_fcc_moves_seq_t
+fcs_flare_item_t
 fcs_foreach_st_callback_choice_t
 fcs_freecell_card_suit
 fcs_freecell_is_empty
+fcs_game_limit_t
 fcs_game_type_params_t
 fcs_get_calc_real_depth
 fcs_get_preset_by_id
@@ -1734,6 +1752,7 @@ fcs_move_stack_params_push
 fcs_move_stack_push
 fcs_move_stack_reset
 fcs_move_stack_static_destroy
+fcs_move_stack_t
 fcs_move_t
 fcs_moves_processed_t
 fcs_moves_sequence_t
@@ -1769,6 +1788,7 @@ fcs_pats__treelist_t
 fcs_pats_is_king_only
 fcs_pats_is_suitable
 fcs_pats_next_card
+fcs_pats_position_t
 fcs_pats_xy_param_t
 fcs_pdfs_cache_destroy
 fcs_pdfs_cache_does_key_exist
@@ -1807,6 +1827,7 @@ fcs_state_extra_info_t
 fcs_state_foundation_t
 fcs_state_ia_alloc_into_var
 fcs_state_keyval_pair_struct
+fcs_state_locs_struct_t
 fcs_state_pop_col_card
 fcs_state_pop_col_top
 fcs_state_push
@@ -1912,6 +1933,7 @@ freecell_preset
 freecell_solver_pats__make_move
 freecell_solver_pats__x_y_params_preset
 freecell_solver_set_stored_states_trimming_limit
+freecell_solver_str_t
 freecell_solver_user_alloc
 freecell_solver_user_apply_preset
 freecell_solver_user_cmd_line_known_commands_callback_t
@@ -1994,6 +2016,7 @@ freecell_solver_user_solve_board
 freecell_solver_user_stringify_move_ptr
 freecell_solver_user_stringify_move_w_state
 freecells
+freecells_num
 freecells_s
 freecells_s_end
 freecells_to_fill
@@ -2076,6 +2099,7 @@ hard_threads
 has_empty_col
 hash_type
 hash_value
+hash_value_int
 have_more
 height
 height_left
@@ -2265,6 +2289,7 @@ limits
 line
 line_num
 line_size
+list
 list_iter
 list_next
 list_of_vacant_items
@@ -2286,6 +2311,7 @@ lookup_state
 lower
 lower_card
 lower_pri
+lowest_pri
 lowleft
 lowright
 lp_instance
@@ -2440,6 +2466,7 @@ myslot
 mytime
 mytype
 myvar
+name
 name_len
 nanosleep
 needed_cards
@@ -2550,6 +2577,7 @@ num_cards_to_move_from_columns
 num_cards_to_relocate
 num_checked_states
 num_childs
+num_columns
 num_deals
 num_derived_cards
 num_derived_states
@@ -2561,6 +2589,7 @@ num_file_args_to_skip
 num_finished_boards
 num_flares
 num_foundations
+num_freecells
 num_hard_threads
 num_hard_threads_finished
 num_inserted
@@ -2588,6 +2617,8 @@ num_soft_threads
 num_soft_threads_finished
 num_solutions
 num_src_junk_true_seqs
+num_states
+num_threads
 num_to_skip
 num_true_seqs
 num_true_seqs_out_ptr
@@ -2603,6 +2634,7 @@ octet_a
 octet_b
 octet_c
 off_q_page_t
+offload_dir_path
 old_hard_thread
 old_list
 old_move_stack_to_parent
@@ -2635,12 +2667,14 @@ out_fcc_start_points
 out_filename
 out_is_fcc_new
 out_item
+out_move
 out_move_funcs_list
 out_new_state_out
 out_num_new_positions
 out_of_loop
 out_state
 out_sum
+output_fh
 output_filename
 output_length
 output_lock
@@ -2655,6 +2689,7 @@ p_scan
 p_scan_copy
 pack_position
 packed_foundations
+page
 page_filename
 page_idx_for_backup
 page_idx_to_read_from
@@ -2718,6 +2753,7 @@ pq
 pq_element_t
 pq_rating_t
 pqueue
+pre_cache
 pre_cache_does_key_exist
 pre_cache_init
 pre_cache_insert
@@ -2744,6 +2780,7 @@ prev_item
 prev_rss
 prev_size
 prev_src
+pri
 pri_queue_t
 print_flares_plan_error
 print_help
@@ -2938,6 +2975,7 @@ s_and_info
 s_e
 s_e_src_t
 s_end
+s_ptr
 safe_traverse
 save_item
 save_queue
@@ -3005,6 +3043,7 @@ simple_alloc_and_parse
 single_derived_state
 single_flare
 singleton
+sister
 size
 size_bitmask
 skip_queue_output
@@ -3030,6 +3069,7 @@ sorted_idx
 source
 source_col_cards_num
 source_col_idx
+sprintf
 srando
 srandp
 src_card
@@ -3062,6 +3102,7 @@ stacks_hash
 stacks_judy_array
 stacks_map
 stacks_tree
+standard_notation
 start
 start_arg
 start_board
@@ -3098,6 +3139,7 @@ state_ptr
 state_raw
 state_s_proto
 state_str
+state_string
 state_string_copy
 state_val
 state_validity_card
@@ -3189,6 +3231,7 @@ tests_order_groups
 tests_order_num
 the_card
 the_num_true_seqs
+the_state
 the_tests_list_ptr
 theme_error
 this_card
@@ -3203,6 +3246,7 @@ timespec
 timeval
 timezone
 tl
+to
 to_check
 to_empty_stack
 to_insert
@@ -3254,9 +3298,11 @@ tv
 tv_nsec
 tv_sec
 tv_usec
+type
 typedef
 types
 tz
+u_char
 u_int16_t
 u_int32_t
 u_int8_t
