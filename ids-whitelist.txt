@@ -91,6 +91,7 @@ FCS_BEFS_WEIGHT_MAX_SEQUENCE_MOVE
 FCS_BEFS_WEIGHT_NUM_CARDS_NOT_ON_PARENTS
 FCS_BEFS_WEIGHT_SEQS_OVER_RENEGADE_CARDS
 FCS_BOTH__POS_BY_RANK__SIZE
+FCS_BREAK_BACKWARD_COMPAT_1
 FCS_B_AT_FMT
 FCS_CARD_SUIT_POSITIONS_BY_RANK_INITIAL_OFFSET
 FCS_CARD_SUIT_POSITIONS_BY_RANK_STEP
@@ -299,6 +300,7 @@ FCS_SEQS_OVER_RENEGADE_POWER
 FCS_SEQ_BUILT_BY_ALTERNATE_COLOR
 FCS_SEQ_BUILT_BY_RANK
 FCS_SEQ_BUILT_BY_SUIT
+FCS_SINGLE_HARD_THREAD
 FCS_SOFT_THREAD_INITIALIZED
 FCS_SOFT_THREAD_IS_A_COMPLETE_SCAN
 FCS_SOFT_THREAD_IS_FINISHED
@@ -380,7 +382,10 @@ FCS_WITHOUT_VISITED_ITER
 FCS_WITH_CARD_COMPARE_LOOKUP
 FCS_WITH_CONTEXT_VARIABLE
 FCS_WITH_ERROR_STRS
+FCS_WITH_FLARES
+FCS_WITH_FLARES
 FCS__OUTPUT_STATE
+FCS__PASS_ERR_STR
 FCS__RENDER_STATE
 FCS__SEQS_ARE_BUILT_BY_RANK
 FCS__pass_moves
@@ -530,6 +535,7 @@ King_only
 LAST
 LEVEL
 LOCAL_DECKS_NUM
+LOCAL_FREECELLS_NUM
 LOCAL_VARIANT
 LOG_FILENAME
 LONG
@@ -571,6 +577,7 @@ MY_MARGIN
 NDEBUG
 NEW_BRFS_QUEUE_ITEM
 NEXT_CACHE_STATE
+NO_FC_SOLVE
 NULL
 NUM_BITS
 NUM_BITS_IN_BYTES
@@ -667,6 +674,7 @@ SIMPS_define_vacant_stacks_accessors
 SINGLE_FLARE
 SIZEOF_VOID_P
 SIZE_INT
+SMALLOC
 SMALLOC1
 SOFT_DFS_DEPTH_GROW_BY
 SOLUTION_FOUND_TERMINATE
@@ -816,6 +824,7 @@ behavior_flag
 below_c
 bfs_queue
 bfs_queue_last_item
+bin
 bin_close
 bin_init
 binary_output
@@ -837,6 +846,7 @@ bsearch
 bucket
 bucket_from_pile_lookup
 buckets_list
+buffer
 buffer_end
 buffer_size
 build_decoding_table
@@ -855,6 +865,7 @@ cache_destroy_key
 cache_does_key_exist
 cache_init
 cache_insert
+cache_key
 cache_populate_from_pre_cache
 cache_ret
 cache_store__has_key
@@ -914,6 +925,7 @@ check_if_limits_exceeded__num_states
 check_len
 check_num_states_in_collection
 checked_states_step
+child
 child_card
 child_card_height
 child_idx
@@ -938,12 +950,14 @@ cmin_flt
 col
 col_enc
 col_idx_val
+col_len
 col_len_minus_1
 col_num_cards
 col_seqs_iter__advance
 col_seqs_iter__calc_end
 col_seqs_iter__create
 col_seqs_iter_t
+coll
 colls_by_depth
 cols
 cols_indexes
@@ -983,6 +997,7 @@ copy_two_stacks
 copyleft
 copyright
 core_irreversible_moves_count
+count
 count_additional_irrev_moves
 count_elements
 count_elements_in_cache
@@ -1042,6 +1057,7 @@ debug_iter_output_func
 debug_iter_output_on
 debug_iter_state_output
 debug_ret
+deck
 decks_index
 decks_num
 decoded_data
@@ -1070,6 +1086,8 @@ derived_start_idx
 derived_state
 derived_state_s
 derived_states
+derived_states_list
+derived_states_list
 derived_states_list_struct
 derived_states_random_indexes
 derived_states_random_indexes_max_size
@@ -1144,6 +1162,7 @@ dictptr
 diff
 dir
 display_10_as_t
+display_context
 display_moves
 display_parent_iter_num
 display_states
@@ -1261,6 +1280,7 @@ false_seq_idx
 false_seq_index_limit
 false_seq_index_loop
 fatalerr
+fc
 fc_idx
 fc_locs
 fc_pro_get_board
@@ -1353,7 +1373,9 @@ fc_solve_delta_stater_set_derived
 fc_solve_delta_stater_t
 fc_solve_derived_states_list_add_state
 fc_solve_display_information_context_t
+fc_solve_empty_card
 fc_solve_empty_move
+fc_solve_fc_pro__can_be_moved
 fc_solve_fcc_alloc_moves_list_item
 fc_solve_fcc_release_moves_seq
 fc_solve_finish_instance
@@ -1373,6 +1395,7 @@ fc_solve_get_preset_by_name
 fc_solve_glib_hash_stack_compare
 fc_solve_glib_hash_stack_hash_function
 fc_solve_hard_thread_struct
+fc_solve_hard_thread_t
 fc_solve_hash_foreach
 fc_solve_hash_free
 fc_solve_hash_function
@@ -1645,9 +1668,11 @@ fcs_dbm_record_get_refcount
 fcs_dbm_record_increment_refcount
 fcs_dbm_record_set_parent_ptr
 fcs_dbm_record_set_refcount
+fcs_dbm_solver_instance_t
 fcs_dbm_solver_thread_struct
 fcs_dbm_solver_thread_t
 fcs_dbm_store_t
+fcs_dbm_variant_type_t
 fcs_debondt_init_and_encode_state
 fcs_default_weights_t
 fcs_depth_multi_queue__destroy
@@ -1676,6 +1701,8 @@ fcs_fcc_moves_seq_allocator_t
 fcs_fcc_moves_seq_t
 fcs_flare_item_t
 fcs_foreach_st_callback_choice_t
+fcs_foundation_value
+fcs_freecell_card
 fcs_freecell_card_suit
 fcs_freecell_is_empty
 fcs_game_limit_t
@@ -1712,6 +1739,7 @@ fcs_is_parent_card__helper
 fcs_is_ss_false_parent
 fcs_is_ss_suit_true
 fcs_is_ss_true_parent
+fcs_kv_state_t
 fcs_libavl2_stacks_tree_create
 fcs_libavl2_stacks_tree_destroy
 fcs_libavl2_stacks_tree_insert
@@ -1729,6 +1757,7 @@ fcs_locs_t
 fcs_lru_cache_t
 fcs_lru_side_t
 fcs_make_card
+fcs_meta_compact_allocator_t
 fcs_move_func_aliases_mapping_t
 fcs_move_get_dest_freecell
 fcs_move_get_dest_stack
@@ -2049,6 +2078,7 @@ g_tree_insert
 g_tree_lookup
 g_tree_new
 game_flags
+game_params
 game_variant_desired_suit_value
 game_variant_suit_mask
 gamenumber_s
@@ -2109,6 +2139,7 @@ help_key
 help_screen_t
 help_screens
 hex_digits
+higher_pri
 highest_pri
 home_dir
 home_dir_presetrc
@@ -2142,6 +2173,7 @@ in_move
 in_word_set
 include
 increment
+ind_buf
 indexes
 info
 info_ptr
@@ -2261,6 +2293,7 @@ key_raw
 key_to_add
 known_param
 known_parameters
+kv
 kv_allocator
 kv_calc_depth
 kv_ptr
@@ -2279,6 +2312,7 @@ last_line_fh
 last_one
 last_pos_idx
 leftnode
+len
 level
 likely
 lim
@@ -2474,6 +2508,7 @@ needed_len
 needle
 negated_depth
 new_arg
+new_cache_state
 new_card
 new_count
 new_current_size
@@ -2486,6 +2521,7 @@ new_entries
 new_factor
 new_fingerprint
 new_flares_choice_string
+new_item
 new_key
 new_last_arg
 new_lim
@@ -2507,6 +2543,7 @@ new_size_bitmask
 new_source_col
 new_src_col
 new_start_point
+new_state
 new_state_info
 new_state_val
 new_state_void
@@ -2525,7 +2562,6 @@ next_dc
 next_derived_iter
 next_element
 next_freecell_idx
-next_i
 next_item
 next_iter
 next_milestone
@@ -2545,6 +2581,7 @@ nextcolor
 nextparent
 nfds
 nicev
+nilnode
 no_use
 nodecount
 non_orig_idx
@@ -2556,6 +2593,7 @@ not
 not_King_only
 not_king_only
 nullify_newline
+num
 num_active_children
 num_back_end_moves
 num_bits
@@ -2618,11 +2656,13 @@ num_soft_threads_finished
 num_solutions
 num_src_junk_true_seqs
 num_states
+num_states_in_collection
 num_threads
 num_to_skip
 num_true_seqs
 num_true_seqs_out_ptr
 num_units
+num_vacant_freecells
 num_vacant_slots
 num_vacant_slots_plus_1
 num_valid_move_funcs
@@ -2696,6 +2736,7 @@ page_idx_to_read_from
 page_idx_to_write_to
 page_index
 pages
+param
 param_num
 parent_and_refcount
 parent_card
@@ -2819,12 +2860,14 @@ pthread_rwlock_fcfs_gain_write
 pthread_rwlock_fcfs_release
 pthread_rwlock_fcfs_t
 pthread_t
+ptr
 ptr_dest
 ptr_initial_record
 ptr_new_state
 ptr_new_state_foo
 ptr_next_state
 ptr_src
+ptr_state
 ptr_state_input
 ptr_state_key
 ptr_state_orig
@@ -2921,6 +2964,7 @@ realloc
 rec
 record
 record_on_stack
+recycle_bin
 recycle_bin_ptr
 recycle_flare
 recycle_instance
@@ -3049,6 +3093,7 @@ size_bitmask
 skip_queue_output
 snprintf
 soft_dfs
+soft_dfs_info
 soft_thread
 soft_thread_clean_soft_dfs
 soft_thread_id
@@ -3089,6 +3134,7 @@ ssize_t
 st_idx
 st_idx_ptr
 st_tests_order
+stack
 stack_card_str
 stack_depth
 stack_hashes
@@ -3101,6 +3147,7 @@ stacks_copy_on_write_flags
 stacks_hash
 stacks_judy_array
 stacks_map
+stacks_num
 stacks_tree
 standard_notation
 start
@@ -3133,6 +3180,7 @@ state_copy_ptr
 state_depth
 state_idx
 state_indirect_stacks_buffer
+state_key
 state_locs
 state_pair
 state_ptr
@@ -3185,6 +3233,7 @@ strtod
 strtoul
 suit2str
 suit_bit
+suit_idx
 suit_mask
 suit_positions_by_rank_step
 suit_times_two
@@ -3195,6 +3244,7 @@ swap_int
 swap_loc
 swap_save
 swap_temp
+switch
 switch_to_next_soft_thread
 synergy
 sys
@@ -3236,6 +3286,7 @@ the_tests_list_ptr
 theme_error
 this_card
 this_real_depth
+thread
 thread_arg_t
 thread_end
 thread_meta_alloc
@@ -3254,6 +3305,7 @@ to_output
 to_prune
 to_reparent_states
 to_stack
+token
 tokens
 top_card
 top_card_idx
@@ -3404,6 +3456,7 @@ was_start_key_reachable
 was_total_iterations_limit_per_board_set
 wcmp
 weight
+weighting
 weights
 where
 which_irreversible_moves_bitmask
