@@ -137,6 +137,7 @@ FCS_EXPLICIT_REFCOUNT
 FCS_FCC_NUM_MOVES_IN_ITEM
 FCS_FOUNDATIONS_OFFSET
 FCS_FREECELLS_OFFSET
+FCS_FREECELL_ONLY
 FCS_GEN_BOARDS_WITH_EXTERNAL_API
 FCS_GET_TIME
 FCS_HARD_CODE_CALC_REAL_DEPTH_AS_FALSE
@@ -578,6 +579,7 @@ MOVE_FUNCS__define_common
 MOVE_FUNCS__define_empty_stacks_fill
 MOVE_FUNCS__define_seqs_built_by
 MOVE_FUNCS__should_not_empty_columns
+MYINLINE
 MY_HASH_COMPARE
 MY_HASH_COMPARE_PROTO
 MY_HASH_CONTEXT_VAR
@@ -744,6 +746,7 @@ __GNUC__
 __VA_ARGS__
 __attribute__
 __builtin_expect
+__cplusplus
 __declspec
 __int128
 __linux__
@@ -785,6 +788,7 @@ all_instances_were_suspended
 all_plan_items_finished_so_far
 alloc_instance_and_parse
 allocated_from_list
+allocator
 allocnode
 allowed_tests
 ancestor
@@ -799,6 +803,7 @@ arg_argc
 arg_index
 arg_ptr
 arg_str
+argc
 argc0
 argc_ptr
 args_man
@@ -922,6 +927,7 @@ card_to_string
 card_to_string_suits
 card_to_string_values
 cards_char_map
+cards_num
 cards_num_min_limit
 cards_size
 cards_under_sequences
@@ -982,6 +988,7 @@ columns
 command
 command_num
 command_signal_handler
+common
 common_preset
 comp
 comparator
@@ -999,8 +1006,10 @@ condition_expr
 const
 const_SLOT
 consumed_states_fh
+context
 context_argc
 context_argv
+continue
 coord
 coord_from_input
 copy_col_idx
@@ -1045,12 +1054,14 @@ current_instance
 current_iterations_limit
 current_plan_item
 current_plan_item_idx
+current_pos
 current_size
 current_stack
 current_state_index
 cutime
 dashes_ptr
 dashes_s
+data
 data_byte_offset
 data_len
 datum
@@ -1178,6 +1189,7 @@ dict_set_allocator
 dict_similar
 dict_strict_lower_bound
 dict_strict_upper_bound
+dict_t
 dict_upper_bound
 dict_verify
 dictcount_t
@@ -1210,12 +1222,14 @@ dnode_is_in_a_dict
 dnode_process_t
 dnode_put
 dnode_red
+dnode_t
 do
 do_next_fcc_start_points_exist
 does_min_by_sorting_exist
 does_state_exist_in_any_FCC_cache
 dont_exit_on_sol
 double
+ds
 ds_dc_t
 ds_dcs
 dummy
@@ -1279,6 +1293,7 @@ epollfd
 err
 error
 error_code
+error_string
 errstr
 es_fill
 ev
@@ -1660,8 +1675,10 @@ fcs_card_rank
 fcs_card_suit
 fcs_cards_column_t
 fcs_char2card
+fcs_col_get_card
 fcs_col_get_rank
 fcs_col_is_king
+fcs_col_len
 fcs_col_pop_card
 fcs_col_pop_top
 fcs_col_push_card
@@ -1889,6 +1906,7 @@ fcs_standalone_state_ptrs_t
 fcs_state_extra_info_struct
 fcs_state_extra_info_t
 fcs_state_foundation_t
+fcs_state_get_col
 fcs_state_ia_alloc_into_var
 fcs_state_keyval_pair_struct
 fcs_state_keyval_pair_t
@@ -1917,6 +1935,7 @@ fcs_trace
 fcs_uchar_t
 fcs_user_errstr
 fcs_user_state_str_t
+fcs_user_t
 fcs_var_base_int_t
 fcs_var_base_reader_t
 fcs_var_base_writer_t
@@ -1955,6 +1974,7 @@ first_line
 first_state_to_check
 flag
 flags
+flare
 flare_iters_quota
 flare_iters_quota_t
 flares
@@ -1984,6 +2004,7 @@ fputc
 fputs
 fr
 fread
+free
 free_instance_hard_thread_callback
 free_nodes
 free_position_non_recursive
@@ -2200,6 +2221,7 @@ i_mod
 i_mult
 id
 ident
+idx
 idx1
 idx2
 if
@@ -2215,6 +2237,7 @@ include
 increment
 ind_buf
 indexes
+indirect_stacks_buffer
 info
 info_ptr
 init_card
@@ -2222,6 +2245,7 @@ init_indirect_stacks_buffer
 init_moves_seq
 init_num_checked_states
 init_stacks_map
+init_state
 init_state_kv_ptr
 init_state_pair
 init_state_ptr
@@ -2260,6 +2284,7 @@ instance_free_solution_moves
 instance_increment
 instance_init
 instance_is_ready
+instance_item
 instance_item_t
 instance_num_checked_states_ptr
 instance_print_stats
@@ -2310,12 +2335,14 @@ is_win
 isdigit
 it
 it_real_value
+item
 item_end
 item_idx
 item_opt
 item_placeholder
 item_start
 items_count
+iter
 iter_handler
 iter_handler_context
 iter_handler_wrapper
@@ -2353,6 +2380,7 @@ last_item_next
 last_line_fh
 last_one
 last_pos_idx
+left
 leftnode
 len
 level
@@ -2378,8 +2406,10 @@ loadnil
 local_limit
 local_shuffling_type
 local_stacks_num
+local_variant
 location_in_file
 lock
+locs
 log_fh
 long
 long_iter_handler
@@ -2438,6 +2468,7 @@ memmove
 memset
 message
 meta
+meta_alloc
 meta_allocator
 meta_request_new_buffer
 meth
@@ -2485,6 +2516,7 @@ move_to_return
 move_to_string
 move_type
 moved_card
+moves
 moves_base64_encoding_buffer
 moves_base64_encoding_buffer_max_len
 moves_count
@@ -2495,6 +2527,7 @@ moves_list
 moves_list_allocator
 moves_list_compact_alloc
 moves_list_of_lists
+moves_order
 moves_processed_add_new_move
 moves_ptr
 moves_seq
@@ -2597,6 +2630,7 @@ new_str2
 new_top_most_cards
 new_val
 newnode
+next
 next_arg
 next_board_num
 next_board_num_lock
@@ -2626,6 +2660,7 @@ nextcolor
 nextparent
 nfds
 nicev
+nil
 nilnode
 no_use
 node
@@ -2728,6 +2763,7 @@ old_hard_thread
 old_list
 old_move_stack_to_parent
 old_size
+once
 one_card_buffer
 only_recognized
 open
@@ -2753,6 +2789,7 @@ out
 out_derived_states
 out_enc_state
 out_fcc_start_points
+out_fh
 out_filename
 out_is_fcc_new
 out_item
@@ -2844,6 +2881,7 @@ pq
 pq_element_t
 pq_rating_t
 pqueue
+pragma
 pre_cache
 pre_cache_does_key_exist
 pre_cache_init
@@ -3048,8 +3086,10 @@ return
 return_depth
 return_item
 reusable_move_stack
+right
 rightnode
 rollback_ptr
+root
 rotate_left
 rotate_right
 rounded_x
@@ -3273,6 +3313,7 @@ stop_at
 storage_lock
 store
 store_t
+str
 strchr
 strcmp
 strcpy
@@ -3430,6 +3471,7 @@ uint_fast32_t
 uintptr_t
 ul
 uncle
+undef
 union
 unistd
 unit
@@ -3439,6 +3481,7 @@ unlimited_sequence_move
 unlimited_sequence_move_var
 unlink
 unpack_position
+unsigned
 unused
 unused_output_len
 unused_size
