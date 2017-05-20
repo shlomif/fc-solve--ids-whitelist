@@ -73,6 +73,7 @@ DFS_VAR
 DICTCOUNT_T_MAX
 DICT_DEPTH_MAX
 DICT_IMPLEMENTATION
+DLLEXPORT
 DLLLOCAL
 DNODE_NEXT
 DONT_TERMINATE
@@ -83,6 +84,7 @@ EPOLL_CTL_ADD
 ERROR
 EXIT_AND_RETURN_0
 EXIT_FAILURE
+FALSE
 FCS_ASSIGN_STATE_KEY
 FCS_BEFS_SEQS_OVER_RENEGADE_CARDS_EXPONENT
 FCS_BEFS_WEIGHT_CARDS_OUT
@@ -717,6 +719,7 @@ THE_MOVE_FUNCS_LIST
 TRACE
 TRACE0
 TRAILING_CHAR
+TRUE
 TRY_P
 TRY_PARAM
 UINT
@@ -793,12 +796,14 @@ allocnode
 allowed_tests
 ancestor
 ap
+api_instance
 api_soft_thread
 app_str_struct
 append
 append_char
 apply_game_params_for_all_instances
 are
+arg
 arg_argc
 arg_index
 arg_ptr
@@ -809,6 +814,7 @@ argc_ptr
 args_man
 args_man_t
 args_man_wrapper_t
+argv
 argv0
 argv_ptr
 arr
@@ -876,6 +882,7 @@ bytes_per_tree_node
 c1
 c2
 c_bottom
+cache
 cache_destroy
 cache_destroy_key
 cache_does_key_exist
@@ -933,6 +940,7 @@ cards_size
 cards_under_sequences
 cards_under_sequences_factor
 cards_were_moved
+case
 cb
 char
 check
@@ -1004,6 +1012,7 @@ complete_path
 cond
 condition_expr
 const
+const_AUTO
 const_SLOT
 consumed_states_fh
 context
@@ -1141,6 +1150,7 @@ destcard
 determine_scan_completeness
 dfs_max_depth
 dfs_max_info_ptr
+dict
 dict_allocator
 dict_allocnode
 dict_allow_dupes
@@ -1663,6 +1673,7 @@ fcs_Q_item_wrapper_t
 fcs__is_state_a_dead_end
 fcs__positions_by_rank_t
 fcs__should_state_be_pruned
+fcs_bool_t
 fcs_by_depth_tests_order_array_t
 fcs_by_depth_tests_order_t
 fcs_cache_key_info_struct
@@ -1673,6 +1684,7 @@ fcs_card_is_empty
 fcs_card_is_valid
 fcs_card_rank
 fcs_card_suit
+fcs_card_t
 fcs_cards_column_t
 fcs_char2card
 fcs_col_get_card
@@ -2183,6 +2195,7 @@ h_above_card
 h_card
 handle_and_destroy_instance_solution
 handle_existing_void
+hard_thread
 hard_thread_max_num_checked_states
 hard_thread_num_checked_states_ptr
 hard_threads
@@ -2824,6 +2837,7 @@ page_index
 pages
 param
 param_num
+parent
 parent_and_refcount
 parent_card
 parent_card_height
@@ -2864,6 +2878,7 @@ plan
 popen
 populate_instance_with_intermediate_input_line
 populate_seq_points
+pos
 pos0
 pos_by_rank__freecell
 pos_idx_to_check
@@ -2977,6 +2992,7 @@ q_stats_extract
 q_stats_insert
 q_stats_is_empty
 qsort
+queue
 queue_allocator
 queue_head
 queue_id
@@ -3185,6 +3201,8 @@ singleton
 sister
 size
 size_bitmask
+size_t
+sizeof
 skip_queue_output
 snprintf
 soft_dfs
@@ -3235,6 +3253,7 @@ stack_card_str
 stack_depth
 stack_hashes
 stack_ids
+stack_idx
 stack_item
 stack_locs
 stack_ptr__moves_to_parent
@@ -3269,6 +3288,7 @@ start_state_str_proto
 start_time
 stat
 stat_fn
+state
 state_as_string
 state_base64
 state_context_value
@@ -3331,6 +3351,7 @@ strncpy
 strnicmp
 strtod
 strtoul
+struct
 suit
 suit2str
 suit_bit
@@ -3569,6 +3590,7 @@ weighting
 weights
 where
 which_irreversible_moves_bitmask
+while
 win
 windows
 windows_exe_dir
